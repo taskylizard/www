@@ -102,6 +102,12 @@ importers:
       '@iconify-json/carbon':
         specifier: ^1.2.1
         version: 1.2.1
+      '@iconify-json/devicon':
+        specifier: ^1.2.4
+        version: 1.2.4
+      '@iconify-json/logos':
+        specifier: ^1.2.3
+        version: 1.2.3
       '@iconify-json/lucide':
         specifier: ^1.2.6
         version: 1.2.6
@@ -114,6 +120,9 @@ importers:
       '@iconify-json/simple-icons':
         specifier: ^1.2.4
         version: 1.2.4
+      '@iconify-json/skill-icons':
+        specifier: ^1.2.0
+        version: 1.2.0
       eslint-plugin-tailwindcss:
         specifier: ^3.17.5
         version: 3.17.5(tailwindcss@3.4.13)
@@ -1006,6 +1015,12 @@ packages:
   '@iconify-json/carbon@1.2.1':
     resolution: {integrity: sha512-dIMY6OOY9LnwR3kOqAtfz4phGFG+KNfESEwSL6muCprBelSlSPpRXtdqvEEO/qWhkf5AJ9hWrOV3Egi5Z2IuKA==}
 
+  '@iconify-json/devicon@1.2.4':
+    resolution: {integrity: sha512-DrYBFGycCW2wAloxxHEDIFuqv9lUYIn6FVbSx/l7ZqhO9rDtD8jLECS+mfn/BTRBs4/uH8wzB0sYPHXulP8aLQ==}
+
+  '@iconify-json/logos@1.2.3':
+    resolution: {integrity: sha512-JLHS5hgZP1b55EONAWNeqBUuriRfRNKWXK4cqYx0PpVaJfIIMiiMxFfvoQiX/bkE9XgkLhcKmDUqL3LXPdXPwQ==}
+
   '@iconify-json/lucide@1.2.6':
     resolution: {integrity: sha512-HVLLxmG/rJ91GqpEE97OHdEwb/LfjwMVdynWIrnjvNRQNoKvrYG2N2+jABSBibEhnYQOfv+k8/7X6fK44PEtKA==}
 
@@ -1017,6 +1032,9 @@ packages:
 
   '@iconify-json/simple-icons@1.2.4':
     resolution: {integrity: sha512-AKUGO7cX2KykFEJ+P6tY3wGhGgbrL3RMqbxNTfutGsKojaSEFosN/cmWQ9l9hmUiS2IN7fVLsPMAIvV1uJyyVw==}
+
+  '@iconify-json/skill-icons@1.2.0':
+    resolution: {integrity: sha512-5zlPrzF5pelV1wut7C88zmAiYONvGxvFw11dXW1Pr1oIhUOtYhC7x3zkErSTFkyZ3m5fEgcEUrcO1W3UhNJVpw==}
 
   '@iconify/collections@1.0.465':
     resolution: {integrity: sha512-40sG1esFVHw4WdT9vH16FAu21KqZqudGHLCDs4uRAnLaym1XFXLJYzT1YEYlaV+mz3N7DQMBcjuJqQFPFFz42Q==}
@@ -6619,6 +6637,14 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/devicon@1.2.4':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/logos@1.2.3':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/lucide@1.2.6':
     dependencies:
       '@iconify/types': 2.0.0
@@ -6632,6 +6658,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/simple-icons@1.2.4':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/skill-icons@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
 
