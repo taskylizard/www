@@ -7,14 +7,15 @@ const props = defineProps<{
 const computedTitle = computed(
   () =>
     props.title
-    ?? (props.type === 'details' ? 'Details' : props.type.toUpperCase()),
+    ?? (props.type === 'details' ? 'Details' : props.type.toUpperCase())
 )
 const is = computed(() => (props.type === 'details' ? 'details' : 'div'))
 </script>
 
 <template>
-  <component :is
-             :class="`${type} custom-block`"
+  <component
+    :is
+    :class="`${type} custom-block`"
   >
     <template v-if="type === 'details'">
       <summary>

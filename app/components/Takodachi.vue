@@ -51,7 +51,7 @@ onMounted(() => {
 
     const currentPos: Vec2D = [
       position.value.x + offset[0],
-      position.value.y + offset[1],
+      position.value.y + offset[1]
     ]
 
     target = target ?? currentPos

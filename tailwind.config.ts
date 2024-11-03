@@ -44,7 +44,7 @@ const gray = (
     yellow: 'sand',
     amber: 'sand',
     orange: 'sand',
-    brown: 'sand',
+    brown: 'sand'
   } as const
 )[brand]
 
@@ -69,7 +69,7 @@ const prose = {
   'pre-code': '12',
   'pre-bg': '3',
   'th-borders': '7',
-  'td-borders': '6',
+  'td-borders': '6'
 }
 
 function getProse(theme: (key: string) => string) {
@@ -85,21 +85,21 @@ function getProse(theme: (key: string) => string) {
 export default {
   darkMode: 'class',
   content: [
-    './components/**/*.{vue,js}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './app.vue',
+    './app/components/**/*.{vue,js}',
+    './app/layouts/**/*.vue',
+    './app/pages/**/*.vue',
+    './app/app.vue'
   ],
   theme: {
     colors,
     extend: {
       fontFamily: {
-        mono: ['Geist Mono', 'Geist Mono fallback', ...fontFamily.mono],
+        mono: ['Geist Mono', 'Geist Mono fallback', ...fontFamily.mono]
       },
-      typography: ({ theme }) => ({ DEFAULT: { css: getProse(theme) } }),
-    },
+      typography: ({ theme }) => ({ DEFAULT: { css: getProse(theme) } })
+    }
   },
-  plugins: [typography],
+  plugins: [typography]
 } satisfies Config
 
 /* [

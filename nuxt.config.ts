@@ -1,14 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  telemetry: { enabled: false },
-  devtools: { enabled: true },
-  future: {
-    compatibilityVersion: 4,
-  },
-  experimental: { buildCache: true },
   modules: [
-    '@nuxthub/core',
+    process.env.NODE_ENV === 'production' ? '@nuxthub/core' : undefined,
     '@nuxtjs/tailwindcss',
     '@nuxtjs/sitemap',
     '@nuxtjs/color-mode',
@@ -24,47 +17,36 @@ export default defineNuxtConfig({
     'nuxt-link-checker',
     '@vueuse/nuxt',
     'nuxt-time',
-    '@nuxthq/studio',
+    '@nuxthq/studio'
   ],
-  css: ['~/styles.scss'],
   components: true,
-  eslint: {
-    config: {
-      stylistic: {
-        semi: false,
-      },
-    },
-  },
-  colorMode: {
-    classSuffix: '',
-  },
-  site: {
-    url: 'https://tasky.nuxt.dev',
-    name: 'tasky',
-    description: 'tasky\'s site',
-    author: 'tasky',
-    defaultLocale: 'en',
-  },
+  devtools: { enabled: true },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       titleTemplate: '%s %separator %siteName',
       templateParams: {
-        separator: '•',
+        separator: '•'
       },
       htmlAttrs: {
         lang: 'en',
-        class: 'h-full',
+        class: 'h-full'
       },
       bodyAttrs: {
-        class: 'antialiased min-h-screen bg-neutral-1 dark:bg-neutral-dark-1',
-      },
-    },
+        class: 'antialiased min-h-screen bg-neutral-1 dark:bg-neutral-dark-1'
+      }
+    }
   },
-  twoslash: {
-    floatingVueOptions: {
-      classMarkdown: 'prose prose-primary dark:prose-invert',
-    },
+  css: ['~/styles.scss'],
+  site: {
+    url: 'https://tasky.nuxt.dev',
+    name: 'tasky',
+    description: 'tasky\'s site',
+    author: 'tasky',
+    defaultLocale: 'en'
+  },
+  colorMode: {
+    classSuffix: ''
   },
   content: {
     documentDriven: true,
@@ -72,7 +54,7 @@ export default defineNuxtConfig({
       theme: {
         default: 'github-dark',
         light: 'github-light',
-        dark: 'github-dark',
+        dark: 'github-dark'
       },
       langs: [
         'js',
@@ -89,20 +71,43 @@ export default defineNuxtConfig({
         'yaml',
         'yml',
         'diff',
-        'tsx',
-      ],
-    },
+        'tsx'
+      ]
+    }
   },
-  icon: {
-    serverBundle: false,
+  future: {
+    compatibilityVersion: 4
   },
+  experimental: {
+    typedPages: true,
+    buildCache: true
+  },
+  compatibilityDate: '2024-04-03',
   vite: {
     css: {
       preprocessorOptions: {
         sass: {
-          api: 'modern-compiler',
-        },
-      },
-    },
+          api: 'modern-compiler'
+        }
+      }
+    }
   },
+  telemetry: { enabled: false },
+  eslint: {
+    config: {
+      tooling: true,
+      stylistic: {
+        semi: false,
+        commaDangle: 'never'
+      }
+    }
+  },
+  icon: {
+    serverBundle: false
+  },
+  twoslash: {
+    floatingVueOptions: {
+      classMarkdown: 'prose prose-primary dark:prose-invert'
+    }
+  }
 })

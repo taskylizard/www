@@ -1,18 +1,21 @@
 <template>
-  <h3 :id="props.id"
-      tabindex="-1"
+  <h4
+    :id="props.id"
+    tabindex="-1"
   >
     <slot />
-    <a v-if="props.id && generate"
-       class="header-anchor"
-       :href="`#${props.id}`"
+    <a
+      v-if="props.id && generate"
+      class="header-anchor"
+      :href="`#${props.id}`"
     >
-      <Icon name="radix-icons:link-2"
-            class="ml-1 size-5"
+      <Icon
+        name="radix-icons:link-2"
+        class="ml-1 size-5"
       />
     </a>
     <slot v-else />
-  </h3>
+  </h4>
 </template>
 
 <script setup lang="ts">
@@ -26,6 +29,6 @@ const generate = computed(
     props.id
     && ((typeof headings?.anchorLinks === 'boolean'
       && headings?.anchorLinks === true)
-      || (typeof headings?.anchorLinks === 'object' && headings?.anchorLinks?.h3)),
+    || (typeof headings?.anchorLinks === 'object' && headings?.anchorLinks?.h4))
 )
 </script>

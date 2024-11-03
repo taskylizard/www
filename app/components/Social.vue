@@ -4,7 +4,7 @@ const props = defineProps<{ to: string, icon: string, label: string, accent: 'sk
 const accentClasses = {
   sky: 'hover:text-sky-11 dark:hover:text-sky-dark-11 hover:border-sky-11 dark:hover:border-sky-dark-11',
   crimson: 'hover:text-crimson-11 dark:hover:text-crimson-dark-11 hover:border-crimson-11 dark:hover:border-crimson-dark-11',
-  olive: 'hover:text-olive-11 dark:hover:text-olive-dark-11 hover:border-olive-11 dark:hover:border-olive-dark-11',
+  olive: 'hover:text-olive-11 dark:hover:text-olive-dark-11 hover:border-olive-11 dark:hover:border-olive-dark-11'
 }
 
 const accentClass = computed(() => accentClasses[props.accent] || '')

@@ -2,14 +2,14 @@
 const article = ref<HTMLElement | null>(null)
 const route = useRoute()
 const { data: page, error } = await useAsyncData(route.path, () =>
-  queryContent(route.path).findOne(),
+  queryContent(route.path).findOne()
 )
 
 if (error.value) {
   throw createError({
     statusCode: 404,
     message: 'Page not found',
-    fatal: true,
+    fatal: true
   })
 }
 
@@ -17,7 +17,7 @@ useSeoMeta({
   title: page.value?.title,
   description: page.value?.description,
   ogTitle: page.value?.title,
-  ogDescription: page.value?.description,
+  ogDescription: page.value?.description
 })
 
 const [prev, next] = await queryContent()
@@ -28,7 +28,7 @@ const [prev, next] = await queryContent()
 
 const onBackToTop = () => {
   article.value!.scrollIntoView({
-    behavior: 'smooth',
+    behavior: 'smooth'
   })
 }
 </script>
@@ -50,8 +50,9 @@ const onBackToTop = () => {
               aria-label="Back to top"
               @click="onBackToTop"
             >
-              <Icon name="lucide:chevron-up"
-                    class="size-4"
+              <Icon
+                name="lucide:chevron-up"
+                class="size-4"
               />
               <span class="text-sm font-medium">Back to Top</span>
             </button>

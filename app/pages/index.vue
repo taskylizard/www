@@ -8,7 +8,7 @@ const { data: _posts } = await useAsyncData(
     await queryContent<MarkdownParsedContent>(withTrailingSlash('posts'))
       .sort({ date: -1 })
       .only(['title', 'date', '_path'])
-      .find(),
+      .find()
 )
 
 const posts = computed(
@@ -17,9 +17,9 @@ const posts = computed(
       && (_posts.value.map(({ _path, title, date }) => ({
         title,
         date,
-        path: _path,
+        path: _path
       })) as { title: string, date: string, path: string }[]))
-      || [],
+      || []
 )
 
 type Project = {
@@ -35,17 +35,17 @@ const _projects: Project[] = [
   {
     name: 'vyx',
     link: 'https://github.com/taskylizard/vyx',
-    description: 'Personal discord/revolt/divolt bot for funsies.',
-  },
+    description: 'Personal discord/revolt/divolt bot for funsies.'
+  }
 ]
 
 const projects = computed(() =>
-  _projects.map(p => ({ ...p, link: withTrailingSlash(p.link) })),
+  _projects.map(p => ({ ...p, link: withTrailingSlash(p.link) }))
 )
 
 useSeoMeta({
   ogTitle: 'Hello! I am tasky. 🌷',
-  ogDescription: 'Welcome!',
+  ogDescription: 'Welcome!'
 })
 </script>
 
@@ -61,12 +61,14 @@ useSeoMeta({
 
     <h2>Posts</h2>
     <ul>
-      <li v-for="(post, index) of posts"
-          :key="index"
+      <li
+        v-for="(post, index) of posts"
+        :key="index"
       >
-        <LinkItem :date="post.date"
-                  :text="post.title ?? post.path"
-                  :to="post.path"
+        <LinkItem
+          :date="post.date"
+          :text="post.title ?? post.path"
+          :to="post.path"
         />
       </li>
     </ul>
@@ -74,11 +76,13 @@ useSeoMeta({
     <h2>Projects</h2>
     <p>The projects I made, or I'm a core member of sorts.</p>
     <ul>
-      <li v-for="{ name, link, description } of projects"
-          :key="name"
+      <li
+        v-for="{ name, link, description } of projects"
+        :key="name"
       >
-        <LinkItem :text="name"
-                  :to="link"
+        <LinkItem
+          :text="name"
+          :to="link"
         />
         <span v-if="description"> — {{ description }}</span>
       </li>

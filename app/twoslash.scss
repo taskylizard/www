@@ -1,43 +1,10 @@
 :root {
-  --twoslash-popup-bg: rgb(theme('colors.neutral.12') / 1);
-  --twoslash-popup-color: rgb(theme('colors.neutral.10') / 1);
-  --twoslash-popup-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
-  --twoslash-docs-color: inherit;
-  --twoslash-docs-font: inherit;
-  --twoslash-code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
-  --twoslash-underline-color: #8888;
-  --twoslash-border-color: rgb(var(--color-gray-700) / 1);
-  --twoslash-cursor-color: rgb(var(--color-primary-DEFAULT) / 1);
-  --twoslash-matched-color: rgb(var(--color-primary-DEFAULT) / 1);
-}
-
-html:not(.dark) {
-  --twoslash-popup-bg: rgb(theme('colors.neutral.12') / 1);
-  --twoslash-popup-color: rgb(theme('colors.neutral.10') / 1);
-  --twoslash-border-color: rgb(theme('colors.neutral.12') / 1);
-}
-
-.twoslash-popup-container .twoslash-popup-code {
-  font-size: 0.9em;
-}
-
-.twoslash-popup-container .twoslash-popup-code .line {
-  display: block;
-}
-
-.twoslash-popup-container .shiki .line {
-  --shiki-default-bg: transparent;
-  --shiki-dark-bg: transparent;
-}
-
-.twoslash-floating .twoslash-popup-docs-tags .twoslash-popup-docs-tag-name {
-  color: inherit;
-  opacity: 0.5;
-}
-
-/* ===== Basic ===== */
-:root {
+  --twoslash-underline-color: theme("colors.neutral.8");
+  --twoslash-cursor-color: theme("colors.pink.8");
+  --twoslash-matched-color: theme("colors.neutral.4");
+  --twoslash-popup-bg: theme("colors.neutral.2");
+  --twoslash-popup-color: theme("colors.neutral.10");
+  --twoslash-border-color: theme("colors.neutral.6");
   --twoslash-highlighted-border: #c37d0d50;
   --twoslash-highlighted-bg: #c37d0d20;
   --twoslash-popup-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
@@ -51,6 +18,35 @@ html:not(.dark) {
   --twoslash-tag-warn-bg: var(--twoslash-warn-bg);
   --twoslash-tag-annotate-color: #1ba673;
   --twoslash-tag-annotate-bg: #1ba67320;
+  --twoslash-docs-color: inherit;
+  --twoslash-docs-font: inherit;
+  --twoslash-code-font: Geist Mono, Geist Mono fallbaxk, SFMono-Regular, Menlo,
+    Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  color-scheme: light;
+
+  &.dark {
+    color-scheme: dark;
+    --twoslash-popup-bg: theme("colors.neutral.dark-2");
+    --twoslash-popup-color: theme("colors.neutral.10");
+    --twoslash-underline-color: theme("colors.neutral.dark-8");
+    --twoslash-border-color: theme("colors.neutral.dark-6");
+    --twoslash-cursor-color: theme("colors.pink.1");
+    --twoslash-matched-color: theme("colors.neutral.dark-4");
+  }
+}
+
+.twoslash-popup-container .twoslash-popup-code {
+  font-size: 0.9em;
+}
+
+.twoslash-popup-container .twoslash-popup-code .line {
+  display: block;
+}
+
+.twoslash-floating .twoslash-popup-docs-tags .twoslash-popup-docs-tag-name {
+  color: inherit;
+  opacity: 0.5;
 }
 
 /* Respect people's wishes to not have animations */
@@ -58,6 +54,19 @@ html:not(.dark) {
   .twoslash * {
     transition: none !important;
   }
+}
+
+.twoslash-popup-container .twoslash-popup-code {
+  font-size: 0.9em;
+}
+
+.twoslash-popup-container .twoslash-popup-code .line {
+  display: block;
+}
+
+.twoslash-floating .twoslash-popup-docs-tags .twoslash-popup-docs-tag-name {
+  color: inherit;
+  opacity: 0.5;
 }
 
 /* ===== Hover Info ===== */
@@ -197,7 +206,6 @@ html:not(.dark) {
   padding-bottom: 2px;
 }
 
-/* ===== Completeions ===== */
 .twoslash .twoslash-completion-cursor {
   position: relative;
 }
@@ -230,13 +238,13 @@ html:not(.dark) {
 }
 
 .twoslash-completion-list::before {
-  background-color: var(--twoslash-cursor-color);
-  width: 2px;
+  background-color: theme("colors.pink.8");
+  width: 6px;
   position: absolute;
   top: -1.6em;
   height: 1.4em;
   left: -1px;
-  content: ' ';
+  content: " ";
 }
 
 .twoslash-completion-list li {
