@@ -1,6 +1,6 @@
 {
 	"extends": [
-		"config:base",
+		"config:recommended",
 		":rebaseStalePrs",
 		"github>nuxt/renovate-config-nuxt"
 	],
@@ -19,21 +19,21 @@
 	"packageRules": [
 		{
 			"groupName": "definitelyTyped",
-			"matchPackagePrefixes": [
-				"@types/"
-			],
-			"automerge": true
+			"automerge": true,
+			"matchPackageNames": [
+				"@types/{/,}**"
+			]
 		},
 		{
-			"matchPackagePatterns": [
-				"*"
-			],
 			"matchUpdateTypes": [
 				"minor",
 				"patch"
 			],
 			"groupName": "all non-major dependencies",
-			"groupSlug": "all-minor-patch"
+			"groupSlug": "all-minor-patch",
+			"matchPackageNames": [
+				"*"
+			]
 		},
 		{
 			"automerge": true,
