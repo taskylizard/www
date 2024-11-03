@@ -58,7 +58,7 @@
     "@types/hast": "^3.0.4",
     "eslint-plugin-format": "^0.1.2",
     "eslint-plugin-tailwindcss": "^3.17.5",
-    "nuxthub": "^0.7.0",
+    "nuxthub": "^0.7.2",
     "typescript": "^5.6.3",
     "wrangler": "^3.84.1"
   },

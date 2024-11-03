@@ -142,8 +142,8 @@ importers:
         specifier: ^3.17.5
         version: 3.17.5(tailwindcss@3.4.14)
       nuxthub:
-        specifier: ^0.7.0
-        version: 0.7.0(ioredis@5.4.1)(magicast@0.3.5)
+        specifier: ^0.7.2
+        version: 0.7.2(ioredis@5.4.1)(magicast@0.3.5)
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -4375,8 +4375,8 @@ packages:
       '@types/node':
         optional: true
 
-  nuxthub@0.7.0:
-    resolution: {integrity: sha512-M/5YelxbWCpqBHZP//G2hUcJcYFhW70hzlNwYOq8mrCXMig5XfgPZuSI8h6u1fHeDhCJXg+XAFLxBpOdyxYRKQ==}
+  nuxthub@0.7.2:
+    resolution: {integrity: sha512-YxQamgnN0Z9dVaN0ggsCUv9gaTy07SbYOW7AmZucgndLOCI5HXtMFQjUnCLFxawfu7GYuTMfrqdPliZOHXkQNg==}
     hasBin: true
 
   nypm@0.3.12:
@@ -11664,7 +11664,7 @@ snapshots:
       - webpack-sources
       - xml2js
 
-  nuxthub@0.7.0(ioredis@5.4.1)(magicast@0.3.5):
+  nuxthub@0.7.2(ioredis@5.4.1)(magicast@0.3.5):
     dependencies:
       '@clack/prompts': 0.7.0
       blake3-wasm: 2.1.5
