@@ -1,5 +1,9 @@
 name: Deploy with NuxtHub CLI
-on: push
+
+on:
+  push:
+  workflow_dispatch:
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
