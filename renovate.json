@@ -21,13 +21,37 @@
 	],
 	"packageRules": [
 		{
+			"groupName": "definitelyTyped",
+			"automerge": true,
+			"matchPackageNames": [
+				"@types/{/,}**"
+			]
+		},
+		{
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"groupName": "all non-major dependencies",
+			"groupSlug": "all-minor-patch",
+			"matchPackageNames": [
+				"*"
+			]
+		},
+		{
 			"automerge": true,
 			"extends": [
-				"group:definitelyTyped",
-				"group:allNonMajor",
-				"group:linters",
-				"group:allDigest"
+				"packages:linters"
 			]
+		},
+		{
+			"matchUpdateTypes": [
+				"minor",
+				"patch",
+				"pin",
+				"digest"
+			],
+			"automerge": true
 		}
 	],
 	"prBodyNotes": [
