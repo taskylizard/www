@@ -2,6 +2,9 @@
 	"extends": [
 		"config:recommended",
 		":rebaseStalePrs",
+		"docker:pinDigests",
+		"helpers:pinGitHubActionDigests",
+		":configMigration",
 		"github>nuxt/renovate-config-nuxt"
 	],
 	"automerge": true,
@@ -13,42 +16,18 @@
 	"major": {
 		"automerge": false
 	},
-	"labels": [
+	"addLabels": [
 		"renovate"
 	],
 	"packageRules": [
 		{
-			"groupName": "definitelyTyped",
-			"automerge": true,
-			"matchPackageNames": [
-				"@types/{/,}**"
-			]
-		},
-		{
-			"matchUpdateTypes": [
-				"minor",
-				"patch"
-			],
-			"groupName": "all non-major dependencies",
-			"groupSlug": "all-minor-patch",
-			"matchPackageNames": [
-				"*"
-			]
-		},
-		{
 			"automerge": true,
 			"extends": [
-				"packages:linters"
+				"group:definitelyTyped",
+				"group:allNonMajor",
+				"group:linters",
+				"group:allDigest"
 			]
-		},
-		{
-			"matchUpdateTypes": [
-				"minor",
-				"patch",
-				"pin",
-				"digest"
-			],
-			"automerge": true
 		}
 	],
 	"prBodyNotes": [
