@@ -21,8 +21,8 @@ importers:
         specifier: ^0.10.2
         version: 0.10.2(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(sass-embedded@1.80.6)(terser@5.36.0))
       '@nuxt/icon':
-        specifier: ^1.7.0
-        version: 1.7.0(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(sass-embedded@1.80.6)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))
+        specifier: ^1.7.2
+        version: 1.7.2(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(sass-embedded@1.80.6)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))
       '@nuxt/image':
         specifier: ^1.8.1
         version: 1.8.1(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.24.4)
@@ -142,8 +142,8 @@ importers:
         specifier: ^3.17.5
         version: 3.17.5(tailwindcss@3.4.14)
       nuxthub:
-        specifier: ^0.7.2
-        version: 0.7.2(ioredis@5.4.1)(magicast@0.3.5)
+        specifier: ^0.7.3
+        version: 0.7.3(ioredis@5.4.1)(magicast@0.3.5)
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -947,8 +947,8 @@ packages:
   '@iconify/utils@2.1.33':
     resolution: {integrity: sha512-jP9h6v/g0BIZx0p7XGJJVtkVnydtbgTgt9mVNcGDYwaa7UhdHdI9dvoq+gKj9sijMSJKxUPEG2JyjsgXjxL7Kw==}
 
-  '@iconify/vue@4.1.3-beta.1':
-    resolution: {integrity: sha512-N7iEOnWfhjbMqiyGMhotJKip23nrK5l3+T1hQwpEjKeMD2o4zOjm8zmeEfOOH81EXllhhOm7upR8jcH499YRWA==}
+  '@iconify/vue@4.2.0-dev.1':
+    resolution: {integrity: sha512-ojS7VyinX55KmcOt7Q7DfsvPhSoawLjFh3abywio7pWUfTqKRJZn6XaoBwAmduNN0A+Jl1ZjjTB7UX+Oeksnyw==}
     peerDependencies:
       vue: '>=3'
 
@@ -1088,8 +1088,8 @@ packages:
   '@nuxt/fonts@0.10.2':
     resolution: {integrity: sha512-WYsrKBv9tPEgEntNwe4Zov2taKO/cnct+tR/g5EQ1jgADkFeEGkfCsUDwTG/pZFkW0FlKSR/KRLMB3U6O+C6Ow==}
 
-  '@nuxt/icon@1.7.0':
-    resolution: {integrity: sha512-NhDKs7r1QVcYYYks0PTQawH7Asmiex2s2GXov2+ZDkhqpLiU08KEXeGnpphthoSTX9qrVg3N1IMcQaKbfIi8dQ==}
+  '@nuxt/icon@1.7.2':
+    resolution: {integrity: sha512-E2sH/wchLfcUIuUPIFFtaFNHfPP7sVSnJNWfvOOzq1KnRNA1sWWEhr1DriuCF2g+QukrSM96Xp5b9OrQCso/8w==}
 
   '@nuxt/image@1.8.1':
     resolution: {integrity: sha512-qNj7OCNsoGcutGOo1R2PYp4tQ/6uD77aSakyDoVAmLSRJBmhFTnT2+gIqVD95JMmkSHgYhmSX4gGxnaQK/t1cw==}
@@ -4213,8 +4213,8 @@ packages:
       '@types/node':
         optional: true
 
-  nuxthub@0.7.2:
-    resolution: {integrity: sha512-YxQamgnN0Z9dVaN0ggsCUv9gaTy07SbYOW7AmZucgndLOCI5HXtMFQjUnCLFxawfu7GYuTMfrqdPliZOHXkQNg==}
+  nuxthub@0.7.3:
+    resolution: {integrity: sha512-FAD5WDx1o84zEr0sHN0X4TMqHePIxPU8vxvj5ApR2IIlUvCF00F8cmzBPfyD6F3W697r963O41vNhCxV2ajd6w==}
     hasBin: true
 
   nypm@0.3.12:
@@ -6760,7 +6760,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@iconify/vue@4.1.3-beta.1(vue@3.5.12(typescript@5.6.3))':
+  '@iconify/vue@4.2.0-dev.1(vue@3.5.12(typescript@5.6.3))':
     dependencies:
       '@iconify/types': 2.0.0
       vue: 3.5.12(typescript@5.6.3)
@@ -7110,12 +7110,12 @@ snapshots:
       - vite
       - webpack-sources
 
-  '@nuxt/icon@1.7.0(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(sass-embedded@1.80.6)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))':
+  '@nuxt/icon@1.7.2(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(sass-embedded@1.80.6)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))':
     dependencies:
       '@iconify/collections': 1.0.480
       '@iconify/types': 2.0.0
       '@iconify/utils': 2.1.33
-      '@iconify/vue': 4.1.3-beta.1(vue@3.5.12(typescript@5.6.3))
+      '@iconify/vue': 4.2.0-dev.1(vue@3.5.12(typescript@5.6.3))
       '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.10(@types/node@22.9.0)(sass-embedded@1.80.6)(terser@5.36.0))
       '@nuxt/kit': 3.14.159(magicast@0.3.5)(rollup@4.24.4)
       consola: 3.2.3
@@ -11104,7 +11104,7 @@ snapshots:
 
   nuxt-component-meta@0.9.0(magicast@0.3.5)(rollup@4.24.4):
     dependencies:
-      '@nuxt/kit': 3.14.0(magicast@0.3.5)(rollup@4.24.4)
+      '@nuxt/kit': 3.14.159(magicast@0.3.5)(rollup@4.24.4)
       citty: 0.1.6
       mlly: 1.7.2
       scule: 1.3.0
@@ -11417,7 +11417,7 @@ snapshots:
       - webpack-sources
       - xml2js
 
-  nuxthub@0.7.2(ioredis@5.4.1)(magicast@0.3.5):
+  nuxthub@0.7.3(ioredis@5.4.1)(magicast@0.3.5):
     dependencies:
       '@clack/prompts': 0.7.0
       blake3-wasm: 2.1.5
