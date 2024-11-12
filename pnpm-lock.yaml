@@ -109,14 +109,14 @@ importers:
         specifier: ^1.2.4
         version: 1.2.4
       '@iconify-json/devicon':
-        specifier: ^1.2.4
-        version: 1.2.4
+        specifier: ^1.2.5
+        version: 1.2.5
       '@iconify-json/logos':
         specifier: ^1.2.3
         version: 1.2.3
       '@iconify-json/lucide':
-        specifier: ^1.2.13
-        version: 1.2.13
+        specifier: ^1.2.14
+        version: 1.2.14
       '@iconify-json/mingcute':
         specifier: ^1.2.1
         version: 1.2.1
@@ -917,14 +917,14 @@ packages:
   '@iconify-json/carbon@1.2.4':
     resolution: {integrity: sha512-DhW2jjMVGwV0DLHc0cmDYohdtGxMra8UuwgjHrryPy+rQX4gXhJwCBBVP2h2UG/92AoRCTn7zUJve4WvY5MLYg==}
 
-  '@iconify-json/devicon@1.2.4':
-    resolution: {integrity: sha512-DrYBFGycCW2wAloxxHEDIFuqv9lUYIn6FVbSx/l7ZqhO9rDtD8jLECS+mfn/BTRBs4/uH8wzB0sYPHXulP8aLQ==}
+  '@iconify-json/devicon@1.2.5':
+    resolution: {integrity: sha512-yDx5UDO/W6ySfc68q5i+RaGenXYcEgawdgVx4CZEV6tVdbT6LwrFwRF/hvds26bu4HhR3bQeB0czGUeahw/TEQ==}
 
   '@iconify-json/logos@1.2.3':
     resolution: {integrity: sha512-JLHS5hgZP1b55EONAWNeqBUuriRfRNKWXK4cqYx0PpVaJfIIMiiMxFfvoQiX/bkE9XgkLhcKmDUqL3LXPdXPwQ==}
 
-  '@iconify-json/lucide@1.2.13':
-    resolution: {integrity: sha512-hBRp3kZiy71YtAjKV48p1LRZMQmFKKBkjGWV2v2MWUOuMxIMo0Bp1KPJhCXCYwB0xZLTdi3iED4JjamwMSp3AQ==}
+  '@iconify-json/lucide@1.2.14':
+    resolution: {integrity: sha512-NDJKk1NQRNymlr5B5uiWBRc3RAZ8r+8A1F4SU+60udy05V0GwILAnoJvlg6oY0WZBhqb/ChaU1LWm1XHmJ4DEg==}
 
   '@iconify-json/mingcute@1.2.1':
     resolution: {integrity: sha512-rv682dBsjKUs1/AVg5tOegAunjCLuqyQufXU0D6Kbmgg5jMoUcl/9K2C+9MAiepBP0Eyb05YwXQvGaXMLPu/YA==}
@@ -6714,7 +6714,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/devicon@1.2.4':
+  '@iconify-json/devicon@1.2.5':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -6722,7 +6722,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/lucide@1.2.13':
+  '@iconify-json/lucide@1.2.14':
     dependencies:
       '@iconify/types': 2.0.0
 
