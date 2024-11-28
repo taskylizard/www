@@ -78,8 +78,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.81.0)(terser@5.36.0))(vue@3.5.13(typescript@5.7.2))
       nuxt-time:
-        specifier: ^1.0.2
-        version: 1.0.2(magicast@0.3.5)(nuxt@3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(sass-embedded@1.81.0)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.81.0)(terser@5.36.0)))(rollup@4.24.4)
+        specifier: ^1.0.3
+        version: 1.0.3(magicast@0.3.5)(nuxt@3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(sass-embedded@1.81.0)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.81.0)(terser@5.36.0)))(rollup@4.24.4)
       nuxt-typed-router:
         specifier: ^3.7.1
         version: 3.7.1(magicast@0.3.5)(prettier@3.3.3)(rollup@4.24.4)
@@ -4308,8 +4308,8 @@ packages:
   nuxt-site-config@2.2.21:
     resolution: {integrity: sha512-VsHpR4socGrlRPjyg2F8JqbirBqH4yCkTQa60fj7saqKMPW1VcRROn21OJzfTHDpjeD+KayRdR3FB0Jxk9WFNA==}
 
-  nuxt-time@1.0.2:
-    resolution: {integrity: sha512-mSJq5W1Z5d9EhuV/cvaAhfhwwqqtqD3n9ClLQbM7F473ic0gBZnppTJsA7f20wfm8Sz+Q1dZHhfU7gqhQ9lbgg==}
+  nuxt-time@1.0.3:
+    resolution: {integrity: sha512-aD5Yv18IIKX08ED9B+Hd2rSDewcV40qNxUursdtJFaKFhLLZWPQF8TR2d/P523erPlqht2OvxSN3iyGhUJJy/g==}
     peerDependencies:
       nuxt: '>=3.12.0'
 
@@ -11660,12 +11660,10 @@ snapshots:
       - vue
       - webpack-sources
 
-  nuxt-time@1.0.2(magicast@0.3.5)(nuxt@3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(sass-embedded@1.81.0)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.81.0)(terser@5.36.0)))(rollup@4.24.4):
+  nuxt-time@1.0.3(magicast@0.3.5)(nuxt@3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(sass-embedded@1.81.0)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.81.0)(terser@5.36.0)))(rollup@4.24.4):
     dependencies:
-      '@nuxt/kit': 3.14.0(magicast@0.3.5)(rollup@4.24.4)
-      defu: 6.1.4
+      '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
       nuxt: 3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(sass-embedded@1.81.0)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.81.0)(terser@5.36.0))
-      pathe: 1.1.2
     transitivePeerDependencies:
       - magicast
       - rollup

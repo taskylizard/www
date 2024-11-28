@@ -35,7 +35,7 @@
     "nuxt-content-twoslash": "^0.1.2",
     "nuxt-link-checker": "^3.2.0",
     "nuxt-og-image": "^3.1.1",
-    "nuxt-time": "^1.0.2",
+    "nuxt-time": "^1.0.3",
     "nuxt-typed-router": "^3.7.1",
     "radix-vue": "^1.9.10",
     "sass-embedded": "^1.81.0",
@@ -62,5 +62,5 @@
     "typescript": "^5.7.2",
     "wrangler": "^3.91.0"
   },
-  "packageManager": "pnpm@9.14.2"
+  "packageManager": "pnpm@9.14.3"
 }
