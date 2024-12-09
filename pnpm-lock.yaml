@@ -51,8 +51,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       '@shikijs/transformers':
-        specifier: ^1.24.0
-        version: 1.24.0
+        specifier: ^1.24.1
+        version: 1.24.1
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.16)
@@ -109,8 +109,8 @@ importers:
         specifier: ^1.2.4
         version: 1.2.4
       '@iconify-json/devicon':
-        specifier: ^1.2.7
-        version: 1.2.7
+        specifier: ^1.2.8
+        version: 1.2.8
       '@iconify-json/logos':
         specifier: ^1.2.3
         version: 1.2.3
@@ -124,14 +124,14 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1
       '@iconify-json/simple-icons':
-        specifier: ^1.2.14
-        version: 1.2.14
+        specifier: ^1.2.15
+        version: 1.2.15
       '@iconify-json/skill-icons':
         specifier: ^1.2.0
         version: 1.2.0
       '@shikijs/types':
-        specifier: ^1.24.0
-        version: 1.24.0
+        specifier: ^1.24.1
+        version: 1.24.1
       '@types/hast':
         specifier: ^3.0.4
         version: 3.0.4
@@ -927,8 +927,8 @@ packages:
   '@iconify-json/carbon@1.2.4':
     resolution: {integrity: sha512-DhW2jjMVGwV0DLHc0cmDYohdtGxMra8UuwgjHrryPy+rQX4gXhJwCBBVP2h2UG/92AoRCTn7zUJve4WvY5MLYg==}
 
-  '@iconify-json/devicon@1.2.7':
-    resolution: {integrity: sha512-UZCl7w8h2uirbcqHtf3mjlynk3kRJ1s2I1Hqeu5DRHm8tsSOkR4tkTa+VTMxQooyiPBM45Xu/ouBGWzY12G+eQ==}
+  '@iconify-json/devicon@1.2.8':
+    resolution: {integrity: sha512-bFR+zEhb5Drz2XSYCPn7Sjbfq3ld6arbhy8QjdP2MxOjOdY9VcDi1lPTt88/cPqPHcI/xeDh51RcwfjvxLyJOQ==}
 
   '@iconify-json/logos@1.2.3':
     resolution: {integrity: sha512-JLHS5hgZP1b55EONAWNeqBUuriRfRNKWXK4cqYx0PpVaJfIIMiiMxFfvoQiX/bkE9XgkLhcKmDUqL3LXPdXPwQ==}
@@ -942,8 +942,8 @@ packages:
   '@iconify-json/radix-icons@1.2.1':
     resolution: {integrity: sha512-glzHFq3Sj9QKUQG7u2dnlC+KPJGpGM1GhyUIrFFWhXqr9CZgkUPnF5n/6YlbCkYGMa+feSwdhwroLTfKvaAaVA==}
 
-  '@iconify-json/simple-icons@1.2.14':
-    resolution: {integrity: sha512-zLqb48pM1B5vegMBDouyv7FzrROV5HRIjDpl+/PKjY3P7AeSySaOeT6mzutF6hDZCJvn1J7qQ7lug3FOgegiiA==}
+  '@iconify-json/simple-icons@1.2.15':
+    resolution: {integrity: sha512-4vxMQwkjsbjVIVGsPjKBnLMqAXu4wSlHmeN35KaJLK0UJNUj/ef6ES5c4bT/U4bSZjD2oZqOjOWTPD+HCrSUkg==}
 
   '@iconify-json/skill-icons@1.2.0':
     resolution: {integrity: sha512-5zlPrzF5pelV1wut7C88zmAiYONvGxvFw11dXW1Pr1oIhUOtYhC7x3zkErSTFkyZ3m5fEgcEUrcO1W3UhNJVpw==}
@@ -1560,6 +1560,9 @@ packages:
   '@shikijs/core@1.24.0':
     resolution: {integrity: sha512-6pvdH0KoahMzr6689yh0QJ3rCgF4j1XsXRHNEeEN6M4xJTfQ6QPWrmHzIddotg+xPJUPEPzYzYCKzpYyhTI6Gw==}
 
+  '@shikijs/core@1.24.1':
+    resolution: {integrity: sha512-3q/9oarMVcLqJ+NQOdKL40dJVq/UKCsiWXz3QRQPBglHqa8dDJ0p6TuMuk2gHphy5FZcvFtg4UHBgpW0JtZ8+A==}
+
   '@shikijs/engine-javascript@1.22.2':
     resolution: {integrity: sha512-iOvql09ql6m+3d1vtvP8fLCVCK7BQD1pJFmHIECsujB0V32BJ0Ab6hxk1ewVSMFA58FI0pR2Had9BKZdyQrxTw==}
 
@@ -1568,6 +1571,9 @@ packages:
 
   '@shikijs/engine-javascript@1.24.0':
     resolution: {integrity: sha512-ZA6sCeSsF3Mnlxxr+4wGEJ9Tto4RHmfIS7ox8KIAbH0MTVUkw3roHPHZN+LlJMOHJJOVupe6tvuAzRpN8qK1vA==}
+
+  '@shikijs/engine-javascript@1.24.1':
+    resolution: {integrity: sha512-lNgUSHYDYaQ6daj4lJJqcY2Ru9LgHwpFoposJkRVRPh21Yg4kaPFRhzaWoSg3PliwcDOpDuMy3xsmQaJp201Fg==}
 
   '@shikijs/engine-oniguruma@1.22.2':
     resolution: {integrity: sha512-GIZPAGzQOy56mGvWMoZRPggn0dTlBf1gutV5TdceLCZlFNqWmuc7u+CzD0Gd9vQUTgLbrt0KLzz6FNprqYAxlA==}
@@ -1578,8 +1584,11 @@ packages:
   '@shikijs/engine-oniguruma@1.24.0':
     resolution: {integrity: sha512-Eua0qNOL73Y82lGA4GF5P+G2+VXX9XnuUxkiUuwcxQPH4wom+tE39kZpBFXfUuwNYxHSkrSxpB1p4kyRW0moSg==}
 
-  '@shikijs/transformers@1.24.0':
-    resolution: {integrity: sha512-Qf/hby+PRPkoHncjYnJf5svK1aCsOUtQhuLzKPnmeXJtuUZCmbH0pTpdNtXe9tgln/RHlyRJnv7q46HHS1sO0Q==}
+  '@shikijs/engine-oniguruma@1.24.1':
+    resolution: {integrity: sha512-KdrTIBIONWd+Xs61eh8HdIpfigtrseat9dpARvaOe2x0g/FNTbwbkGr3y92VSOVD1XotzEskh3v/nCzyWjkf7g==}
+
+  '@shikijs/transformers@1.24.1':
+    resolution: {integrity: sha512-IQmk8o0RNlaQ3Ig0Urx4bfen/zvS5St6as7o0q+bTDfbuFjqUMNjoMMKMN1Lu66mAh83seURwPLi2EjjLTD6+w==}
 
   '@shikijs/twoslash@1.23.1':
     resolution: {integrity: sha512-Qj/+CGAF6TdcRjPDQn1bxyKD8ejnV7VJLqCHzob1uCbwQlJTI5z0gUVAgpqS55z4vdV1Mrx2IpCTl9glhC0l3A==}
@@ -1592,6 +1601,9 @@ packages:
 
   '@shikijs/types@1.24.0':
     resolution: {integrity: sha512-aptbEuq1Pk88DMlCe+FzXNnBZ17LCiLIGWAeCWhoFDzia5Q5Krx3DgnULLiouSdd6+LUM39XwXGppqYE0Ghtug==}
+
+  '@shikijs/types@1.24.1':
+    resolution: {integrity: sha512-ZwZFbShFY/APfKNt3s9Gv8rhTm29GodSKsOW66X6N+HGsZuaHalE1VUEX4fv93UXHTZTLjb3uxn63F96RhGfXw==}
 
   '@shikijs/vitepress-twoslash@1.23.1':
     resolution: {integrity: sha512-L67HkzDkbECjYdWxQA9BuKAIB0c7eaa+7sD6dZUQ6/cdJGiWvaPLYMRwMWZQ4ToRsz1X6MQmOKQp6Xb6FEc3Bg==}
@@ -5332,6 +5344,9 @@ packages:
   shiki@1.24.0:
     resolution: {integrity: sha512-qIneep7QRwxRd5oiHb8jaRzH15V/S8F3saCXOdjwRLgozZJr5x2yeBhQtqkO3FSzQDwYEFAYuifg4oHjpDghrg==}
 
+  shiki@1.24.1:
+    resolution: {integrity: sha512-/qByWMg05+POb63c/OvnrU17FcCUa34WU4F6FCrd/mjDPEDPl8YUNRkRMbo8l3iYMLydfCgxi1r37JFoSw8A4A==}
+
   signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
 
@@ -6923,7 +6938,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/devicon@1.2.7':
+  '@iconify-json/devicon@1.2.8':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -6943,7 +6958,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/simple-icons@1.2.14':
+  '@iconify-json/simple-icons@1.2.15':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -7709,7 +7724,7 @@ snapshots:
   '@nuxtjs/mdc@0.10.0(magicast@0.3.5)(rollup@4.24.4)':
     dependencies:
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
-      '@shikijs/transformers': 1.24.0
+      '@shikijs/transformers': 1.24.1
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       '@vue/compiler-core': 3.5.13
@@ -7752,7 +7767,7 @@ snapshots:
   '@nuxtjs/mdc@0.9.5(magicast@0.3.5)(rollup@4.24.4)':
     dependencies:
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
-      '@shikijs/transformers': 1.24.0
+      '@shikijs/transformers': 1.24.1
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       '@vue/compiler-core': 3.5.13
@@ -8154,6 +8169,15 @@ snapshots:
       '@types/hast': 3.0.4
       hast-util-to-html: 9.0.3
 
+  '@shikijs/core@1.24.1':
+    dependencies:
+      '@shikijs/engine-javascript': 1.24.1
+      '@shikijs/engine-oniguruma': 1.24.1
+      '@shikijs/types': 1.24.1
+      '@shikijs/vscode-textmate': 9.3.0
+      '@types/hast': 3.0.4
+      hast-util-to-html: 9.0.3
+
   '@shikijs/engine-javascript@1.22.2':
     dependencies:
       '@shikijs/types': 1.22.2
@@ -8172,6 +8196,12 @@ snapshots:
       '@shikijs/vscode-textmate': 9.3.0
       oniguruma-to-es: 0.7.0
 
+  '@shikijs/engine-javascript@1.24.1':
+    dependencies:
+      '@shikijs/types': 1.24.1
+      '@shikijs/vscode-textmate': 9.3.0
+      oniguruma-to-es: 0.7.0
+
   '@shikijs/engine-oniguruma@1.22.2':
     dependencies:
       '@shikijs/types': 1.22.2
@@ -8187,9 +8217,14 @@ snapshots:
       '@shikijs/types': 1.24.0
       '@shikijs/vscode-textmate': 9.3.0
 
-  '@shikijs/transformers@1.24.0':
+  '@shikijs/engine-oniguruma@1.24.1':
     dependencies:
-      shiki: 1.24.0
+      '@shikijs/types': 1.24.1
+      '@shikijs/vscode-textmate': 9.3.0
+
+  '@shikijs/transformers@1.24.1':
+    dependencies:
+      shiki: 1.24.1
 
   '@shikijs/twoslash@1.23.1(typescript@5.6.3)':
     dependencies:
@@ -8211,6 +8246,11 @@ snapshots:
       '@types/hast': 3.0.4
 
   '@shikijs/types@1.24.0':
+    dependencies:
+      '@shikijs/vscode-textmate': 9.3.0
+      '@types/hast': 3.0.4
+
+  '@shikijs/types@1.24.1':
     dependencies:
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
@@ -13045,7 +13085,7 @@ snapshots:
   shiki-transformer-color-highlight@0.2.0:
     dependencies:
       '@shikijs/core': 1.22.2
-      '@shikijs/types': 1.24.0
+      '@shikijs/types': 1.24.1
       colorjs.io: 0.5.2
 
   shiki@1.22.2:
@@ -13072,6 +13112,15 @@ snapshots:
       '@shikijs/engine-javascript': 1.24.0
       '@shikijs/engine-oniguruma': 1.24.0
       '@shikijs/types': 1.24.0
+      '@shikijs/vscode-textmate': 9.3.0
+      '@types/hast': 3.0.4
+
+  shiki@1.24.1:
+    dependencies:
+      '@shikijs/core': 1.24.1
+      '@shikijs/engine-javascript': 1.24.1
+      '@shikijs/engine-oniguruma': 1.24.1
+      '@shikijs/types': 1.24.1
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
 
