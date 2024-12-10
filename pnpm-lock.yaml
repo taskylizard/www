@@ -21,8 +21,8 @@ importers:
         specifier: ^0.10.3
         version: 0.10.3(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.82.0)(terser@5.36.0))
       '@nuxt/icon':
-        specifier: ^1.9.1
-        version: 1.9.1(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.82.0)(terser@5.36.0))(vue@3.5.13(typescript@5.7.2))
+        specifier: ^1.10.0
+        version: 1.10.0(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.82.0)(terser@5.36.0))(vue@3.5.13(typescript@5.7.2))
       '@nuxt/image':
         specifier: ^1.8.1
         version: 1.8.1(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.24.4)
@@ -51,8 +51,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       '@shikijs/transformers':
-        specifier: ^1.24.1
-        version: 1.24.1
+        specifier: ^1.24.2
+        version: 1.24.2
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.16)
@@ -81,8 +81,8 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3(magicast@0.3.5)(nuxt@3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.1))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(sass-embedded@1.82.0)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.82.0)(terser@5.36.0)))(rollup@4.24.4)
       nuxt-typed-router:
-        specifier: ^3.7.1
-        version: 3.7.1(magicast@0.3.5)(prettier@3.4.1)(rollup@4.24.4)
+        specifier: ^3.7.2
+        version: 3.7.2(magicast@0.3.5)(prettier@3.4.1)(rollup@4.24.4)
       radix-vue:
         specifier: ^1.9.11
         version: 1.9.11(vue@3.5.13(typescript@5.7.2))
@@ -130,8 +130,8 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       '@shikijs/types':
-        specifier: ^1.24.1
-        version: 1.24.1
+        specifier: ^1.24.2
+        version: 1.24.2
       '@types/hast':
         specifier: ^3.0.4
         version: 3.0.4
@@ -948,17 +948,17 @@ packages:
   '@iconify-json/skill-icons@1.2.0':
     resolution: {integrity: sha512-5zlPrzF5pelV1wut7C88zmAiYONvGxvFw11dXW1Pr1oIhUOtYhC7x3zkErSTFkyZ3m5fEgcEUrcO1W3UhNJVpw==}
 
-  '@iconify/collections@1.0.484':
-    resolution: {integrity: sha512-b/6PlgO0BDx8ElxiceLtYigSQcKAXFPNAU8d4rOLtRvdkda1HOnAsPIqCSeuYHe3H5d9n9tdukLXM9Yv9bkgfA==}
+  '@iconify/collections@1.0.492':
+    resolution: {integrity: sha512-feMan3gInpf7kXbYtQjErLx36UIpHyJyanhbEeNLsAl+za8STeyJsqCMpz9lDC6C3fL26wWsyJDXPYW1kUDV7A==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
-  '@iconify/utils@2.1.33':
-    resolution: {integrity: sha512-jP9h6v/g0BIZx0p7XGJJVtkVnydtbgTgt9mVNcGDYwaa7UhdHdI9dvoq+gKj9sijMSJKxUPEG2JyjsgXjxL7Kw==}
+  '@iconify/utils@2.2.0':
+    resolution: {integrity: sha512-9A5eZQV9eKlNCXlI/SgYsGRS7YmGmB1oAsRpNVIYBmIzGJRgH+hfG+lo4069s+GFWFNnBAtDg10c53vQZBLfnA==}
 
-  '@iconify/vue@4.2.0-dev.2':
-    resolution: {integrity: sha512-fHsLaBaegrXyshUR2j9sV4TXkTgRQ9FhQ9PIqWgW/dFTPcMe2uEtUr1H9XQaDTpN8F9chnVqhLH8FT9asTDaSQ==}
+  '@iconify/vue@4.2.0':
+    resolution: {integrity: sha512-CMynoz9BDWugDO2B7LU/s8L99dHCiqDGCjCki6bhVx5etZhw9x0BTV7wWRdj82jtl1yQTc+QQRcHQmSvUY6R+g==}
     peerDependencies:
       vue: '>=3'
 
@@ -1112,8 +1112,8 @@ packages:
   '@nuxt/fonts@0.10.3':
     resolution: {integrity: sha512-wLCQ+olKZtClVmMEgjsNNDfcNCmyhIv8eujcWYYoFiv1Csy1ySqjI2+1Kq7wwaJhWl4sU83KQC2lLdiMuEeHCw==}
 
-  '@nuxt/icon@1.9.1':
-    resolution: {integrity: sha512-kxhNAFRhjZuANy4vkPhRu2EG8MHLitBc3l/MY4vrUHzuaBRb8fyYZvOuMkligovLn0fsfhivWS2WG3yawCzBEA==}
+  '@nuxt/icon@1.10.0':
+    resolution: {integrity: sha512-Mbb6LzOT6IdVKlGUTZykS+igwHDEbhKilyzNVOg7R2HoSzyb36YDzekGSphexRrKZweGOa1m3lGHCKHlwX1tcQ==}
 
   '@nuxt/image@1.8.1':
     resolution: {integrity: sha512-qNj7OCNsoGcutGOo1R2PYp4tQ/6uD77aSakyDoVAmLSRJBmhFTnT2+gIqVD95JMmkSHgYhmSX4gGxnaQK/t1cw==}
@@ -1560,6 +1560,9 @@ packages:
   '@shikijs/core@1.24.1':
     resolution: {integrity: sha512-3q/9oarMVcLqJ+NQOdKL40dJVq/UKCsiWXz3QRQPBglHqa8dDJ0p6TuMuk2gHphy5FZcvFtg4UHBgpW0JtZ8+A==}
 
+  '@shikijs/core@1.24.2':
+    resolution: {integrity: sha512-BpbNUSKIwbKrRRA+BQj0BEWSw+8kOPKDJevWeSE/xIqGX7K0xrCZQ9kK0nnEQyrzsUoka1l81ZtJ2mGaCA32HQ==}
+
   '@shikijs/engine-javascript@1.22.2':
     resolution: {integrity: sha512-iOvql09ql6m+3d1vtvP8fLCVCK7BQD1pJFmHIECsujB0V32BJ0Ab6hxk1ewVSMFA58FI0pR2Had9BKZdyQrxTw==}
 
@@ -1568,6 +1571,9 @@ packages:
 
   '@shikijs/engine-javascript@1.24.1':
     resolution: {integrity: sha512-lNgUSHYDYaQ6daj4lJJqcY2Ru9LgHwpFoposJkRVRPh21Yg4kaPFRhzaWoSg3PliwcDOpDuMy3xsmQaJp201Fg==}
+
+  '@shikijs/engine-javascript@1.24.2':
+    resolution: {integrity: sha512-EqsmYBJdLEwEiO4H+oExz34a5GhhnVp+jH9Q/XjPjmBPc6TE/x4/gD0X3i0EbkKKNqXYHHJTJUpOLRQNkEzS9Q==}
 
   '@shikijs/engine-oniguruma@1.22.2':
     resolution: {integrity: sha512-GIZPAGzQOy56mGvWMoZRPggn0dTlBf1gutV5TdceLCZlFNqWmuc7u+CzD0Gd9vQUTgLbrt0KLzz6FNprqYAxlA==}
@@ -1578,8 +1584,11 @@ packages:
   '@shikijs/engine-oniguruma@1.24.1':
     resolution: {integrity: sha512-KdrTIBIONWd+Xs61eh8HdIpfigtrseat9dpARvaOe2x0g/FNTbwbkGr3y92VSOVD1XotzEskh3v/nCzyWjkf7g==}
 
-  '@shikijs/transformers@1.24.1':
-    resolution: {integrity: sha512-IQmk8o0RNlaQ3Ig0Urx4bfen/zvS5St6as7o0q+bTDfbuFjqUMNjoMMKMN1Lu66mAh83seURwPLi2EjjLTD6+w==}
+  '@shikijs/engine-oniguruma@1.24.2':
+    resolution: {integrity: sha512-ZN6k//aDNWRJs1uKB12pturKHh7GejKugowOFGAuG7TxDRLod1Bd5JhpOikOiFqPmKjKEPtEA6mRCf7q3ulDyQ==}
+
+  '@shikijs/transformers@1.24.2':
+    resolution: {integrity: sha512-cIwn8YSwO3bsWKJ+pezcXY1Vq0BVwvuLes1TZSC5+Awi6Tsfqhf3vBahOIqZK1rraMKOti2VEAEF/95oXMig1w==}
 
   '@shikijs/twoslash@1.23.1':
     resolution: {integrity: sha512-Qj/+CGAF6TdcRjPDQn1bxyKD8ejnV7VJLqCHzob1uCbwQlJTI5z0gUVAgpqS55z4vdV1Mrx2IpCTl9glhC0l3A==}
@@ -1592,6 +1601,9 @@ packages:
 
   '@shikijs/types@1.24.1':
     resolution: {integrity: sha512-ZwZFbShFY/APfKNt3s9Gv8rhTm29GodSKsOW66X6N+HGsZuaHalE1VUEX4fv93UXHTZTLjb3uxn63F96RhGfXw==}
+
+  '@shikijs/types@1.24.2':
+    resolution: {integrity: sha512-bdeWZiDtajGLG9BudI0AHet0b6e7FbR0EsE4jpGaI0YwHm/XJunI9+3uZnzFtX65gsyJ6ngCIWUfA4NWRPnBkQ==}
 
   '@shikijs/vitepress-twoslash@1.23.1':
     resolution: {integrity: sha512-L67HkzDkbECjYdWxQA9BuKAIB0c7eaa+7sD6dZUQ6/cdJGiWvaPLYMRwMWZQ4ToRsz1X6MQmOKQp6Xb6FEc3Bg==}
@@ -2638,6 +2650,15 @@ packages:
       supports-color:
         optional: true
 
+  debug@4.4.0:
+    resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
   decode-named-character-reference@1.0.2:
     resolution: {integrity: sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==}
 
@@ -3273,6 +3294,10 @@ packages:
 
   globals@15.12.0:
     resolution: {integrity: sha512-1+gLErljJFhbOVyaetcwJiJ4+eLe45S2E7P5UiZ9xGfeq3ATQf5DOv9G7MH3gGbKQLkzmNh2DxfZwLdw+j6oTQ==}
+    engines: {node: '>=18'}
+
+  globals@15.13.0:
+    resolution: {integrity: sha512-49TewVEz0UxZjr1WYYsWpPrhyC/B/pA8Bq0fUmet2n+eR7yn0IvNzNaoBwnK6mdkzcN+se7Ez9zUgULTz2QH4g==}
     engines: {node: '>=18'}
 
   globby@14.0.2:
@@ -4364,8 +4389,8 @@ packages:
     peerDependencies:
       nuxt: '>=3.12.0'
 
-  nuxt-typed-router@3.7.1:
-    resolution: {integrity: sha512-4hlPVT18JqlXmM6mgKciOH8DQg6FldkccBN6JQV7+fkPkwVNkzfNwGdlS96LcMeyRQZpayN8SCgPz7cOHYvYFw==}
+  nuxt-typed-router@3.7.2:
+    resolution: {integrity: sha512-1gYVEO6A1XNZAvuWF5JQEOczRku1aR1wJ+FK+07SWDWIa2xUjuCEurOB3ik2FcZ8Fgr+W1LMIpO7I5HK+1EHOw==}
     peerDependencies:
       prettier: ^2.5.x || 3.x
 
@@ -5364,6 +5389,9 @@ packages:
 
   shiki@1.24.1:
     resolution: {integrity: sha512-/qByWMg05+POb63c/OvnrU17FcCUa34WU4F6FCrd/mjDPEDPl8YUNRkRMbo8l3iYMLydfCgxi1r37JFoSw8A4A==}
+
+  shiki@1.24.2:
+    resolution: {integrity: sha512-TR1fi6mkRrzW+SKT5G6uKuc32Dj2EEa7Kj0k8kGqiBINb+C1TiflVOiT9ta6GqOJtC4fraxO5SLUaKBcSY38Fg==}
 
   signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
@@ -6990,25 +7018,26 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/collections@1.0.484':
+  '@iconify/collections@1.0.492':
     dependencies:
       '@iconify/types': 2.0.0
 
   '@iconify/types@2.0.0': {}
 
-  '@iconify/utils@2.1.33':
+  '@iconify/utils@2.2.0':
     dependencies:
       '@antfu/install-pkg': 0.4.1
       '@antfu/utils': 0.7.10
       '@iconify/types': 2.0.0
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0
+      globals: 15.13.0
       kolorist: 1.8.0
       local-pkg: 0.5.1
       mlly: 1.7.3
     transitivePeerDependencies:
       - supports-color
 
-  '@iconify/vue@4.2.0-dev.2(vue@3.5.13(typescript@5.7.2))':
+  '@iconify/vue@4.2.0(vue@3.5.13(typescript@5.7.2))':
     dependencies:
       '@iconify/types': 2.0.0
       vue: 3.5.13(typescript@5.7.2)
@@ -7384,12 +7413,12 @@ snapshots:
       - supports-color
       - vite
 
-  '@nuxt/icon@1.9.1(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.82.0)(terser@5.36.0))(vue@3.5.13(typescript@5.7.2))':
+  '@nuxt/icon@1.10.0(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.82.0)(terser@5.36.0))(vue@3.5.13(typescript@5.7.2))':
     dependencies:
-      '@iconify/collections': 1.0.484
+      '@iconify/collections': 1.0.492
       '@iconify/types': 2.0.0
-      '@iconify/utils': 2.1.33
-      '@iconify/vue': 4.2.0-dev.2(vue@3.5.13(typescript@5.7.2))
+      '@iconify/utils': 2.2.0
+      '@iconify/vue': 4.2.0(vue@3.5.13(typescript@5.7.2))
       '@nuxt/devtools-kit': 1.6.3(magicast@0.3.5)(rollup@4.24.4)(vite@5.4.11(@types/node@22.9.0)(sass-embedded@1.82.0)(terser@5.36.0))
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
       consola: 3.2.3
@@ -7748,7 +7777,7 @@ snapshots:
   '@nuxtjs/mdc@0.11.1(magicast@0.3.5)(rollup@4.24.4)':
     dependencies:
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
-      '@shikijs/transformers': 1.24.1
+      '@shikijs/transformers': 1.24.2
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       '@vue/compiler-core': 3.5.13
@@ -7796,7 +7825,7 @@ snapshots:
   '@nuxtjs/mdc@0.9.5(magicast@0.3.5)(rollup@4.24.4)':
     dependencies:
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
-      '@shikijs/transformers': 1.24.1
+      '@shikijs/transformers': 1.24.2
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       '@vue/compiler-core': 3.5.13
@@ -8198,6 +8227,15 @@ snapshots:
       '@types/hast': 3.0.4
       hast-util-to-html: 9.0.3
 
+  '@shikijs/core@1.24.2':
+    dependencies:
+      '@shikijs/engine-javascript': 1.24.2
+      '@shikijs/engine-oniguruma': 1.24.2
+      '@shikijs/types': 1.24.2
+      '@shikijs/vscode-textmate': 9.3.0
+      '@types/hast': 3.0.4
+      hast-util-to-html: 9.0.3
+
   '@shikijs/engine-javascript@1.22.2':
     dependencies:
       '@shikijs/types': 1.22.2
@@ -8216,6 +8254,12 @@ snapshots:
       '@shikijs/vscode-textmate': 9.3.0
       oniguruma-to-es: 0.7.0
 
+  '@shikijs/engine-javascript@1.24.2':
+    dependencies:
+      '@shikijs/types': 1.24.2
+      '@shikijs/vscode-textmate': 9.3.0
+      oniguruma-to-es: 0.7.0
+
   '@shikijs/engine-oniguruma@1.22.2':
     dependencies:
       '@shikijs/types': 1.22.2
@@ -8231,9 +8275,14 @@ snapshots:
       '@shikijs/types': 1.24.1
       '@shikijs/vscode-textmate': 9.3.0
 
-  '@shikijs/transformers@1.24.1':
+  '@shikijs/engine-oniguruma@1.24.2':
     dependencies:
-      shiki: 1.24.1
+      '@shikijs/types': 1.24.2
+      '@shikijs/vscode-textmate': 9.3.0
+
+  '@shikijs/transformers@1.24.2':
+    dependencies:
+      shiki: 1.24.2
 
   '@shikijs/twoslash@1.23.1(typescript@5.6.3)':
     dependencies:
@@ -8255,6 +8304,11 @@ snapshots:
       '@types/hast': 3.0.4
 
   '@shikijs/types@1.24.1':
+    dependencies:
+      '@shikijs/vscode-textmate': 9.3.0
+      '@types/hast': 3.0.4
+
+  '@shikijs/types@1.24.2':
     dependencies:
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
@@ -9512,6 +9566,10 @@ snapshots:
     optionalDependencies:
       supports-color: 9.4.0
 
+  debug@4.4.0:
+    dependencies:
+      ms: 2.1.3
+
   decode-named-character-reference@1.0.2:
     dependencies:
       character-entities: 2.0.2
@@ -10292,6 +10350,8 @@ snapshots:
   globals@14.0.0: {}
 
   globals@15.12.0: {}
+
+  globals@15.13.0: {}
 
   globby@14.0.2:
     dependencies:
@@ -11880,7 +11940,7 @@ snapshots:
       - rollup
       - supports-color
 
-  nuxt-typed-router@3.7.1(magicast@0.3.5)(prettier@3.4.1)(rollup@4.24.4):
+  nuxt-typed-router@3.7.2(magicast@0.3.5)(prettier@3.4.1)(rollup@4.24.4):
     dependencies:
       '@nuxt/kit': 3.14.1592(magicast@0.3.5)(rollup@4.24.4)
       chalk: 5.3.0
@@ -13167,7 +13227,7 @@ snapshots:
   shiki-transformer-color-highlight@0.2.0:
     dependencies:
       '@shikijs/core': 1.22.2
-      '@shikijs/types': 1.24.1
+      '@shikijs/types': 1.24.2
       colorjs.io: 0.5.2
 
   shiki@1.22.2:
@@ -13194,6 +13254,15 @@ snapshots:
       '@shikijs/engine-javascript': 1.24.1
       '@shikijs/engine-oniguruma': 1.24.1
       '@shikijs/types': 1.24.1
+      '@shikijs/vscode-textmate': 9.3.0
+      '@types/hast': 3.0.4
+
+  shiki@1.24.2:
+    dependencies:
+      '@shikijs/core': 1.24.2
+      '@shikijs/engine-javascript': 1.24.2
+      '@shikijs/engine-oniguruma': 1.24.2
+      '@shikijs/types': 1.24.2
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
 
