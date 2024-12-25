@@ -49,14 +49,12 @@ useSeoMeta({
         <div class="flex gap-1">
           <Social to="https://github.com/taskylizard" icon="carbon:logo-github" label="Github" accent="olive" />
         </div>
-
-        <div class="flex gap-1">
-          <a href="https://notbyai.fyi">
-            <img src="/not-by-ai-light.svg" class="dark:hidden" alt="Written by Human, Not by AI">
-            <img src="/not-by-ai-dark.svg" class="hidden dark:block" alt="Written by Human, Not by AI">
-          </a>
-        </div>
       </div>
+
+      <a href="https://notbyai.fyi">
+        <img src="/not-by-ai-light.svg" class="dark:hidden" alt="Written by Human, Not by AI">
+        <img src="/not-by-ai-dark.svg" class="hidden dark:block" alt="Written by Human, Not by AI">
+      </a>
     </footer>
   </main>
 </template>
