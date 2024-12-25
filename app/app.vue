@@ -20,33 +20,21 @@ useSeoMeta({
 </script>
 
 <template>
-  <NuxtLoadingIndicator
-    :color="false"
-    class="bg-[#ff91af]"
-  />
+  <NuxtLoadingIndicator :color="false" class="bg-[#ff91af]" />
   <NuxtRouteAnnouncer />
   <Navigation />
-  <main class="content prose mx-auto max-w-[700px] px-6 py-12 dark:prose-invert focus:outline-none prose-a:decoration-dashed hover:prose-a:decoration-solid focus:prose-a:decoration-solid prose-pre:my-0 prose-pre:rounded-lg prose-table:block prose-table:overflow-x-auto prose-table:whitespace-nowrap md:px-6 md:pb-20 md:pt-10">
+  <main
+    class="content prose mx-auto max-w-[700px] px-6 py-12 dark:prose-invert focus:outline-none prose-a:decoration-dashed hover:prose-a:decoration-solid focus:prose-a:decoration-solid prose-pre:my-0 prose-pre:rounded-lg prose-table:block prose-table:overflow-x-auto prose-table:whitespace-nowrap md:px-6 md:pb-20 md:pt-10"
+  >
     <NuxtPage />
-    <footer
-      class="pt-4"
-      aria-label="footer"
-    >
+    <footer class="pt-4" aria-label="footer">
       <p class="pt-2">
         &copy; taskylizard, CC BY-NC-SA 4.0
       </p>
 
-      <div
-        class="flex flex-row flex-wrap gap-1 pt-2 prose-a:no-underline"
-        aria-label="footer links"
-      >
+      <div class="flex flex-row flex-wrap gap-1 pt-2 prose-a:no-underline" aria-label="footer links">
         <div class="flex gap-1">
-          <Social
-            to="mailto:tasky@fmhy.net"
-            icon="carbon:email"
-            label="Email"
-            accent="crimson"
-          />
+          <Social to="mailto:tasky@fmhy.net" icon="carbon:email" label="Email" accent="crimson" />
         </div>
 
         <div class="flex gap-1">
@@ -59,12 +47,14 @@ useSeoMeta({
         </div>
 
         <div class="flex gap-1">
-          <Social
-            to="https://github.com/taskylizard"
-            icon="carbon:logo-github"
-            label="Github"
-            accent="olive"
-          />
+          <Social to="https://github.com/taskylizard" icon="carbon:logo-github" label="Github" accent="olive" />
+        </div>
+
+        <div class="flex gap-1">
+          <a href="https://notbyai.fyi">
+            <img src="/not-by-ai-light.svg" class="dark:hidden" alt="Written by Human, Not by AI">
+            <img src="/not-by-ai-dark.svg" class="hidden dark:block" alt="Written by Human, Not by AI">
+          </a>
         </div>
       </div>
     </footer>
