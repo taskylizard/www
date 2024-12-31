@@ -57,6 +57,7 @@ useSeoMeta({
       I love writing software that scales, design systems, and try to have fun
       in everyday challenges. Music is love. Shitposter by day, programmer by
       night.
+      <Pronouns />
     </p>
 
     <h2>Posts</h2>
