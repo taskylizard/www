@@ -61,34 +61,20 @@ useSeoMeta({
 
     <h2>Posts</h2>
     <ul>
-      <li
-        v-for="(post, index) of posts"
-        :key="index"
-      >
-        <LinkItem
-          :date="post.date"
-          :text="post.title ?? post.path"
-          :to="post.path"
-        />
+      <li v-for="(post, index) of posts" :key="index">
+        <LinkItem type="post" :title="post.title ?? post.path" :date="post.date" :to="post.path" />
       </li>
     </ul>
 
     <h2>Projects</h2>
     <p>The projects I made, or I'm a core member of sorts.</p>
     <ul>
-      <li
-        v-for="{ name, link, description } of projects"
-        :key="name"
-      >
-        <LinkItem
-          :text="name"
-          :to="link"
-        />
-        <span v-if="description"> — {{ description }}</span>
+      <li v-for="{ name, link, description } of projects" :key="name">
+        <LinkItem type="project" :title="name" :to="link" :description />
       </li>
     </ul>
 
-    <h2>Stack</h2>
+    <h2>Shit I Like 💩</h2>
     <p>Shit I like to use, in no order.</p>
     <ul>
       <li>

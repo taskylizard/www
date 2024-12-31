@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    process.env.NODE_ENV === 'production' ? '@nuxthub/core' : undefined,
+    '@nuxthub/core',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/sitemap',
     '@nuxtjs/color-mode',
@@ -17,7 +17,8 @@ export default defineNuxtConfig({
     'nuxt-link-checker',
     '@vueuse/nuxt',
     'nuxt-time',
-    '@nuxthq/studio'
+    '@nuxthq/studio',
+    'nuxt-server-fn'
   ],
   components: true,
   devtools: { enabled: true },
@@ -83,10 +84,13 @@ export default defineNuxtConfig({
     buildCache: true
   },
   compatibilityDate: '2024-04-03',
+  hub: {
+    database: true
+  },
   vite: {
     css: {
       preprocessorOptions: {
-        sass: {
+        scss: {
           api: 'modern-compiler'
         }
       }

@@ -1,23 +1,3 @@
-<template>
-  <span class="top-0 m-1 size-7 rounded-lg bg-neutral-5 before:bg-neutral-10 hover:bg-neutral-6 hover:before:bg-neutral-11 focus:bg-neutral-6 focus:before:bg-neutral-11 dark:bg-neutral-dark-5 dark:before:bg-neutral-dark-10 dark:hover:bg-neutral-dark-6 dark:hover:before:bg-neutral-dark-11 dark:focus:bg-neutral-dark-6 dark:focus:before:bg-neutral-dark-11">
-    <Transition
-      name="fade"
-      mode="out-in"
-    >
-      <Icon
-        v-if="copied === false"
-        name="radix-icons:copy"
-        @click="handleClick"
-      />
-      <Icon
-        v-else
-        ref="checkIconRef"
-        name="radix-icons:check"
-      />
-    </Transition>
-  </span>
-</template>
-
 <script setup lang="ts">
 const props = defineProps<{
   code: string
@@ -25,14 +5,56 @@ const props = defineProps<{
 
 const { copy } = useClipboard({ source: props.code })
 const copied = ref(false)
+const checkIconRef = ref<HTMLElement>()
 
 async function handleClick() {
   await copy(props.code)
   copied.value = true
 }
 
-const checkIconRef = ref<HTMLElement>()
 onClickOutside(checkIconRef, () => {
   copied.value = false
 })
 </script>
+
+<template>
+  <div class="flex">
+    <Transition
+      name="fade"
+      mode="out-in"
+      enter-active-class="transition-opacity duration-200"
+      leave-active-class="transition-opacity duration-200"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
+    >
+      <div v-if="copied === false">
+        <Icon
+          name="lucide:copy"
+          class="block cursor-pointer self-center text-neutral-11 transition-colors duration-200 hover:text-neutral-12 active:text-neutral-11 dark:text-neutral-dark-11 dark:hover:text-neutral-dark-12 dark:active:text-neutral-dark-11"
+          @click="handleClick"
+        />
+      </div>
+      <div v-else>
+        <Icon
+          ref="checkIconRef"
+          name="lucide:check"
+          class="block cursor-pointer self-center text-neutral-11 transition-colors duration-200 hover:text-neutral-12 active:text-neutral-11 dark:text-neutral-dark-11 dark:hover:text-neutral-dark-12 dark:active:text-neutral-dark-11"
+        />
+      </div>
+    </Transition>
+  </div>
+</template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 200ms ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

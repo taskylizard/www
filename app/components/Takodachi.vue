@@ -1,12 +1,3 @@
-<template>
-  <img
-    id="takodachi"
-    :src="takodachi"
-    class="pointer-events-none absolute z-[9999] size-10 opacity-0 transition-opacity duration-500"
-    :style="{ left: position.x + 'px', top: position.y + 'px' }"
-  >
-</template>
-
 <script setup lang="ts">
 // Thanks to @yellowsink for the original code!! <3
 // https://github.com/uwu/uwu.network/blob/master/src/components/sink/Takodachi.astro
@@ -75,3 +66,12 @@ onMounted(() => {
   })
 })
 </script>
+
+<template>
+  <img
+    id="takodachi"
+    :src="takodachi"
+    class="pointer-events-none absolute z-[9999] size-10 opacity-0 transition-opacity duration-500"
+    :style="{ left: position.x + 'px', top: position.y + 'px' }"
+  >
+</template>

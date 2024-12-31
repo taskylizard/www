@@ -20,7 +20,7 @@ useSeoMeta({
   ogDescription: page.value?.description
 })
 
-const [prev, next] = await queryContent()
+const [next, prev] = await queryContent()
   .only(['_path', 'title', 'description'])
   .sort({ date: -1 })
   .where({ _draft: false })
@@ -50,14 +50,13 @@ const onBackToTop = () => {
               aria-label="Back to top"
               @click="onBackToTop"
             >
-              <Icon
-                name="lucide:chevron-up"
-                class="size-4"
-              />
+              <Icon name="lucide:chevron-up" class="size-4" />
               <span class="text-sm font-medium">Back to Top</span>
             </button>
           </div>
-          <nav class="flex flex-col items-stretch justify-between space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
+          <nav
+            class="flex flex-col items-stretch justify-between space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0"
+          >
             <PrevNextButton :prev />
             <PrevNextButton :next />
           </nav>

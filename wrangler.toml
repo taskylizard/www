@@ -1,0 +1,13 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "sight"
+compatibility_date = "2024-11-12"
+compatibility_flags = ["nodejs_compat"]
+
+
+[vars]
+ACTION_DELAY_MS = 604_800_000
+
+[[d1_databases]]
+binding = "DB"
+database_name = "canvas"
+database_id = "bc4c2ebf-fc17-426f-97b9-a764d966a0a8"

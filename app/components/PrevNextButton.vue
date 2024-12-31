@@ -31,10 +31,7 @@ const description = computed(() =>
     class="not-prose flex flex-1 flex-col justify-between rounded-md bg-neutral-3 p-4 transition duration-300 ease-in-out hover:bg-neutral-4 focus:outline-none focus:ring-2 focus:ring-neutral-5 dark:bg-neutral-dark-3 dark:hover:bg-neutral-dark-4 dark:focus:ring-neutral-dark-5"
   >
     <div class="mb-2 flex items-center text-sm">
-      <Icon
-        :name="icon"
-        class="mr-1 size-4"
-      />
+      <Icon :name="icon" class="mr-1 size-4" />
       <span>{{ text }}</span>
     </div>
     <div>
