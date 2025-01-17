@@ -36,7 +36,7 @@
     "medium-zoom": "^1.1.0",
     "nuxt": "^3.15.2",
     "nuxt-content-twoslash": "^0.1.2",
-    "nuxt-link-checker": "^3.2.0",
+    "nuxt-link-checker": "^4.0.4",
     "nuxt-og-image": "^3.1.1",
     "nuxt-time": "^1.0.3",
     "nuxt-typed-router": "^3.7.3",
