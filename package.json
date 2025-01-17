@@ -15,7 +15,7 @@
   "dependencies": {
     "@antfu/utils": "^8.1.0",
     "@iconify/utils": "^2.2.1",
-    "@nuxt/content": "^2.13.4",
+    "@nuxt/content": "^3.0.0",
     "@nuxt/eslint": "^0.7.5",
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/icon": "^1.10.3",
