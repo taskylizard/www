@@ -49,13 +49,13 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.2.5",
+    "@iconify-json/carbon": "^1.2.6",
     "@iconify-json/devicon": "^1.2.13",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/lucide": "^1.2.25",
     "@iconify-json/mingcute": "^1.2.3",
     "@iconify-json/radix-icons": "^1.2.2",
-    "@iconify-json/simple-icons": "^1.2.22",
+    "@iconify-json/simple-icons": "^1.2.23",
     "@iconify-json/skill-icons": "^1.2.0",
     "@iconify-json/vscode-icons": "^1.2.11",
     "@shikijs/colorized-brackets": "^1.29.2",
