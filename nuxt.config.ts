@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    '@unocss/nuxt',
     '@nuxthub/core',
-    // '@nuxtjs/tailwindcss',
     '@nuxtjs/sitemap',
     '@nuxtjs/color-mode',
     '@nuxt/eslint',
@@ -18,8 +18,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-time',
     '@nuxthq/studio',
-    'nuxt-server-fn',
-    '@unocss/nuxt'
+    'nuxt-server-fn'
   ],
   components: true,
   devtools: { enabled: true },
