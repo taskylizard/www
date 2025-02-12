@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
+defineProps<{ error: NuxtError }>()
+
 useSeoMeta({
   title: 'Page not found',
-  description: 'We are sorry but this page could not be found.'
+  description: 'We are sorry but this page could not be found.',
 })
-
-defineProps<{ error: NuxtError }>()
 </script>
 
 <template>
@@ -20,9 +20,15 @@ defineProps<{ error: NuxtError }>()
     <p class="text-lg">
       We are sorry but this page could not be found.
     </p>
-    <NuxtLink to="/" class="text-neutral-11">
+    <NuxtLink
+      to="/"
+      class="text-neutral-11"
+    >
       <span class="text-neutral-11">Go back home</span>
-      <Icon name="radix-icons:arrow-right" class="inline-block size-4" />
+      <Icon
+        name="radix-icons:arrow-right"
+        class="inline-block size-4"
+      />
     </NuxtLink>
   </div>
 </template>

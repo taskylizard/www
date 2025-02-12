@@ -1,21 +1,21 @@
 import type { Preflight } from 'unocss'
 
-import { blackA, whiteA } from '@radix-ui/colors'
-
 import type {
-  Shade,
+  Alias,
+  Color,
+  ColorsOverlayResult,
+  ColorsResult,
+  ColorValue,
   CustomColorObject,
   RadixColorObject,
-  ColorValue,
-  Color,
-  Alias,
-  ColorsOverlayResult,
-  ColorsResult
+  Shade
 } from './colors'
 
-type BuildOptions<O extends boolean> = { overlay?: O, selector?: 'attribute' | 'class' }
+import { blackA, whiteA } from '@radix-ui/colors'
 
-type BuildResult<A extends string, O extends boolean> = {
+interface BuildOptions<O extends boolean> { overlay?: O, selector?: 'attribute' | 'class' }
+
+interface BuildResult<A extends string, O extends boolean> {
   colors: ColorsResult<A> & (O extends true | undefined ? ColorsOverlayResult : unknown)
   preflight: Preflight
 }
@@ -26,7 +26,7 @@ type BuildResult<A extends string, O extends boolean> = {
  * @returns alias function
  *
  */
-const colorx = <N extends string>(color: Color<N>) => {
+function colorx<N extends string>(color: Color<N>) {
   return {
     /**
      *
@@ -58,7 +58,7 @@ const colorx = <N extends string>(color: Color<N>) => {
               ...aliasentries.reduce((object, [name]) => {
                 object[name as A] = colorobject({
                   key: i => `${i}`,
-                  value: i => `rgb(var(--${name}-${i}))`
+                  value: i => `rgb(var(--${name}-${i}))`,
                 })
                 return object
               }, {} as ColorsResult<A>),
@@ -77,7 +77,7 @@ const colorx = <N extends string>(color: Color<N>) => {
                       9: 'var(--black-9)',
                       10: 'var(--black-10)',
                       11: 'var(--black-11)',
-                      12: 'var(--black-12)'
+                      12: 'var(--black-12)',
                     },
                     white: {
                       DEFAULT: '#ffffff',
@@ -92,10 +92,10 @@ const colorx = <N extends string>(color: Color<N>) => {
                       9: 'var(--white-9)',
                       10: 'var(--white-10)',
                       11: 'var(--white-11)',
-                      12: 'var(--white-12)'
+                      12: 'var(--white-12)',
                     }
                   } as ColorsOverlayResult)
-                : {}) as any)
+                : {}) as any),
             } as any,
             preflight: (() => {
               let css = ''
@@ -106,7 +106,7 @@ const colorx = <N extends string>(color: Color<N>) => {
                   const value = record[key]
                   _css += `${key} {`
                   for (const _key in value) _css += ` ${_key}: ${value[_key]};`
-                  _css += `}`
+                  _css += '}'
                 }
                 css += `${_css}`
               }
@@ -133,20 +133,24 @@ const colorx = <N extends string>(color: Color<N>) => {
 
               const SELECTOR = {
                 theme: (value: string) => {
-                  if (selector === 'attribute') return `[data-theme="${value}"]`
-                  if (selector === 'class') return `.${value}`
-                  console.log(`ERROR : invalid theme selector`)
+                  if (selector === 'attribute')
+                    return `[data-theme="${value}"]`
+                  if (selector === 'class')
+                    return `.${value}`
+                  console.log('ERROR : invalid theme selector')
                 },
                 alias: (name: string, value: string) => {
-                  if (selector === 'attribute') return `[data-alias-${name}="${value}"]`
-                  if (selector === 'class') return `.alias-${name}-${value}`
-                  console.log(`ERROR : invalid alias selector`)
-                }
+                  if (selector === 'attribute')
+                    return `[data-alias-${name}="${value}"]`
+                  if (selector === 'class')
+                    return `.alias-${name}-${value}`
+                  console.log('ERROR : invalid alias selector')
+                },
               }
 
               addBase({
                 [`:root, ${SELECTOR.theme('light')}`]: LIGHT,
-                [`${SELECTOR.theme('dark')}`]: DARK
+                [`${SELECTOR.theme('dark')}`]: DARK,
               })
 
               aliasentries.forEach(([name, color]) => {
@@ -158,18 +162,18 @@ const colorx = <N extends string>(color: Color<N>) => {
                 if (Array.isArray(color)) {
                   color.forEach((value, index) => {
                     addBase({
-                      [[index === 0 && `:root`, `${SELECTOR.alias(name, value)}`].filter(Boolean).join(', ')]: colorobject({
+                      [[index === 0 && ':root', `${SELECTOR.alias(name, value)}`].filter(Boolean).join(', ')]: colorobject({
                         key: i => `--${name}-${i}`,
-                        value: i => `var(--${value}-${i})`
+                        value: i => `var(--${value}-${i})`,
                       })
                     })
                   })
                 }
                 else {
                   addBase({
-                    [`:root`]: colorobject({
+                    ':root': colorobject({
                       key: i => `--${name}-${i}`,
-                      value: i => `var(--${color}-${i})`
+                      value: i => `var(--${color}-${i})`,
                     })
                   })
                 }
@@ -177,43 +181,43 @@ const colorx = <N extends string>(color: Color<N>) => {
 
               if (overlay) {
                 addBase({
-                  [`:root`]: {
-                    '--black-1': blackA['blackA1'],
-                    '--black-2': blackA['blackA2'],
-                    '--black-3': blackA['blackA3'],
-                    '--black-4': blackA['blackA4'],
-                    '--black-5': blackA['blackA5'],
-                    '--black-6': blackA['blackA6'],
-                    '--black-7': blackA['blackA7'],
-                    '--black-8': blackA['blackA8'],
-                    '--black-9': blackA['blackA9'],
-                    '--black-10': blackA['blackA10'],
-                    '--black-11': blackA['blackA11'],
-                    '--black-12': blackA['blackA12'],
-                    '--white-1': whiteA['whiteA1'],
-                    '--white-2': whiteA['whiteA2'],
-                    '--white-3': whiteA['whiteA3'],
-                    '--white-4': whiteA['whiteA4'],
-                    '--white-5': whiteA['whiteA5'],
-                    '--white-6': whiteA['whiteA6'],
-                    '--white-7': whiteA['whiteA7'],
-                    '--white-8': whiteA['whiteA8'],
-                    '--white-9': whiteA['whiteA9'],
-                    '--white-10': whiteA['whiteA10'],
-                    '--white-11': whiteA['whiteA11'],
-                    '--white-12': whiteA['whiteA12']
-                  }
+                  ':root': {
+                    '--black-1': blackA.blackA1,
+                    '--black-2': blackA.blackA2,
+                    '--black-3': blackA.blackA3,
+                    '--black-4': blackA.blackA4,
+                    '--black-5': blackA.blackA5,
+                    '--black-6': blackA.blackA6,
+                    '--black-7': blackA.blackA7,
+                    '--black-8': blackA.blackA8,
+                    '--black-9': blackA.blackA9,
+                    '--black-10': blackA.blackA10,
+                    '--black-11': blackA.blackA11,
+                    '--black-12': blackA.blackA12,
+                    '--white-1': whiteA.whiteA1,
+                    '--white-2': whiteA.whiteA2,
+                    '--white-3': whiteA.whiteA3,
+                    '--white-4': whiteA.whiteA4,
+                    '--white-5': whiteA.whiteA5,
+                    '--white-6': whiteA.whiteA6,
+                    '--white-7': whiteA.whiteA7,
+                    '--white-8': whiteA.whiteA8,
+                    '--white-9': whiteA.whiteA9,
+                    '--white-10': whiteA.whiteA10,
+                    '--white-11': whiteA.whiteA11,
+                    '--white-12': whiteA.whiteA12
+                  },
                 })
               }
 
               return {
-                getCSS: () => css
+                getCSS: () => css,
               }
-            })()
+            })(),
           }
-        }
+        },
       }
-    }
+    },
   }
 }
 

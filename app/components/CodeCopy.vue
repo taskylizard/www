@@ -32,7 +32,7 @@ onClickOutside(checkIconRef, () => {
       <div v-if="copied === false">
         <Icon
           name="lucide:copy"
-          class="block cursor-pointer self-center text-neutral-11 transition-colors duration-200 hover:text-neutral-12 active:text-neutral-11"
+          class="block cursor-pointer self-center text-neutral-11 transition-colors duration-200 active:text-neutral-11 hover:text-neutral-12"
           @click="handleClick"
         />
       </div>
@@ -40,7 +40,7 @@ onClickOutside(checkIconRef, () => {
         <Icon
           ref="checkIconRef"
           name="lucide:check"
-          class="block cursor-pointer self-center text-neutral-11 transition-colors duration-200 hover:text-neutral-12 active:text-neutral-11"
+          class="block cursor-pointer self-center text-neutral-11 transition-colors duration-200 active:text-neutral-11 hover:text-neutral-12"
         />
       </div>
     </Transition>

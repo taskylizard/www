@@ -26,9 +26,9 @@ const [next, prev] = await queryContent()
   .where({ _draft: false })
   .findSurround(useRoute().path)
 
-const onBackToTop = () => {
+function onBackToTop() {
   article.value!.scrollIntoView({
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 }
 </script>
@@ -46,17 +46,18 @@ const onBackToTop = () => {
         <div class="mt-8 space-y-4">
           <div class="flex items-center justify-start">
             <button
-              class="flex items-center space-x-2 rounded-md bg-neutral-3 px-4 py-2 transition duration-300 ease-in-out hover:bg-neutral-5 focus:outline-none focus:ring-2 focus:ring-neutral-6 dark:bg-neutral-dark-3 dark:hover:bg-neutral-dark-5 dark:focus:ring-neutral-dark-6"
+              class="dark:bg-neutral-dark-3 dark:hover:bg-neutral-dark-5 dark:focus:ring-neutral-dark-6 flex items-center rounded-md bg-neutral-3 px-4 py-2 transition duration-300 ease-in-out space-x-2 hover:bg-neutral-5 focus:outline-none focus:ring-2 focus:ring-neutral-6"
               aria-label="Back to top"
               @click="onBackToTop"
             >
-              <Icon name="lucide:chevron-up" class="size-4" />
+              <Icon
+                name="lucide:chevron-up"
+                class="size-4"
+              />
               <span class="text-sm font-medium">Back to Top</span>
             </button>
           </div>
-          <nav
-            class="flex flex-col items-stretch justify-between space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0"
-          >
+          <nav class="flex flex-col items-stretch justify-between sm:flex-row sm:items-center space-y-4 sm:space-x-4 sm:space-y-0">
             <PrevNextButton :prev />
             <PrevNextButton :next />
           </nav>

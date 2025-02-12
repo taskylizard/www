@@ -17,7 +17,7 @@ defineProps<{
     <h4 class="mb-2 text-xl font-bold">
       {{ title }}
     </h4>
-    <p class="italic text-neutral-8">
+    <p class="text-neutral-8 italic">
       {{ description }}
     </p>
   </div>

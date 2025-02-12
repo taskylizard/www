@@ -20,18 +20,18 @@ const themeRgb = computed(() => {
 </script>
 
 <template>
-  <div class="relative flex size-full justify-between bg-neutral-dark-1 p-[60px] text-neutral-1">
+  <div class="bg-neutral-dark-1 relative size-full flex justify-between p-[60px] text-neutral-1">
     <div
-      class="absolute -right-full top-0 flex"
+      class="absolute top-0 flex -right-full"
       :style="{
         width: '200%',
         height: '200%',
-        backgroundImage: `radial-gradient(circle, rgba(${themeRgb}, 0.5) 0%,  rgba(5, 5, 5,0.3) 50%, rgba(5, 5, 5,0) 70%)`
+        backgroundImage: `radial-gradient(circle, rgba(${themeRgb}, 0.5) 0%,  rgba(5, 5, 5,0.3) 50%, rgba(5, 5, 5,0) 70%)`,
       }"
     />
     <div class="relative size-full justify-between">
       <div class="flex flex-row items-start justify-between">
-        <div class="flex w-full max-w-[65%] flex-col">
+        <div class="max-w-[65%] w-full flex flex-col">
           <h1 class="m-0 mb-[30px] text-[75px] font-bold">
             {{ title }}
           </h1>

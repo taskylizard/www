@@ -22,7 +22,7 @@ const posts = computed(
       || []
 )
 
-type Project = {
+interface Project {
   name: string
   link: string
   description?: string
@@ -54,13 +54,13 @@ useSeoMeta({
     <h1 tracking-tight>
       <span>Hello! I am </span>
       <p
-        text-transparent
         from-indigo-300
         to-rose-300
-        font-pacifico
         bg-gradient-to-r
         bg-clip-text
+        text-transparent
         font-medium
+        font-pacifico
       >
         tasky
       </p>
@@ -75,16 +75,32 @@ useSeoMeta({
 
     <h2>Posts</h2>
     <ul>
-      <li v-for="(post, index) of posts" :key="index">
-        <LinkItem type="post" :title="post.title ?? post.path" :date="post.date" :to="post.path" />
+      <li
+        v-for="(post, index) in posts"
+        :key="index"
+      >
+        <LinkItem
+          type="post"
+          :title="post.title ?? post.path"
+          :date="post.date"
+          :to="post.path"
+        />
       </li>
     </ul>
 
     <h2>Projects</h2>
     <p>The projects I made, or I'm a core member of sorts.</p>
     <ul>
-      <li v-for="{ name, link, description } of projects" :key="name">
-        <LinkItem type="project" :title="name" :to="link" :description />
+      <li
+        v-for="{ name, link, description } in projects"
+        :key="name"
+      >
+        <LinkItem
+          type="project"
+          :title="name"
+          :to="link"
+          :description
+        />
       </li>
     </ul>
   </div>

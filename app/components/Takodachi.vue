@@ -14,7 +14,7 @@ let mousePos: Vec2D | null = null
 let target: Vec2D | null = null
 let offset: Vec2D = [0, 0]
 
-const updateMousePos = (e: MouseEvent | TouchEvent) => {
+function updateMousePos(e: MouseEvent | TouchEvent) {
   if (e instanceof MouseEvent) {
     mousePos = [e.clientX, e.clientY]
   }
@@ -24,7 +24,8 @@ const updateMousePos = (e: MouseEvent | TouchEvent) => {
 }
 
 onMounted(() => {
-  if (prefs.value === 'reduce') return
+  if (prefs.value === 'reduce')
+    return
 
   window.addEventListener('mousemove', updateMousePos)
   window.addEventListener('touchstart', updateMousePos)
@@ -38,7 +39,8 @@ onMounted(() => {
   }
 
   const intervalId = setInterval(() => {
-    if (!mousePos) return
+    if (!mousePos)
+      return
 
     const currentPos: Vec2D = [
       position.value.x + offset[0],
@@ -72,6 +74,6 @@ onMounted(() => {
     id="takodachi"
     :src="takodachi"
     class="pointer-events-none absolute z-[9999] size-10 opacity-0 transition-opacity duration-500"
-    :style="{ left: position.x + 'px', top: position.y + 'px' }"
+    :style="{ left: `${position.x}px`, top: `${position.y}px` }"
   >
 </template>

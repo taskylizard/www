@@ -36,13 +36,17 @@ const punctuationMark = [
 
 const pronouns = ref<Array<typeof pronounsList[number]>>([pronounsList[0]])
 
-const inc = () => {
+function inc() {
   pronouns.value = [...pronouns.value, pronounsList[pronouns.value.length % pronounsList.length]]
 }
 </script>
 
 <template>
-  <span class="pronoun" :class="{ single: pronouns.length <= 1 }" @click="inc">
+  <span
+    class="pronoun"
+    :class="{ single: pronouns.length <= 1 }"
+    @click="inc"
+  >
     {{ pronouns.join(' / ') }}{{ punctuationMark[pronouns.length % punctuationMark.length] }}
   </span>
 </template>

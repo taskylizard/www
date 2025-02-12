@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type BaseProps = {
+interface BaseProps {
   title: string
   to: string
   description?: string
@@ -20,12 +20,17 @@ const props = defineProps<Props>()
 
 <template>
   <template v-if="props.type === 'post'">
-    <NuxtTime class="text-neutral-11" :datetime="props.date" />
+    <NuxtTime
+      class="text-neutral-11"
+      :datetime="props.date"
+    />
     <span class="text-neutral-6"> – </span>
   </template>
 
-  <NuxtLink :to
-    class="rounded bg-neutral-3 px-1 py-0.5 no-underline transition-colors duration-300 hover:bg-primary-4 hover:text-primary-11">
+  <NuxtLink
+    :to
+    class="rounded bg-neutral-3 px-1 py-0.5 no-underline transition-colors duration-300 hover:bg-primary-4 hover:text-primary-11"
+  >
     {{ props.title }}
   </NuxtLink>
 

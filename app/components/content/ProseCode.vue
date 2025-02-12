@@ -34,15 +34,26 @@ const icon = computed(() => {
 </script>
 
 <template>
-  <div
-    class="relative overflow-hidden rounded-lg border border-neutral-6 bg-neutral-2 text-neutral-12 shadow-sm [&:not(:first-child)]:mt-5 [&:not(:last-child)]:mb-5"
-  >
-    <div v-if="filename" class="flex items-center border-b border-b-neutral-6 p-3 font-mono text-sm">
-      <SmartIcon v-if="icon" :name="icon" class="mr-1.5" />
+  <div class="relative overflow-hidden border border-neutral-6 rounded-lg bg-neutral-2 text-neutral-12 shadow-sm [&:not(:first-child)]:mt-5 [&:not(:last-child)]:mb-5">
+    <div
+      v-if="filename"
+      class="flex items-center border-b border-b-neutral-6 p-3 text-sm font-mono"
+    >
+      <SmartIcon
+        v-if="icon"
+        :name="icon"
+        class="mr-1.5"
+      />
       <span>{{ filename }}</span>
-      <CodeCopy :code class="ml-auto mr-1" />
+      <CodeCopy
+        :code
+        class="ml-auto mr-1"
+      />
     </div>
-    <span v-else class="absolute right-3 top-3 z-10">
+    <span
+      v-else
+      class="absolute right-3 top-3 z-10"
+    >
       <CodeCopy :code />
     </span>
     <slot />

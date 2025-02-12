@@ -7,8 +7,10 @@ const props = defineProps<{
 }>()
 
 const to = computed(() => {
-  if (props.prev) return props.prev._path
-  if (props.next) return props.next._path
+  if (props.prev)
+    return props.prev._path
+  if (props.next)
+    return props.next._path
 
   return null
 })
@@ -31,14 +33,17 @@ const description = computed(() =>
     class="not-prose flex flex-1 flex-col justify-between rounded-md bg-neutral-3 p-4 transition duration-300 ease-in-out hover:bg-neutral-4 focus:outline-none focus:ring-2 focus:ring-neutral-5"
   >
     <div class="mb-2 flex items-center text-sm">
-      <Icon :name="icon" class="mr-1 size-4" />
+      <Icon
+        :name="icon"
+        class="mr-1 size-4"
+      />
       <span>{{ text }}</span>
     </div>
     <div>
-      <h3 class="mb-1 text-lg font-semibold text-neutral-dark-4">
+      <h3 class="text-neutral-dark-4 mb-1 text-lg font-semibold">
         {{ title }}
       </h3>
-      <p class="line-clamp-2 text-sm text-neutral-dark-8">
+      <p class="text-neutral-dark-8 line-clamp-2 text-sm">
         {{ description }}
       </p>
     </div>

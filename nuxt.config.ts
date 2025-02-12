@@ -97,6 +97,7 @@ export default defineNuxtConfig({
   telemetry: { enabled: false },
   eslint: {
     config: {
+      standalone: false,
       tooling: true,
       stylistic: {
         semi: false,

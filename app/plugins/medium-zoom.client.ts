@@ -1,6 +1,6 @@
 import type { Zoom } from 'medium-zoom'
-import mediumZoom from 'medium-zoom'
 import { defineNuxtPlugin } from '#app'
+import mediumZoom from 'medium-zoom'
 
 export default defineNuxtPlugin((app) => {
   const selector = ':not(a) > img'

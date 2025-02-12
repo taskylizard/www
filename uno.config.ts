@@ -9,7 +9,7 @@ import {
   transformerVariantGroup
 } from 'unocss'
 
-import colorx, { gray, blue, yellow, red, pink, sky, slate, olive, indigo, crimson, amber, green } from './config/colorx'
+import colorx, { amber, blue, crimson, gray, green, indigo, olive, pink, red, sky, slate, yellow } from './config/colorx'
 
 // Define typography tokens mapping
 const proseTokens = {

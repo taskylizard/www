@@ -16,12 +16,12 @@
 }
 
 :root {
-  --twoslash-underline-color: theme("colors.neutral.8");
-  --twoslash-cursor-color: theme("colors.pink.8");
-  --twoslash-matched-color: theme("colors.neutral.4");
-  --twoslash-popup-bg: theme("colors.neutral.2");
-  --twoslash-popup-color: theme("colors.neutral.10");
-  --twoslash-border-color: theme("colors.neutral.6");
+  --twoslash-underline-color: theme('colors.neutral.8');
+  --twoslash-cursor-color: theme('colors.pink.8');
+  --twoslash-matched-color: theme('colors.neutral.4');
+  --twoslash-popup-bg: theme('colors.neutral.2');
+  --twoslash-popup-color: theme('colors.neutral.10');
+  --twoslash-border-color: theme('colors.neutral.6');
   --twoslash-highlighted-border: #c37d0d50;
   --twoslash-highlighted-bg: #c37d0d20;
   --twoslash-popup-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
@@ -43,17 +43,17 @@
 
   &.dark {
     color-scheme: dark;
-    --twoslash-popup-bg: theme("colors.neutral.2");
-    --twoslash-popup-color: theme("colors.neutral.10");
-    --twoslash-underline-color: theme("colors.neutral.8");
-    --twoslash-border-color: theme("colors.neutral.6");
-    --twoslash-cursor-color: theme("colors.pink.1");
-    --twoslash-matched-color: theme("colors.neutral.4");
+    --twoslash-popup-bg: theme('colors.neutral.2');
+    --twoslash-popup-color: theme('colors.neutral.10');
+    --twoslash-underline-color: theme('colors.neutral.8');
+    --twoslash-border-color: theme('colors.neutral.6');
+    --twoslash-cursor-color: theme('colors.pink.1');
+    --twoslash-matched-color: theme('colors.neutral.4');
   }
 }
 
 .content {
-  :is(:where(h1, h2, h3, h4, h5, h6):not(:where([class~="not-prose"] *))) {
+  :is(:where(h1, h2, h3, h4, h5, h6):not(:where([class~='not-prose'] *))) {
     @apply flex scroll-mt-24 items-center gap-2;
 
     &:hover .header-anchor {
@@ -65,7 +65,7 @@
     }
   }
 
-  :where(hr + h2):not(:where([class~="not-prose"] *)) {
+  :where(hr + h2):not(:where([class~='not-prose'] *)) {
     @apply -mt-4;
   }
 }
@@ -74,7 +74,7 @@
   @apply not-prose text-neutral-10 opacity-0 transition delay-100 duration-200 hover:text-neutral-11 focus:opacity-100 dark:text-neutral-dark-10 dark:hover:text-neutral-dark-11;
 }
 
-div[class*="language-"] {
+div[class*='language-'] {
   @apply relative flex;
 
   > :not(pre) {
@@ -91,12 +91,12 @@ div[class*="language-"] {
     &:before {
       transition: background-color 0.3s;
 
-      --icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMSA5LjVBMS41IDEuNSAwIDAgMCAyLjUgMTFINHYtMUgyLjVhLjUuNSAwIDAgMS0uNS0uNXYtN2EuNS41IDAgMCAxIC41LS41aDdhLjUuNSAwIDAgMSAuNS41VjRINS41QTEuNSAxLjUgMCAwIDAgNCA1LjV2N0ExLjUgMS41IDAgMCAwIDUuNSAxNGg3YTEuNSAxLjUgMCAwIDAgMS41LTEuNXYtN0ExLjUgMS41IDAgMCAwIDEyLjUgNEgxMVYyLjVBMS41IDEuNSAwIDAgMCA5LjUgMWgtN0ExLjUgMS41IDAgMCAwIDEgMi41djdabTQtNGEuNS41IDAgMCAxIC41LS41aDdhLjUuNSAwIDAgMSAuNS41djdhLjUuNSAwIDAgMS0uNS41aC03YS41LjUgMCAwIDEtLjUtLjV2LTdaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=");
+      --icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMSA5LjVBMS41IDEuNSAwIDAgMCAyLjUgMTFINHYtMUgyLjVhLjUuNSAwIDAgMS0uNS0uNXYtN2EuNS41IDAgMCAxIC41LS41aDdhLjUuNSAwIDAgMSAuNS41VjRINS41QTEuNSAxLjUgMCAwIDAgNCA1LjV2N0ExLjUgMS41IDAgMCAwIDUuNSAxNGg3YTEuNSAxLjUgMCAwIDAgMS41LTEuNXYtN0ExLjUgMS41IDAgMCAwIDEyLjUgNEgxMVYyLjVBMS41IDEuNSAwIDAgMCA5LjUgMWgtN0ExLjUgMS41IDAgMCAwIDEgMi41djdabTQtNGEuNS41IDAgMCAxIC41LS41aDdhLjUuNSAwIDAgMSAuNS41djdhLjUuNSAwIDAgMS0uNS41aC03YS41LjUgMCAwIDEtLjUtLjV2LTdaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=');
       mask: var(--icon) no-repeat center;
     }
 
     &.copied:before {
-      --icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNDY3IDMuNzI3Yy4yODkuMTg5LjM3LjU3Ni4xODEuODY1bC00LjI1IDYuNWEuNjI1LjYyNSAwIDAgMS0uOTQ0LjEybC0yLjc1LTIuNWEuNjI1LjYyNSAwIDAgMSAuODQxLS45MjVsMi4yMDggMi4wMDdsMy44NDktNS44ODZhLjYyNS42MjUgMCAwIDEgLjg2NS0uMTgxWiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+      --icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNDY3IDMuNzI3Yy4yODkuMTg5LjM3LjU3Ni4xODEuODY1bC00LjI1IDYuNWEuNjI1LjYyNSAwIDAgMS0uOTQ0LjEybC0yLjc1LTIuNWEuNjI1LjYyNSAwIDAgMSAuODQxLS45MjVsMi4yMDggMi4wMDdsMy44NDktNS44ODZhLjYyNS42MjUgMCAwIDEgLjg2NS0uMTgxWiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+');
     }
   }
 
@@ -105,7 +105,7 @@ div[class*="language-"] {
     @apply opacity-100;
   }
 
-  + div[class*="language-"] {
+  + div[class*='language-'] {
     @apply mt-2;
   }
 
@@ -374,13 +374,13 @@ div[class*="language-"] {
 }
 
 .twoslash-completion-list::before {
-  background-color: theme("colors.pink.8");
+  background-color: theme('colors.pink.8');
   width: 6px;
   position: absolute;
   top: -1.6em;
   height: 1.4em;
   left: -1px;
-  content: " ";
+  content: ' ';
 }
 
 .twoslash-completion-list li {

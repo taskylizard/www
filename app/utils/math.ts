@@ -7,28 +7,36 @@ export type Vec2D = [number, number]
 /** Lenient square root */
 export const lSqrt = (n: number) => Math.sqrt(Math.abs(n))
 
-export const v2mag = (vec: Vec2D) =>
-  Math.sqrt(vec[0] * vec[0] + vec[1] * vec[1])
+export function v2mag(vec: Vec2D) {
+  return Math.sqrt(vec[0] * vec[0] + vec[1] * vec[1])
+}
 
-export const v2add = (v1: Vec2D, v2: Vec2D): Vec2D => [
-  v1[0] + v2[0],
-  v1[1] + v2[1]
-]
+export function v2add(v1: Vec2D, v2: Vec2D): Vec2D {
+  return [
+    v1[0] + v2[0],
+    v1[1] + v2[1],
+  ]
+}
 
-export const v2sub = (v1: Vec2D, v2: Vec2D): Vec2D => [
-  v1[0] - v2[0],
-  v1[1] - v2[1]
-]
+export function v2sub(v1: Vec2D, v2: Vec2D): Vec2D {
+  return [
+    v1[0] - v2[0],
+    v1[1] - v2[1],
+  ]
+}
 
 /** Multiplies a 2D vector by a scalar */
-export const v2smul = (vec: Vec2D, scalar: number): Vec2D => [
-  vec[0] * scalar,
-  vec[1] * scalar
-]
+export function v2smul(vec: Vec2D, scalar: number): Vec2D {
+  return [
+    vec[0] * scalar,
+    vec[1] * scalar,
+  ]
+}
 
 export function v2norm(vec: Vec2D): Vec2D {
   const l = v2mag(vec)
-  if (l === 0) return [Math.sqrt(2), Math.sqrt(2)]
+  if (l === 0)
+    return [Math.sqrt(2), Math.sqrt(2)]
 
   return [vec[0] / l, vec[1] / l]
 }

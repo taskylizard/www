@@ -1,9 +1,9 @@
 import { defineConfig } from '@nuxtjs/mdc/config'
 import {
-  transformerNotationDiff,
   transformerMetaHighlight,
+  transformerNotationDiff,
+  transformerNotationErrorLevel,
   transformerNotationFocus,
-  transformerNotationErrorLevel
 } from '@shikijs/transformers'
 import { transformerColorHighlight } from 'shiki-transformer-color-highlight'
 
