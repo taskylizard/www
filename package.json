@@ -32,7 +32,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@vueuse/core": "^12.5.0",
     "@vueuse/nuxt": "^12.5.0",
-    "drizzle-orm": "^0.39.2",
+    "drizzle-orm": "^0.39.3",
     "medium-zoom": "^1.1.0",
     "nuxt": "^3.15.4",
     "nuxt-content-twoslash": "^0.1.2",
@@ -51,16 +51,16 @@
   "devDependencies": {
     "@iconify-json/carbon": "^1.2.6",
     "@iconify-json/catppuccin": "^1.2.8",
-    "@iconify-json/devicon": "^1.2.13",
+    "@iconify-json/devicon": "^1.2.14",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/lucide": "^1.2.26",
     "@iconify-json/mingcute": "^1.2.3",
     "@iconify-json/ph": "^1.2.2",
     "@iconify-json/radix-icons": "^1.2.2",
     "@iconify-json/ri": "^1.2.5",
-    "@iconify-json/simple-icons": "^1.2.23",
+    "@iconify-json/simple-icons": "^1.2.24",
     "@iconify-json/skill-icons": "^1.2.0",
-    "@iconify-json/vscode-icons": "^1.2.12",
+    "@iconify-json/vscode-icons": "^1.2.13",
     "@shikijs/colorized-brackets": "^1.29.2",
     "@shikijs/types": "^1.29.2",
     "@types/hast": "^3.0.4",
@@ -71,7 +71,7 @@
     "nuxthub": "^0.8.7",
     "typescript": "^5.7.3",
     "unocss": "^65.4.3",
-    "wrangler": "^3.107.3"
+    "wrangler": "^3.108.1"
   },
   "packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d",
   "pnpm": {
