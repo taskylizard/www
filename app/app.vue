@@ -24,7 +24,7 @@ useSeoMeta({
   <NuxtRouteAnnouncer />
   <Navigation />
   <main
-    class="content prose mx-auto max-w-[700px] px-6 py-12 dark:prose-invert focus:outline-none prose-a:decoration-dashed hover:prose-a:decoration-solid focus:prose-a:decoration-solid prose-pre:my-0 prose-pre:rounded-lg prose-table:block prose-table:overflow-x-auto prose-table:whitespace-nowrap md:px-6 md:pb-20 md:pt-10"
+    class="content prose mx-auto max-w-[700px] bg-neutral-1 px-6 py-12 font-sans text-neutral-11 dark:prose-invert focus:outline-none prose-a:decoration-dashed hover:prose-a:decoration-solid focus:prose-a:decoration-solid prose-pre:my-0 prose-pre:rounded-lg prose-table:block prose-table:overflow-x-auto prose-table:whitespace-nowrap md:px-6 md:pb-20 md:pt-10"
   >
     <NuxtPage />
     <footer class="pt-4" aria-label="footer">
@@ -36,11 +36,11 @@ useSeoMeta({
         class="flex flex-row flex-wrap items-center justify-between pt-2 prose-a:no-underline"
         aria-label="Footer links"
       >
-        <Social to="mailto:tasky@fmhy.net" icon="carbon:email" label="Email" accent="indigo" />
+        <Social to="mailto:tasky@fmhy.net" icon="carbon:email" />
 
-        <Social to="https://bsky.app/profile/tasky.nuxt.dev" icon="simple-icons:bluesky" label="Bluesky" accent="sky" />
+        <Social to="https://bsky.app/profile/tasky.nuxt.dev" icon="simple-icons:bluesky" />
 
-        <Social to="https://github.com/taskylizard" icon="carbon:logo-github" label="Github" accent="slate" />
+        <Social to="https://github.com/taskylizard" icon="carbon:logo-github" />
 
         <div class="flex space-x-2">
           <a href="https://notbyai.fyi">

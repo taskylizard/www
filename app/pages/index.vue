@@ -35,7 +35,7 @@ const _projects: Project[] = [
   {
     name: 'vyx',
     link: 'https://github.com/taskylizard/vyx',
-    description: 'Personal discord/revolt/divolt bot for funsies.'
+    description: 'Personal discord bot for funsies.'
   }
 ]
 
@@ -51,7 +51,20 @@ useSeoMeta({
 
 <template>
   <div>
-    <h1>Hello! I am tasky.</h1>
+    <h1 tracking-tight>
+      <span>Hello! I am </span>
+      <p
+        text-transparent
+        from-indigo-300
+        to-rose-300
+        font-pacifico
+        bg-gradient-to-r
+        bg-clip-text
+        font-medium
+      >
+        tasky
+      </p>
+    </h1>
 
     <p>
       I love writing software that scales, design systems, and try to have fun
@@ -74,66 +87,5 @@ useSeoMeta({
         <LinkItem type="project" :title="name" :to="link" :description />
       </li>
     </ul>
-
-    <h2>Shit I Like 💩</h2>
-    <p>Shit I like to use, in no order.</p>
-    <ul>
-      <li>
-        The obvious:
-        <div class="flex gap-2">
-          <Icon name="logos:vue" />
-          <Icon name="devicon:solidjs" />
-          <Icon name="skill-icons:typescript" />
-          <Icon name="logos:sass" />
-          <Icon name="devicon:tailwindcss" />
-          <Icon name="logos:unocss" />
-          <Icon name="skill-icons:prisma" />
-          <Icon name="logos:postgresql" />
-          <Icon name="devicon:sqlite" />
-          <Icon name="logos:vitest" />
-          <Icon name="logos:vitejs" />
-          <Icon name="devicon:neovim" />
-        </div>
-      </li>
-      <li>
-        Good stuff:
-        <div class="flex gap-2">
-          <Icon name="devicon:cloudflare" />
-          <Icon name="skill-icons:workers-light" />
-          <Icon name="logos:deno" />
-          <Icon name="logos:supabase-icon" />
-          <Icon name="logos:sourcegraph" />
-          <Icon name="logos:xata-icon" />
-        </div>
-      </li>
-      <li>
-        Tools:
-        <div class="flex gap-2">
-          <Icon name="devicon:biome" />
-          <Icon name="devicon:tailwindcss" />
-          <Icon name="logos:deno" />
-          <Icon name="logos:sourcegraph" />
-        </div>
-      </li>
-      <li>
-        Languages:
-        <div class="flex gap-2">
-          <Icon name="skill-icons:typescript" />
-          <Icon name="skill-icons:rust" />
-          <Icon name="skill-icons:crystal-light" />
-          <Icon name="skill-icons:elixir-light" />
-          <Icon name="skill-icons:ruby" />
-          <Icon name="skill-icons:golang" />
-          <Icon name="skill-icons:python-light" />
-        </div>
-      </li>
-    </ul>
-
-    <p>
-      See also:
-      <NuxtLink to="/art">
-        Art
-      </NuxtLink>
-    </p>
   </div>
 </template>

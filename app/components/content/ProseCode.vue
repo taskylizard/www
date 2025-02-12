@@ -20,7 +20,7 @@ const parsedMeta = computed(() => {
 
   for (const param of split) {
     const [key, val] = param.split('=')
-    params.set(key, val)
+    params.set(key!, val)
   }
 
   return params
@@ -35,12 +35,9 @@ const icon = computed(() => {
 
 <template>
   <div
-    class="relative overflow-hidden rounded-lg border border-neutral-6 bg-neutral-2 text-neutral-12 shadow-sm dark:border-neutral-dark-6 dark:bg-neutral-dark-2 dark:text-neutral-dark-12 [&:not(:first-child)]:mt-5 [&:not(:last-child)]:mb-5"
+    class="relative overflow-hidden rounded-lg border border-neutral-6 bg-neutral-2 text-neutral-12 shadow-sm [&:not(:first-child)]:mt-5 [&:not(:last-child)]:mb-5"
   >
-    <div
-      v-if="filename"
-      class="flex items-center border-b border-b-neutral-6 p-3 font-mono text-sm dark:border-b-neutral-dark-6"
-    >
+    <div v-if="filename" class="flex items-center border-b border-b-neutral-6 p-3 font-mono text-sm">
       <SmartIcon v-if="icon" :name="icon" class="mr-1.5" />
       <span>{{ filename }}</span>
       <CodeCopy :code class="ml-auto mr-1" />

@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxthub/core',
-    '@nuxtjs/tailwindcss',
+    // '@nuxtjs/tailwindcss',
     '@nuxtjs/sitemap',
     '@nuxtjs/color-mode',
     '@nuxt/eslint',
@@ -18,13 +18,15 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-time',
     '@nuxthq/studio',
-    'nuxt-server-fn'
+    'nuxt-server-fn',
+    '@unocss/nuxt'
   ],
   components: true,
   devtools: { enabled: true },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
+      viewport: 'width=device-width,initial-scale=1',
       titleTemplate: '%s %separator %siteName',
       templateParams: {
         separator: '•'
@@ -32,13 +34,10 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
         class: 'h-full'
-      },
-      bodyAttrs: {
-        class: 'antialiased min-h-screen bg-neutral-1 dark:bg-neutral-dark-1'
       }
     }
   },
-  css: ['~/styles.scss'],
+  css: ['@unocss/reset/tailwind.css', '~/styles.scss'],
   site: {
     url: 'https://tasky.nuxt.dev',
     name: 'tasky',

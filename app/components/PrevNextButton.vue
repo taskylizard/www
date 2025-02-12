@@ -28,17 +28,17 @@ const description = computed(() =>
   <NuxtLink
     v-if="to"
     :to="to"
-    class="not-prose flex flex-1 flex-col justify-between rounded-md bg-neutral-3 p-4 transition duration-300 ease-in-out hover:bg-neutral-4 focus:outline-none focus:ring-2 focus:ring-neutral-5 dark:bg-neutral-dark-3 dark:hover:bg-neutral-dark-4 dark:focus:ring-neutral-dark-5"
+    class="not-prose flex flex-1 flex-col justify-between rounded-md bg-neutral-3 p-4 transition duration-300 ease-in-out hover:bg-neutral-4 focus:outline-none focus:ring-2 focus:ring-neutral-5"
   >
     <div class="mb-2 flex items-center text-sm">
       <Icon :name="icon" class="mr-1 size-4" />
       <span>{{ text }}</span>
     </div>
     <div>
-      <h3 class="mb-1 text-lg font-semibold text-neutral-dark-4 dark:text-neutral-4">
+      <h3 class="mb-1 text-lg font-semibold text-neutral-dark-4">
         {{ title }}
       </h3>
-      <p class="line-clamp-2 text-sm text-neutral-dark-8 dark:text-neutral-8">
+      <p class="line-clamp-2 text-sm text-neutral-dark-8">
         {{ description }}
       </p>
     </div>
