@@ -291,9 +291,6 @@ importers:
       '@iconify-json/devicon':
         specifier: 'catalog:'
         version: 1.2.13
-      '@iconify-json/game-icons':
-        specifier: ^1.2.1
-        version: 1.2.1
       '@iconify-json/logos':
         specifier: 'catalog:'
         version: 1.2.4
@@ -1423,9 +1420,6 @@ packages:
 
   '@iconify-json/devicon@1.2.13':
     resolution: {integrity: sha512-EPwXcB25EF8iMyYUnu1NM/HBz7x9VpfTPH0gyWPU9Co+fjVpTz1M93ePdOPvQ+XSgNSTi7tkLlQio0BEe2pFag==}
-
-  '@iconify-json/game-icons@1.2.1':
-    resolution: {integrity: sha512-JrKwJT+xmee87QRGIoUdR59fxMzqykS9NUnG7P0XVeznKwr3WkAw5IVWSQVQDLcN6+X3mdMFme3Hbhh6f0qTDw==}
 
   '@iconify-json/logos@1.2.4':
     resolution: {integrity: sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw==}
@@ -7922,10 +7916,6 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/devicon@1.2.13':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify-json/game-icons@1.2.1':
     dependencies:
       '@iconify/types': 2.0.0
 
