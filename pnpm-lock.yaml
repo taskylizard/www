@@ -50,6 +50,9 @@ importers:
       '@nuxtjs/tailwindcss':
         specifier: ^6.13.1
         version: 6.13.1(magicast@0.3.5)
+      '@openpanel/web':
+        specifier: ^1.0.1
+        version: 1.0.1
       '@radix-ui/colors':
         specifier: ^3.0.0
         version: 3.0.0
@@ -1678,6 +1681,12 @@ packages:
 
   '@nuxtjs/tailwindcss@6.13.1':
     resolution: {integrity: sha512-atL2SaPsxLfMTlXUQvr1UpDYdz6ocNOhH35H+t7M++g4r79QiQScJ7XuyyMR9AyBN19lkPA3nw7NXxazXmYxlA==}
+
+  '@openpanel/sdk@1.0.0':
+    resolution: {integrity: sha512-FNmmfjdXoC/VHEjA+WkrQ4lyM5lxEmV7xDd57uj4E+lIS0sU3DLG2mV/dpS8AscnZbUvuMn3kPhiLCqYzuv/gg==}
+
+  '@openpanel/web@1.0.1':
+    resolution: {integrity: sha512-cVZ7Kr9SicczJ/RDIfEtZs8+1iGDzwkabVA/j3NqSl8VSucsC8m1+LVbjmCDzCJNnK4yVn6tEcc9PJRi2rtllw==}
 
   '@parcel/watcher-android-arm64@2.5.0':
     resolution: {integrity: sha512-qlX4eS28bUcQCdribHkg/herLe+0A9RyYC+mm2PXpncit8z5b3nSqGVzMNR3CmtAOgRutiZ02eIJJgP/b1iEFQ==}
@@ -9188,6 +9197,12 @@ snapshots:
       - magicast
       - supports-color
       - ts-node
+
+  '@openpanel/sdk@1.0.0': {}
+
+  '@openpanel/web@1.0.1':
+    dependencies:
+      '@openpanel/sdk': 1.0.0
 
   '@parcel/watcher-android-arm64@2.5.0':
     optional: true

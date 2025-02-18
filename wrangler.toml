@@ -1,8 +1,7 @@
-#:schema node_modules/wrangler/config-schema.json
+# : schema node_modules/wrangler/config-schema.js                              on
 name = "sight"
 compatibility_date = "2024-11-12"
-compatibility_flags = ["nodejs_compat"]
-
+compatibility_flags = [ "nodejs_compat" ]
 
 [vars]
 ACTION_DELAY_MS = 604_800_000

@@ -27,6 +27,7 @@
     "@nuxtjs/mdc": "^0.13.5",
     "@nuxtjs/sitemap": "^6.1.5",
     "@nuxtjs/tailwindcss": "^6.13.1",
+    "@openpanel/web": "^1.0.1",
     "@radix-ui/colors": "^3.0.0",
     "@shikijs/transformers": "^1.29.2",
     "@tailwindcss/typography": "^0.5.16",

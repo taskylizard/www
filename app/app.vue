@@ -20,29 +20,53 @@ useSeoMeta({
 </script>
 
 <template>
-  <NuxtLoadingIndicator :color="false" class="bg-[#ff91af]" />
+  <NuxtLoadingIndicator
+    :color="false"
+    class="bg-[#ff91af]"
+  />
   <NuxtRouteAnnouncer />
   <Navigation />
-  <main
-    class="content mx-auto max-w-[700px] bg-neutral-1 px-6 py-12 text-neutral-11 font-sans prose prose-pre:my-0 prose-table:block prose-table:overflow-x-auto prose-table:whitespace-nowrap prose-pre:rounded-lg md:px-6 md:pb-20 md:pt-10 prose-a:decoration-dashed focus:outline-none dark:prose-invert focus:prose-a:decoration-solid hover:prose-a:decoration-solid">
+  <main class="content mx-auto max-w-[700px] bg-neutral-1 px-6 py-12 text-neutral-11 font-sans prose prose-pre:my-0 prose-table:block prose-table:overflow-x-auto prose-table:whitespace-nowrap prose-pre:rounded-lg md:px-6 md:pb-20 md:pt-10 prose-a:decoration-dashed focus:outline-none dark:prose-invert focus:prose-a:decoration-solid hover:prose-a:decoration-solid">
     <NuxtPage />
-    <footer class="pt-4" aria-label="footer">
+    <footer
+      class="pt-4"
+      aria-label="footer"
+    >
       <p class="pt-2">
         &copy; taskylizard, CC BY-NC-SA 4.0
       </p>
 
-      <div class="flex flex-row flex-wrap items-center justify-between pt-2 prose-a:no-underline"
-        aria-label="Footer links">
-        <Social to="mailto:tasky@fmhy.net" icon="carbon:email" />
+      <div
+        class="flex flex-row flex-wrap items-center justify-between pt-2 prose-a:no-underline"
+        aria-label="Footer links"
+      >
+        <Social
+          to="mailto:tasky@fmhy.net"
+          icon="carbon:email"
+        />
 
-        <Social to="https://bsky.app/profile/tasky.nuxt.dev" icon="simple-icons:bluesky" />
+        <Social
+          to="https://bsky.app/profile/tasky.nuxt.dev"
+          icon="simple-icons:bluesky"
+        />
 
-        <Social to="https://github.com/taskylizard" icon="carbon:logo-github" />
+        <Social
+          to="https://github.com/taskylizard"
+          icon="carbon:logo-github"
+        />
 
         <div class="flex space-x-2">
           <a href="https://notbyai.fyi">
-            <img src="/not-by-ai-light.svg" class="dark:hidden" alt="Written by Human, Not by AI">
-            <img src="/not-by-ai-dark.svg" class="hidden dark:block" alt="Written by Human, Not by AI">
+            <img
+              src="/not-by-ai-light.svg"
+              class="dark:hidden"
+              alt="Written by Human, Not by AI"
+            >
+            <img
+              src="/not-by-ai-dark.svg"
+              class="hidden dark:block"
+              alt="Written by Human, Not by AI"
+            >
           </a>
         </div>
       </div>
