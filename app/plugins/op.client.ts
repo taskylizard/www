@@ -1,4 +1,5 @@
 import { OpenPanel } from '@openpanel/web';
+import { defineNuxtPlugin } from '#app'
 
 const op = new OpenPanel({
   apiUrl: "https://op.fmhy.net/api",
@@ -11,4 +12,8 @@ const op = new OpenPanel({
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.provide('op', op);
+  op.init();
+  // expose on window for debugging
+  // @ts-expect-error
+  window.op = op;
 });
