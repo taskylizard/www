@@ -1,21 +1,10 @@
+import type { Preflight } from 'unocss'
 import {
-  defineConfig,
-  presetAttributify,
-  presetIcons,
-  presetTypography,
-  presetUno,
-  presetWebFonts,
-  transformerDirectives,
-  transformerVariantGroup,
-  type Preflight
-} from 'unocss'
-import {
-  blackA,
-  whiteA,
   amberA as amberALight,
   amberDark,
   amberDarkA,
   amber as amberLight,
+  blackA,
   blueA as blueALight,
   blueDark,
   blueDarkA,
@@ -137,11 +126,23 @@ import {
   violetDark,
   violetDarkA,
   violet as violetLight,
+  whiteA,
   yellowA as yellowALight,
   yellowDark,
   yellowDarkA,
-  yellow as yellowLight,
+  yellow as yellowLight
 } from '@radix-ui/colors'
+import {
+  defineConfig,
+
+  presetAttributify,
+  presetIcons,
+  presetTypography,
+  presetUno,
+  presetWebFonts,
+  transformerDirectives,
+  transformerVariantGroup
+} from 'unocss'
 
 type Shade = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12'
 
@@ -405,7 +406,7 @@ function rename<K extends string>(color: Color<K>) {
         }) as any
         return obj
       }, {} as Color<V>)
-    },
+    }
   }
 }
 
@@ -454,44 +455,44 @@ function colorx<N extends string>(color: Color<N>) {
               ...aliasentries.reduce((object, [name]) => {
                 object[name as A] = colorobject({
                   key: i => `${i}`,
-                  value: i => `rgb(var(--${name}-${i}))`,
+                  value: i => `rgb(var(--${name}-${i}))`
                 })
                 return object
               }, {} as ColorsResult<A>),
               ...((overlay
                 ? ({
-                  black: {
-                    DEFAULT: '#000000',
-                    1: 'var(--black-1)',
-                    2: 'var(--black-2)',
-                    3: 'var(--black-3)',
-                    4: 'var(--black-4)',
-                    5: 'var(--black-5)',
-                    6: 'var(--black-6)',
-                    7: 'var(--black-7)',
-                    8: 'var(--black-8)',
-                    9: 'var(--black-9)',
-                    10: 'var(--black-10)',
-                    11: 'var(--black-11)',
-                    12: 'var(--black-12)',
-                  },
-                  white: {
-                    DEFAULT: '#ffffff',
-                    1: 'var(--white-1)',
-                    2: 'var(--white-2)',
-                    3: 'var(--white-3)',
-                    4: 'var(--white-4)',
-                    5: 'var(--white-5)',
-                    6: 'var(--white-6)',
-                    7: 'var(--white-7)',
-                    8: 'var(--white-8)',
-                    9: 'var(--white-9)',
-                    10: 'var(--white-10)',
-                    11: 'var(--white-11)',
-                    12: 'var(--white-12)',
-                  }
-                } as ColorsOverlayResult)
-                : {}) as any),
+                    black: {
+                      DEFAULT: '#000000',
+                      1: 'var(--black-1)',
+                      2: 'var(--black-2)',
+                      3: 'var(--black-3)',
+                      4: 'var(--black-4)',
+                      5: 'var(--black-5)',
+                      6: 'var(--black-6)',
+                      7: 'var(--black-7)',
+                      8: 'var(--black-8)',
+                      9: 'var(--black-9)',
+                      10: 'var(--black-10)',
+                      11: 'var(--black-11)',
+                      12: 'var(--black-12)'
+                    },
+                    white: {
+                      DEFAULT: '#ffffff',
+                      1: 'var(--white-1)',
+                      2: 'var(--white-2)',
+                      3: 'var(--white-3)',
+                      4: 'var(--white-4)',
+                      5: 'var(--white-5)',
+                      6: 'var(--white-6)',
+                      7: 'var(--white-7)',
+                      8: 'var(--white-8)',
+                      9: 'var(--white-9)',
+                      10: 'var(--white-10)',
+                      11: 'var(--white-11)',
+                      12: 'var(--white-12)'
+                    }
+                  } as ColorsOverlayResult)
+                : {}) as any)
             } as any,
             preflight: (() => {
               let css = ''
@@ -541,12 +542,12 @@ function colorx<N extends string>(color: Color<N>) {
                   if (selector === 'class')
                     return `.alias-${name}-${value}`
                   console.log('ERROR : invalid alias selector')
-                },
+                }
               }
 
               addBase({
                 [`:root, ${SELECTOR.theme('light')}`]: LIGHT,
-                [`${SELECTOR.theme('dark')}`]: DARK,
+                [`${SELECTOR.theme('dark')}`]: DARK
               })
 
               aliasentries.forEach(([name, color]) => {
@@ -560,7 +561,7 @@ function colorx<N extends string>(color: Color<N>) {
                     addBase({
                       [[index === 0 && ':root', `${SELECTOR.alias(name, value)}`].filter(Boolean).join(', ')]: colorobject({
                         key: i => `--${name}-${i}`,
-                        value: i => `var(--${value}-${i})`,
+                        value: i => `var(--${value}-${i})`
                       })
                     })
                   })
@@ -569,7 +570,7 @@ function colorx<N extends string>(color: Color<N>) {
                   addBase({
                     ':root': colorobject({
                       key: i => `--${name}-${i}`,
-                      value: i => `var(--${color}-${i})`,
+                      value: i => `var(--${color}-${i})`
                     })
                   })
                 }
@@ -602,18 +603,18 @@ function colorx<N extends string>(color: Color<N>) {
                     '--white-10': whiteA.whiteA10,
                     '--white-11': whiteA.whiteA11,
                     '--white-12': whiteA.whiteA12
-                  },
+                  }
                 })
               }
 
               return {
-                getCSS: () => css,
+                getCSS: () => css
               }
-            })(),
+            })()
           }
-        },
+        }
       }
-    },
+    }
   }
 }
 

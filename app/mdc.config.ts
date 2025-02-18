@@ -3,7 +3,7 @@ import {
   transformerMetaHighlight,
   transformerNotationDiff,
   transformerNotationErrorLevel,
-  transformerNotationFocus,
+  transformerNotationFocus
 } from '@shikijs/transformers'
 import { transformerColorHighlight } from 'shiki-transformer-color-highlight'
 

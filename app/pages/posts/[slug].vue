@@ -2,8 +2,7 @@
 const article = ref<HTMLElement | null>(null)
 const route = useRoute()
 const { data: page, error } = await useAsyncData(route.path, () =>
-  queryContent(route.path).findOne()
-)
+  queryContent(route.path).findOne())
 
 if (error.value) {
   throw createError({
@@ -28,7 +27,7 @@ const [next, prev] = await queryContent()
 
 function onBackToTop() {
   article.value!.scrollIntoView({
-    behavior: 'smooth',
+    behavior: 'smooth'
   })
 }
 </script>

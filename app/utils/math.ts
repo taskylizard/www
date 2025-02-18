@@ -14,14 +14,14 @@ export function v2mag(vec: Vec2D) {
 export function v2add(v1: Vec2D, v2: Vec2D): Vec2D {
   return [
     v1[0] + v2[0],
-    v1[1] + v2[1],
+    v1[1] + v2[1]
   ]
 }
 
 export function v2sub(v1: Vec2D, v2: Vec2D): Vec2D {
   return [
     v1[0] - v2[0],
-    v1[1] - v2[1],
+    v1[1] - v2[1]
   ]
 }
 
@@ -29,7 +29,7 @@ export function v2sub(v1: Vec2D, v2: Vec2D): Vec2D {
 export function v2smul(vec: Vec2D, scalar: number): Vec2D {
   return [
     vec[0] * scalar,
-    vec[1] * scalar,
+    vec[1] * scalar
   ]
 }
 

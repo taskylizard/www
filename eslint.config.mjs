@@ -7,6 +7,7 @@ export default withNuxt(
     unocss: true,
     formatters: true,
     rules: {
+      'style/comma-dangle': ['off'],
       'quotes': ['error', 'single'],
       'quote-props': ['error', 'consistent'],
       'no-console': ['off'],
@@ -16,7 +17,6 @@ export default withNuxt(
       'import/no-duplicates': ['error'],
       'ts/no-duplicate-enum-values': ['error'],
       'import/order': ['off'],
-      'comma-dangle': ['error', 'always-multiline'],
       'comma-spacing': ['error', { before: false, after: true }],
       'keyword-spacing': ['error', { before: true, after: true }],
       'object-curly-spacing': ['error', 'always'],
@@ -30,16 +30,16 @@ export default withNuxt(
         'PascalCase',
         {
           registeredComponentsOnly: false,
-          ignores: [],
-        },
+          ignores: []
+        }
       ],
       'vue/component-api-style': ['error', ['script-setup']],
       'vue/block-lang': ['error', { script: { lang: 'ts' } }],
       'vue/block-order': [
         'error',
         {
-          order: ['script', 'template', 'style'],
-        },
+          order: ['script', 'template', 'style']
+        }
       ],
       'vue/define-emits-declaration': ['error', 'type-based'],
       'vue/define-props-declaration': ['error', 'type-based'],
@@ -47,8 +47,8 @@ export default withNuxt(
         'error',
         {
           order: ['defineProps', 'defineEmits'],
-          defineExposeLast: true,
-        },
+          defineExposeLast: true
+        }
       ],
       'vue/enforce-style-attribute': ['error', { allow: ['scoped'] }],
       'vue/html-button-has-type': [
@@ -56,8 +56,8 @@ export default withNuxt(
         {
           button: true,
           submit: true,
-          reset: true,
-        },
+          reset: true
+        }
       ],
       'vue/no-empty-component-block': ['error'],
       'vue/no-multiple-objects-in-class': ['error'],
@@ -71,16 +71,16 @@ export default withNuxt(
           ignore: [0, 1],
           ignoreArrayIndexes: true,
           enforceConst: true,
-          detectObjects: false,
-        },
+          detectObjects: false
+        }
       ],
       'vue/max-attributes-per-line': ['error', { singleline: 1 }],
       'vue/first-attribute-linebreak': [
         'error',
         {
           multiline: 'below',
-          singleline: 'beside',
-        },
+          singleline: 'beside'
+        }
       ],
       'vue/no-restricted-syntax': ['error'],
       'vue/no-bare-strings-in-template': ['error', {
@@ -113,14 +113,14 @@ export default withNuxt(
           '\u2014',
           '\u2212',
           '|',
-          '©',
+          '©'
         ],
         attributes: {
           '/.+/': ['title', 'aria-label', 'aria-placeholder', 'aria-roledescription', 'aria-valuetext'],
           'input': ['placeholder'],
-          'img': ['alt'],
+          'img': ['alt']
         },
-        directives: ['v-text'],
+        directives: ['v-text']
       }],
       'vue/no-duplicate-attributes': ['error'],
       'vue/no-mutating-props': ['error'],
@@ -135,8 +135,8 @@ export default withNuxt(
       'vue/this-in-template': ['error', 'never'],
       'vue/no-root-v-if': ['error'],
       'vue/no-use-v-else-with-v-for': ['error'],
-      'vue/padding-line-between-blocks': ['error'],
-    },
+      'vue/padding-line-between-blocks': ['error']
+    }
   }),
   {
     ignores: [
@@ -159,6 +159,7 @@ export default withNuxt(
       '**/theme/',
       'base/assets/primevue',
       '**/personal/',
-    ],
-  },
-);
+      'wrangler.toml'
+    ]
+  }
+)
