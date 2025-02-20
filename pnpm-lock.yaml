@@ -93,8 +93,8 @@ importers:
         specifier: ^3.7.3
         version: 3.7.3(magicast@0.3.5)(prettier@3.4.2)
       radix-vue:
-        specifier: ^1.9.15
-        version: 1.9.15(vue@3.5.13(typescript@5.7.3))
+        specifier: ^1.9.16
+        version: 1.9.16(vue@3.5.13(typescript@5.7.3))
       sass-embedded:
         specifier: ^1.85.0
         version: 1.85.0
@@ -151,8 +151,8 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       '@iconify-json/vscode-icons':
-        specifier: ^1.2.14
-        version: 1.2.14
+        specifier: ^1.2.15
+        version: 1.2.15
       '@shikijs/colorized-brackets':
         specifier: ^1.29.2
         version: 1.29.2
@@ -1362,8 +1362,8 @@ packages:
   '@iconify-json/skill-icons@1.2.0':
     resolution: {integrity: sha512-5zlPrzF5pelV1wut7C88zmAiYONvGxvFw11dXW1Pr1oIhUOtYhC7x3zkErSTFkyZ3m5fEgcEUrcO1W3UhNJVpw==}
 
-  '@iconify-json/vscode-icons@1.2.14':
-    resolution: {integrity: sha512-DLFEWtKpqpzzWbn8DWQoBb2j/KK8KASLHPKQ7763/F4SJelMZg2xVUPUEWrceLNcTu8OVtKQcd/+3Ysa3WcAsg==}
+  '@iconify-json/vscode-icons@1.2.15':
+    resolution: {integrity: sha512-L4IgpPqpZLUvO4NgMYV8jo4idIRn3xfXwBKQCUxKFqa50v65Vc12tipI392Mv+QodagQcouqWAt2emFufGJJ8A==}
 
   '@iconify/collections@1.0.497':
     resolution: {integrity: sha512-o1cdJvH7nqSU5pmFjthmfIXSXbv14eMu3KvStVfmSLgTGzlXUMbteTBIyBVJoaTqgaNRM5qmafEBJszJjja0EQ==}
@@ -5877,8 +5877,8 @@ packages:
   queue@6.0.2:
     resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==}
 
-  radix-vue@1.9.15:
-    resolution: {integrity: sha512-+wz/PBlUTkrqFPS9ZUI1eZ4QHrU2EVbQnPvtnxWY7Q7jZtNE/LAAEf9IDoBoacX1hKfJXBB+SKfZSrv57uofYA==}
+  radix-vue@1.9.16:
+    resolution: {integrity: sha512-xwkTfQ7Ub/0XmT40JDc3g03xuYqKIJzVKGazcIkk8mUksj/tbw1pcCVRP0e3hKvPHKeQ0cktI1MvRnlUwCRvoQ==}
     peerDependencies:
       vue: '>= 3.2.0'
 
@@ -8316,7 +8316,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/vscode-icons@1.2.14':
+  '@iconify-json/vscode-icons@1.2.15':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -14498,7 +14498,7 @@ snapshots:
     dependencies:
       inherits: 2.0.4
 
-  radix-vue@1.9.15(vue@3.5.13(typescript@5.7.3)):
+  radix-vue@1.9.16(vue@3.5.13(typescript@5.7.3)):
     dependencies:
       '@floating-ui/dom': 1.6.12
       '@floating-ui/vue': 1.1.5(vue@3.5.13(typescript@5.7.3))
