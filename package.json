@@ -24,7 +24,7 @@
     "@nuxthub/core": "^0.8.17",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/fontaine": "^0.5.0",
-    "@nuxtjs/mdc": "^0.13.5",
+    "@nuxtjs/mdc": "^0.14.0",
     "@nuxtjs/sitemap": "^6.1.5",
     "@nuxtjs/tailwindcss": "^6.13.1",
     "@openpanel/web": "^1.0.1",
@@ -33,7 +33,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@vueuse/core": "^12.7.0",
     "@vueuse/nuxt": "^12.7.0",
-    "drizzle-orm": "^0.39.3",
+    "drizzle-orm": "^0.40.0",
     "medium-zoom": "^1.1.0",
     "nuxt": "^3.15.4",
     "nuxt-content-twoslash": "^0.1.2",
@@ -68,15 +68,15 @@
     "@types/hast": "^3.0.4",
     "@unocss/eslint-config": "^65.5.0",
     "@unocss/nuxt": "^65.5.0",
-    "drizzle-kit": "^0.30.4",
+    "drizzle-kit": "^0.30.5",
     "eslint-plugin-format": "^1.0.1",
     "nuxt-server-fn": "^0.4.1",
     "nuxthub": "^0.8.9",
     "typescript": "^5.7.3",
     "unocss": "^65.5.0",
-    "wrangler": "^3.109.3"
+    "wrangler": "^3.110.0"
   },
-  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
+  "packageManager": "pnpm@10.5.0+sha512.11106a5916c7406fe4b8cb8e3067974b8728f47308a4f5ac5e850304afa6f57e2847d7950dfe78877d8d36bfb401d381c4215db3a4c3547ffa63c14333a6fa51",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
