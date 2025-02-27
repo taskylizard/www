@@ -51,11 +51,11 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.3.0",
-    "@iconify-json/carbon": "^1.2.7",
+    "@iconify-json/carbon": "^1.2.8",
     "@iconify-json/catppuccin": "^1.2.9",
     "@iconify-json/devicon": "^1.2.17",
     "@iconify-json/logos": "^1.2.4",
-    "@iconify-json/lucide": "^1.2.26",
+    "@iconify-json/lucide": "^1.2.27",
     "@iconify-json/mingcute": "^1.2.3",
     "@iconify-json/ph": "^1.2.2",
     "@iconify-json/radix-icons": "^1.2.2",
@@ -74,9 +74,9 @@
     "nuxthub": "^0.8.9",
     "typescript": "^5.7.3",
     "unocss": "^65.5.0",
-    "wrangler": "^3.110.0"
+    "wrangler": "^3.111.0"
   },
-  "packageManager": "pnpm@10.5.1+sha512.c424c076bd25c1a5b188c37bb1ca56cc1e136fbf530d98bcb3289982a08fd25527b8c9c4ec113be5e3393c39af04521dd647bcf1d0801eaf8ac6a7b14da313af",
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
