@@ -21,7 +21,7 @@
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxthq/studio": "^2.2.1",
-    "@nuxthub/core": "^0.8.17",
+    "@nuxthub/core": "^0.8.18",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/fontaine": "^0.5.0",
     "@nuxtjs/mdc": "^0.14.0",
@@ -53,7 +53,7 @@
     "@antfu/eslint-config": "^4.4.0",
     "@iconify-json/carbon": "^1.2.8",
     "@iconify-json/catppuccin": "^1.2.9",
-    "@iconify-json/devicon": "^1.2.17",
+    "@iconify-json/devicon": "^1.2.18",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/lucide": "^1.2.28",
     "@iconify-json/mingcute": "^1.2.3",
@@ -74,7 +74,7 @@
     "nuxthub": "^0.8.9",
     "typescript": "^5.8.2",
     "unocss": "^65.5.0",
-    "wrangler": "^3.111.0"
+    "wrangler": "^3.112.0"
   },
   "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
   "pnpm": {

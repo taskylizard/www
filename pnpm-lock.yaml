@@ -33,8 +33,8 @@ importers:
         specifier: ^2.2.1
         version: 2.2.1(magicast@0.3.5)
       '@nuxthub/core':
-        specifier: ^0.8.17
-        version: 0.8.17(db0@0.2.1(drizzle-orm@0.40.0(gel@2.0.0)))(ioredis@5.4.1)(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))
+        specifier: ^0.8.18
+        version: 0.8.18(db0@0.2.1(drizzle-orm@0.40.0(gel@2.0.0)))(ioredis@5.4.1)(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))
       '@nuxtjs/color-mode':
         specifier: ^3.5.2
         version: 3.5.2(magicast@0.3.5)
@@ -124,8 +124,8 @@ importers:
         specifier: ^1.2.9
         version: 1.2.9
       '@iconify-json/devicon':
-        specifier: ^1.2.17
-        version: 1.2.17
+        specifier: ^1.2.18
+        version: 1.2.18
       '@iconify-json/logos':
         specifier: ^1.2.4
         version: 1.2.4
@@ -187,8 +187,8 @@ importers:
         specifier: ^65.5.0
         version: 65.5.0(@unocss/webpack@65.5.0(webpack@5.97.1(esbuild@0.24.2)))(postcss@8.5.1)(vite@6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.2))
       wrangler:
-        specifier: ^3.111.0
-        version: 3.111.0
+        specifier: ^3.112.0
+        version: 3.112.0
 
 packages:
 
@@ -1335,8 +1335,8 @@ packages:
   '@iconify-json/catppuccin@1.2.9':
     resolution: {integrity: sha512-PTBKy+xV4P6BdGbZW6uB/IpNN4ejkq4m/mIeyjkNLtGqv44apNaChg65n1IMXthp5Hlsx/VoNdFosaHClC8Ajw==}
 
-  '@iconify-json/devicon@1.2.17':
-    resolution: {integrity: sha512-n8TuuqLLb75Y2ANAhOhPXqRhl2khNzuyVlUsXSJXq3xfaMYHYRSu2A7Cmm2WMLfheA3CnsOLxC3jkp2GhxKb3g==}
+  '@iconify-json/devicon@1.2.18':
+    resolution: {integrity: sha512-A2SDG3BOGOlMrz1zGKoWmM9R17tIUNlWA/JO3YKiIFGd3ysvhXaVBj+Tr12ts0y3e/vTgVW/QkrAFqct9bqC9A==}
 
   '@iconify-json/logos@1.2.4':
     resolution: {integrity: sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw==}
@@ -1590,11 +1590,6 @@ packages:
     peerDependencies:
       vite: '*'
 
-  '@nuxt/devtools-kit@2.0.0':
-    resolution: {integrity: sha512-wWZGob6xsrDa9NcFCJb4I26rv8XPWRXP4QSVgBT7hkgiAstRISduUU1solxVJTrPHjx98L4Lumb2jjy+1MjMSA==}
-    peerDependencies:
-      vite: '>=6.0'
-
   '@nuxt/devtools-kit@2.1.0':
     resolution: {integrity: sha512-1fhwU7dDq/vIpjpNRwjEmTllRT1O0nzyBEhY187bQ8xBpoCC93t3zG3iTKcl8XkpT1aK9SqcgmXOnj5fNIAaYA==}
     peerDependencies:
@@ -1668,8 +1663,8 @@ packages:
   '@nuxthq/studio@2.2.1':
     resolution: {integrity: sha512-FiKaC2NBnoKbV5opW8+bXt75R9b7XQ/xtr2bCSLRUca2H7lYypfUAdpYltJasKMgJsUWMNHME92iW5Fi9gb+IA==}
 
-  '@nuxthub/core@0.8.17':
-    resolution: {integrity: sha512-0plAZ+oE/ty6z90sJ0feozSlcfJENaD9/+mlF4GIXx8bKic10X/w2EzoK1Ky+x4+0mWxi6qL2ZrchoMEJy+ywA==}
+  '@nuxthub/core@0.8.18':
+    resolution: {integrity: sha512-t7+jtyXVFuV60dhoWeYobVzij7c5ir0T10Uam2Gk9SUaMvp8Kd5op5mPnAo4v2SPW/JiJyK6gwTb7jUWDthPqg==}
 
   '@nuxtjs/color-mode@3.5.2':
     resolution: {integrity: sha512-cC6RfgZh3guHBMLLjrBB2Uti5eUoGM9KyauOaYS9ETmxNWBMTvpgjvSiSJp1OFljIXPIqVTJ3xtJpSNZiO3ZaA==}
@@ -5154,8 +5149,8 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
-  miniflare@3.20250214.1:
-    resolution: {integrity: sha512-NE66QV+2n9ZndaP5jgPlcVref3Arvizb+l2QqhgeXtKM5Orhi8UU2mijoiN3mHEUexKaBES2S1VubT4LDPqkxQ==}
+  miniflare@3.20250214.2:
+    resolution: {integrity: sha512-t+lT4p2lbOcKv4PS3sx1F/wcDAlbEYZCO2VooLp4H7JErWWYIi9yjD3UillC3CGOpiBahVg5nrPCoFltZf6UlA==}
     engines: {node: '>=16.13'}
     hasBin: true
 
@@ -7371,8 +7366,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@3.111.0:
-    resolution: {integrity: sha512-3j/Wq5aj/sCQRSmkjBLxbkIH7LCx0h2UnaxmhOplDjJmZty10lGRs/jGgaG/M/GEsDg5TJ7UHvBh3hSldgjfKg==}
+  wrangler@3.112.0:
+    resolution: {integrity: sha512-PNQWGze3ODlWwG33LPr8kNhbht3eB3L9fogv+fapk2fjaqj0kNweRapkwmvtz46ojcqWzsxmTe4nOC0hIVUfPA==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -7499,8 +7494,8 @@ packages:
   zod@3.22.3:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
 
-  zod@3.24.1:
-    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -8377,7 +8372,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/devicon@1.2.17':
+  '@iconify-json/devicon@1.2.18':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -8723,16 +8718,6 @@ snapshots:
       '@nuxt/kit': 3.15.4(magicast@0.3.5)
       '@nuxt/schema': 3.15.4
       execa: 7.2.0
-      vite: 6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0)
-    transitivePeerDependencies:
-      - magicast
-      - supports-color
-
-  '@nuxt/devtools-kit@2.0.0(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))':
-    dependencies:
-      '@nuxt/kit': 3.15.4(magicast@0.3.5)
-      '@nuxt/schema': 3.15.4
-      execa: 9.5.2
       vite: 6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0)
     transitivePeerDependencies:
       - magicast
@@ -9104,10 +9089,10 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@nuxthub/core@0.8.17(db0@0.2.1(drizzle-orm@0.40.0(gel@2.0.0)))(ioredis@5.4.1)(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))':
+  '@nuxthub/core@0.8.18(db0@0.2.1(drizzle-orm@0.40.0(gel@2.0.0)))(ioredis@5.4.1)(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))':
     dependencies:
       '@cloudflare/workers-types': 4.20250204.0
-      '@nuxt/devtools-kit': 2.0.0(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))
+      '@nuxt/devtools-kit': 2.1.0(magicast@0.3.5)(vite@6.0.11(@types/node@22.13.1)(jiti@2.4.2)(sass-embedded@1.85.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))
       '@nuxt/kit': 3.15.4(magicast@0.3.5)
       '@uploadthing/mime-types': 0.3.4
       citty: 0.1.6
@@ -9118,13 +9103,13 @@ snapshots:
       mime: 4.0.6
       nitro-cloudflare-dev: 0.2.1
       ofetch: 1.4.1
-      pathe: 2.0.2
+      pathe: 2.0.3
       pkg-types: 1.3.1
       std-env: 3.8.0
       ufo: 1.5.4
       uncrypto: 0.1.3
       unstorage: 1.14.4(db0@0.2.1(drizzle-orm@0.40.0(gel@2.0.0)))(ioredis@5.4.1)
-      zod: 3.24.1
+      zod: 3.24.2
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -13539,7 +13524,7 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  miniflare@3.20250214.1:
+  miniflare@3.20250214.2:
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       acorn: 8.14.0
@@ -16442,14 +16427,14 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20250214.0
       '@cloudflare/workerd-windows-64': 1.20250214.0
 
-  wrangler@3.111.0:
+  wrangler@3.112.0:
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
       '@esbuild-plugins/node-modules-polyfill': 0.2.2(esbuild@0.17.19)
       blake3-wasm: 2.1.5
       esbuild: 0.17.19
-      miniflare: 3.20250214.1
+      miniflare: 3.20250214.2
       path-to-regexp: 6.3.0
       unenv: 2.0.0-rc.1
       workerd: 1.20250214.0
@@ -16549,6 +16534,6 @@ snapshots:
 
   zod@3.22.3: {}
 
-  zod@3.24.1: {}
+  zod@3.24.2: {}
 
   zwitch@2.0.4: {}
