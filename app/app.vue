@@ -56,18 +56,6 @@ useSeoMeta({
         />
 
         <div class="flex space-x-2">
-          <a href="https://notbyai.fyi">
-            <img
-              src="/not-by-ai-light.svg"
-              class="dark:hidden"
-              alt="Written by Human, Not by AI"
-            >
-            <img
-              src="/not-by-ai-dark.svg"
-              class="hidden dark:block"
-              alt="Written by Human, Not by AI"
-            >
-          </a>
         </div>
       </div>
     </footer>
