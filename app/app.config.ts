@@ -1,4 +1,65 @@
+const WIDTH = 8
+
+const PALETTE = [
+  [
+    13,
+    43,
+    69,
+    255
+  ],
+  [
+    32,
+    60,
+    86,
+    255
+  ],
+  [
+    84,
+    78,
+    104,
+    255
+  ],
+  [
+    141,
+    105,
+    122,
+    255
+  ],
+  [
+    208,
+    129,
+    89,
+    255
+  ],
+  [
+    255,
+    170,
+    94,
+    255
+  ],
+  [
+    255,
+    212,
+    163,
+    255
+  ],
+  [
+    255,
+    236,
+    214,
+    255
+  ]
+]
+
+const DEPTH = PALETTE.length - 1
+
+
 export default defineAppConfig({
+  canvas: {
+    palette: PALETTE,
+    depth: DEPTH,
+    width: WIDTH
+  },
   app: {
     name: 'tasky',
     description: 'tasky\'s site',
