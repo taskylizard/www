@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Toc from '~/components/Toc.vue'
+
 const article = ref<HTMLElement | null>(null)
 const route = useRoute()
 const { data: page, error } = await useAsyncData(route.path, () =>
@@ -33,15 +35,15 @@ function onBackToTop() {
 </script>
 
 <template>
-  <main ref="article">
+  <main ref="article" class="relative">
     <ContentDoc v-slot="{ doc }">
       <article>
         <h1>{{ doc.title }}</h1>
-        <p>
+        <p class="mb-4">
           {{ doc.description }} •
           <NuxtTime :datetime="doc.date" />
         </p>
-        <ContentRenderer :value="doc" />
+        <Toc /> <ContentRenderer :value="doc" />
         <div class="mt-8 space-y-4">
           <div class="flex items-center justify-start">
             <button
@@ -63,5 +65,7 @@ function onBackToTop() {
         </div>
       </article>
     </ContentDoc>
+    <!-- Desktop TOC is fixed positioned, so its exact DOM location here is less critical -->
+    <!-- Mobile TOC (collapsible) is part of Toc.vue and will be placed correctly by the above move -->
   </main>
 </template>
