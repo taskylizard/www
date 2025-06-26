@@ -35,7 +35,10 @@ function onBackToTop() {
 </script>
 
 <template>
-  <main ref="article" class="relative">
+  <main
+    ref="article"
+    class="relative"
+  >
     <ContentDoc v-slot="{ doc }">
       <article>
         <h1>{{ doc.title }}</h1>

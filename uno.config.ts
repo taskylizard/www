@@ -134,7 +134,6 @@ import {
 } from '@radix-ui/colors'
 import {
   defineConfig,
-
   presetAttributify,
   presetIcons,
   presetTypography,
@@ -144,7 +143,19 @@ import {
   transformerVariantGroup
 } from 'unocss'
 
-type Shade = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12'
+type Shade =
+  | '1'
+  | '2'
+  | '3'
+  | '4'
+  | '5'
+  | '6'
+  | '7'
+  | '8'
+  | '9'
+  | '10'
+  | '11'
+  | '12'
 
 type CustomShadeCSSVaraible<T extends string> = `--${T}-${Shade}`
 type CustomColorObject<T extends string> = {
@@ -174,7 +185,10 @@ type Alias<K extends string, T extends string> = {
 }
 
 type ColorsResult<N extends string> = Record<N, Record<Shade, string>>
-type ColorsOverlayResult = Record<'black' | 'white', Record<'DEFAULT' | Shade, string>>
+type ColorsOverlayResult = Record<
+	'black' | 'white',
+  Record<'DEFAULT' | Shade, string>
+>
 
 // colors
 
@@ -396,24 +410,34 @@ const bronzeA: ColorValue<'bronzeA'> = [bronzeALight, bronzeDarkA]
 function rename<K extends string>(color: Color<K>) {
   return {
     to: <V extends string>(next: Readonly<{ [key in K]: V }>) => {
-      return Object.entries(color).reduce((obj, [key, value]) => {
-        obj[next[key as K]] = (value as ColorValue<string>).map((mode) => {
-          return Object.entries(mode).reduce((_mode, [, value], index) => {
-            _mode[`${next[key as K]}${index + 1}`] = value
-            return _mode
-          }, {} as Record<string, string>)
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        }) as any
-        return obj
-      }, {} as Color<V>)
+      return Object.entries(color).reduce(
+        (obj, [key, value]) => {
+          obj[next[key as K]] = (value as ColorValue<string>).map((mode) => {
+            return Object.entries(mode).reduce(
+              (_mode, [, value], index) => {
+                _mode[`${next[key as K]}${index + 1}`] = value
+                return _mode
+              },
+              {} as Record<string, string>
+            )
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          }) as any
+          return obj
+        },
+        {} as Color<V>
+      )
     }
   }
 }
 
-interface BuildOptions<O extends boolean> { overlay?: O, selector?: 'attribute' | 'class' }
+interface BuildOptions<O extends boolean> {
+  overlay?: O
+  selector?: 'attribute' | 'class'
+}
 
 interface BuildResult<A extends string, O extends boolean> {
-  colors: ColorsResult<A> & (O extends true | undefined ? ColorsOverlayResult : unknown)
+  colors: ColorsResult<A> &
+    (O extends true | undefined ? ColorsOverlayResult : unknown)
   preflight: Preflight
 }
 
@@ -439,26 +463,38 @@ function colorx<N extends string>(color: Color<N>) {
          * @returns colors and preflight
          *
          */
-        build: <O extends boolean = true>(options: BuildOptions<O> = {}): BuildResult<A, O> => {
+        build: <O extends boolean = true>(
+          options: BuildOptions<O> = {}
+        ): BuildResult<A, O> => {
           const { overlay = true, selector = 'attribute' } = options
 
-          const aliasentries = Object.entries(alias) as [string, string | string[]][]
+          const aliasentries = Object.entries(alias) as [
+            string,
+						string | string[]
+          ][]
 
-          const colorobject = (callback: { key: (i: number) => string, value: (i: number) => string }) => {
+          const colorobject = (callback: {
+            key: (i: number) => string
+            value: (i: number) => string
+          }) => {
             const value: Record<string, string> = {}
-            for (let i = 1; i <= 12; i++) value[callback.key(i)] = callback.value(i)
+            for (let i = 1; i <= 12; i++)
+              value[callback.key(i)] = callback.value(i)
             return value
           }
 
           return {
             colors: {
-              ...aliasentries.reduce((object, [name]) => {
-                object[name as A] = colorobject({
-                  key: i => `${i}`,
-                  value: i => `rgb(var(--${name}-${i}))`
-                })
-                return object
-              }, {} as ColorsResult<A>),
+              ...aliasentries.reduce(
+                (object, [name]) => {
+                  object[name as A] = colorobject({
+                    key: i => `${i}`,
+                    value: i => `rgb(var(--${name}-${i}))`
+                  })
+                  return object
+                },
+                {} as ColorsResult<A>
+              ),
               ...((overlay
                 ? ({
                     black: {
@@ -497,7 +533,9 @@ function colorx<N extends string>(color: Color<N>) {
             preflight: (() => {
               let css = ''
 
-              const addBase = (record: Record<string, Record<string, string>>) => {
+              const addBase = (
+                record: Record<string, Record<string, string>>
+              ) => {
                 let _css = ''
                 for (const key in record) {
                   const value = record[key]
@@ -513,20 +551,29 @@ function colorx<N extends string>(color: Color<N>) {
                 return `${Number.parseInt(hex.substring(0, 2), 16)} ${Number.parseInt(hex.substring(2, 4), 16)} ${Number.parseInt(hex.substring(4, 6), 16)}`
               }
 
-              const convert = <T extends string>(name: T, radix: RadixColorObject<T>): CustomColorObject<T> => {
-                return (Object.entries(radix) as [string, string][]).reduce((object, [key, value]) => {
-                  object[`--${name}-${key.replace(/\D/g, '') as Shade}`] = format(value)
-                  return object
-                }, {} as CustomColorObject<T>)
+              const convert = <T extends string>(
+                name: T,
+                radix: RadixColorObject<T>
+              ): CustomColorObject<T> => {
+                return (Object.entries(radix) as [string, string][]).reduce(
+                  (object, [key, value]) => {
+                    object[`--${name}-${key.replace(/\D/g, '') as Shade}`]
+											= format(value)
+                    return object
+                  },
+                  {} as CustomColorObject<T>
+                )
               }
 
               const LIGHT: CustomColorObject<string> = {}
               const DARK: CustomColorObject<string> = {};
 
-              (Object.entries(color) as [string, ColorValue<string>][]).forEach(([name, [light, dark]]) => {
-                Object.assign(LIGHT, convert(name, light))
-                Object.assign(DARK, convert(name, dark))
-              })
+              (Object.entries(color) as [string, ColorValue<string>][]).forEach(
+                ([name, [light, dark]]) => {
+                  Object.assign(LIGHT, convert(name, light))
+                  Object.assign(DARK, convert(name, dark))
+                }
+              )
 
               const SELECTOR = {
                 theme: (value: string) => {
@@ -559,7 +606,12 @@ function colorx<N extends string>(color: Color<N>) {
                 if (Array.isArray(color)) {
                   color.forEach((value, index) => {
                     addBase({
-                      [[index === 0 && ':root', `${SELECTOR.alias(name, value)}`].filter(Boolean).join(', ')]: colorobject({
+                      [[
+                        index === 0 && ':root',
+                        `${SELECTOR.alias(name, value)}`
+                      ]
+                        .filter(Boolean)
+                        .join(', ')]: colorobject({
                         key: i => `--${name}-${i}`,
                         value: i => `var(--${value}-${i})`
                       })
@@ -618,26 +670,6 @@ function colorx<N extends string>(color: Color<N>) {
   }
 }
 
-// Define typography tokens mapping
-const proseTokens = {
-  'body': 'neutral-11',
-  'headings': 'neutral-12',
-  'lead': 'neutral-11',
-  'links': 'pink-11',
-  'bold': 'neutral-12',
-  'counters': 'neutral-11',
-  'bullets': 'neutral-12',
-  'hr': 'neutral-6',
-  'quotes': 'neutral-12',
-  'quote-borders': 'neutral-6',
-  'captions': 'neutral-11',
-  'code': 'neutral-12',
-  'pre-code': 'neutral-12',
-  'pre-bg': 'neutral-3',
-  'th-borders': 'neutral-7',
-  'td-borders': 'neutral-6'
-} as const
-
 const radix = colorx({
   gray,
   blue,
@@ -663,58 +695,77 @@ const radix = colorx({
   })
   .build({ selector: 'class' })
 
-// Generate prose styles using CSS variables
 const proseStyles = {
   'h1, h2, h3, h4, h5, h6': {
-    color: `rgb(var(--${proseTokens.headings}))`
+    color: radix.colors.neutral[12]
   },
   'lead': {
-    color: `rgb(var(--${proseTokens.lead}))`
+    color: radix.colors.neutral[11]
   },
   'a': {
-    color: `rgb(var(--${proseTokens.links}))`,
-    textDecoration: 'underline'
+    'color': radix.colors.primary[11],
+    'text-decoration': 'underline',
+    'text-decoration-style': 'dashed'
+  },
+  'a:hover': {
+    'text-decoration-style': 'solid'
   },
   'bold': {
-    color: `rgb(var(--${proseTokens.bold}))`
+    color: radix.colors.neutral[12]
   },
   'counters': {
-    color: `rgb(var(--${proseTokens.counters}))`
+    color: radix.colors.neutral[11]
   },
   'bullets': {
-    color: `rgb(var(--${proseTokens.bullets}))`
+    color: radix.colors.neutral[12]
   },
   'hr': {
-    borderColor: `rgb(var(--${proseTokens.hr}))`
+    'border-color': radix.colors.neutral[6]
   },
   'quotes': {
-    color: `rgb(var(--${proseTokens.quotes}))`
+    color: radix.colors.neutral[12]
   },
   'quote-borders': {
-    borderLeftColor: `rgb(var(--${proseTokens['quote-borders']}))`
+    'border-left-color': radix.colors.neutral[6]
   },
   'captions': {
-    color: `rgb(var(--${proseTokens.captions}))`
+    color: radix.colors.neutral[11]
   },
-  'code': {
-    color: `rgb(var(--${proseTokens.code}))`
+  'p > code': {
+    'background': radix.colors.primary[3],
+    'color': radix.colors.primary[11],
+    'box-sizing': 'border-box',
+    'border-radius': '0.25rem',
+    'padding': '0.125rem 0.25rem'
+  },
+  'p > code::before': {
+    content: '\'\''
+  },
+  'p > code::after': {
+    content: '\'\''
   },
   'pre': {
-    backgroundColor: `rgb(var(--${proseTokens['pre-bg']}))`
+    'background-color': radix.colors.neutral[3]
   },
   'pre code': {
-    color: `rgb(var(--${proseTokens['pre-code']}))`
+    color: radix.colors.neutral[12]
   },
   'th': {
-    borderBottomColor: `rgb(var(--${proseTokens['th-borders']}))`
+    'border-bottom-color': radix.colors.neutral[7]
   },
   'td': {
-    borderBottomColor: `rgb(var(--${proseTokens['td-borders']}))`
+    'border-bottom-color': radix.colors.neutral[6]
   }
 }
 
 export default defineConfig({
-  theme: { colors: { transparent: 'transparent', current: 'currentColor', ...radix.colors } },
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      ...radix.colors
+    }
+  },
   preflights: [radix.preflight],
   presets: [
     presetUno(),
@@ -738,8 +789,5 @@ export default defineConfig({
       }
     })
   ],
-  transformers: [
-    transformerDirectives(),
-    transformerVariantGroup()
-  ]
+  transformers: [transformerDirectives(), transformerVariantGroup()]
 })
