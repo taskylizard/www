@@ -26,7 +26,7 @@ useSeoMeta({
   />
   <NuxtRouteAnnouncer />
   <Navigation />
-  <main class="content mx-auto max-w-[700px] bg-neutral-1 px-6 py-12 text-neutral-11 font-sans prose prose-pre:my-0 prose-table:block prose-table:overflow-x-auto prose-table:whitespace-nowrap prose-pre:rounded-lg md:px-6 md:pb-20 md:pt-10 focus:outline-none dark:prose-invert">
+  <main class="content max-w-[700px] bg-neutral-1 px-6 py-12 text-neutral-11 font-sans prose prose-pre:my-0 prose-table:block prose-table:overflow-x-auto prose-table:whitespace-nowrap prose-pre:rounded-lg md:px-6 md:pb-20 md:pt-10 focus:outline-none dark:prose-invert">
     <NuxtPage />
     <footer
       class="pt-4"
