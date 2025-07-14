@@ -50,15 +50,15 @@ function onBackToTop() {
         <div class="mt-8 space-y-4">
           <div class="flex items-center justify-start">
             <button
-              class="dark:bg-neutral-dark-3 dark:hover:bg-neutral-dark-5 dark:focus:ring-neutral-dark-6 flex items-center rounded-md bg-neutral-3 px-4 py-2 transition duration-300 ease-in-out space-x-2 hover:bg-neutral-5 focus:outline-none focus:ring-2 focus:ring-neutral-6"
+              class="group flex items-center gap-2 text-neutral-11 hover:text-neutral-12 transition-colors duration-300"
               aria-label="Back to top"
               @click="onBackToTop"
             >
               <Icon
                 name="lucide:chevron-up"
-                class="size-4"
+                class="size-4 transition-transform duration-300 group-hover:-translate-y-0.5"
               />
-              <span class="text-sm font-medium">Back to Top</span>
+              <span class="text-sm">Back to Top</span>
             </button>
           </div>
           <nav class="flex flex-col items-stretch justify-between sm:flex-row sm:items-center space-y-4 sm:space-x-4 sm:space-y-0">

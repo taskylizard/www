@@ -21,31 +21,22 @@ const text = computed(() => (props.prev ? 'Previous' : 'Next'))
 const title = computed(() =>
   props.prev ? props.prev.title : props.next!.title
 )
-const description = computed(() =>
-  props.prev ? props.prev.description : props.next!.description
-)
 </script>
 
 <template>
   <NuxtLink
     v-if="to"
     :to="to"
-    class="not-prose flex flex-1 flex-col justify-between rounded-md bg-neutral-3 p-4 transition duration-300 ease-in-out hover:bg-neutral-4 focus:outline-none focus:ring-2 focus:ring-neutral-5"
+    class="not-prose flex flex-1 items-center gap-3 relative pl-4 py-3 group"
   >
-    <div class="mb-2 flex items-center text-sm">
-      <Icon
-        :name="icon"
-        class="mr-1 size-4"
-      />
-      <span>{{ text }}</span>
-    </div>
-    <div>
-      <h3 class="text-neutral-dark-4 mb-1 text-lg font-semibold">
-        {{ title }}
-      </h3>
-      <p class="text-neutral-dark-8 line-clamp-2 text-sm">
-        {{ description }}
-      </p>
+    <div class="absolute left-0 top-0 w-0.5 h-full bg-neutral-6 transition-all duration-500 group-hover:bg-neutral-8"></div>
+    <Icon
+      :name="icon"
+      class="size-4 text-neutral-11"
+    />
+    <div class="flex-1">
+      <div class="text-xs text-neutral-11 mb-1">{{ text }}</div>
+      <div class="text-sm font-medium text-neutral-12">{{ title }}</div>
     </div>
   </NuxtLink>
 </template>
