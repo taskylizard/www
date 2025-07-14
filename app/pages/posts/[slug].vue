@@ -44,7 +44,11 @@ function onBackToTop() {
         <h1>{{ doc.title }}</h1>
         <p class="mb-4">
           {{ doc.description }} •
-          <NuxtTime :datetime="doc.date" />
+          <NuxtTime 
+            :datetime="doc.date" 
+            date-style="short" 
+            locale="en-GB" 
+          />
         </p>
         <Toc /> <ContentRenderer :value="doc" />
         <div class="mt-8 space-y-4">

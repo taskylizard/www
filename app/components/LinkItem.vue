@@ -23,6 +23,8 @@ const props = defineProps<Props>()
     <NuxtTime
       class="text-neutral-11"
       :datetime="props.date"
+      date-style="short"
+      locale="en-GB"
     />
     <span class="text-neutral-6"> – </span>
   </template>
