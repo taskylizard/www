@@ -41,6 +41,14 @@ export default defineNuxtConfig({
 		author: "tasky",
 		defaultLocale: "en",
 	},
+	ogImage: {
+		enabled: true,
+		defaults: {
+			component: "Og",
+			width: 1200,
+			height: 630,
+		},
+	},
 	colorMode: {
 		classSuffix: "",
 	},

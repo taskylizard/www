@@ -18,7 +18,23 @@ useSeoMeta({
   title: page.value?.title,
   description: page.value?.description,
   ogTitle: page.value?.title,
-  ogDescription: page.value?.description
+  ogDescription: page.value?.description,
+  ogType: 'article',
+  ogUrl: `https://tasky.nuxt.dev${route.path}`,
+  ogImage: `https://tasky.nuxt.dev${route.path}/og-image.png`,
+  ogImageAlt: page.value?.title,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogSiteName: 'tasky',
+  articleAuthor: 'taskylizard',
+  articlePublishedTime: page.value?.date,
+  articleModifiedTime: page.value?.date,
+  twitterCard: 'summary_large_image',
+  twitterSite: '@taskylizard',
+  twitterTitle: page.value?.title,
+  twitterDescription: page.value?.description,
+  twitterImage: `https://tasky.nuxt.dev${route.path}/og-image.png`,
+  twitterImageAlt: page.value?.title
 })
 
 const [next, prev] = await queryContent()

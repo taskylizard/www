@@ -14,8 +14,19 @@ const appConfig = useAppConfig()
 useSeoMeta({
   ogSiteName: appConfig.app.name,
   ogType: 'website',
+  ogTitle: 'taskylizard',
+  ogDescription: appConfig.app.description,
+  ogUrl: 'https://tasky.nuxt.dev',
+  ogImage: 'https://tasky.nuxt.dev/og-image.png',
+  ogImageAlt: 'tasky\'s personal website',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   twitterCard: 'summary_large_image',
-  twitterSite: appConfig.app.name
+  twitterSite: '@taskylizard',
+  twitterTitle: 'taskylizard',
+  twitterDescription: appConfig.app.description,
+  twitterImage: 'https://tasky.nuxt.dev/og-image.png',
+  twitterImageAlt: 'tasky\'s personal website'
 })
 </script>
 
