@@ -135,11 +135,11 @@ function depthClasses(depth: number) {
 const tocListClasses = 'list-none p-0 space-y-1' // Added list-none and p-0
 function tocLinkItemClasses(linkDepth: number, currentActiveId: string | null, linkId: string) {
   return [
-    'toc-link',
+    'toc-link prose-a:no-underline',
     depthClasses(linkDepth),
     {
-      'text-pink-11 dark:text-pink-dark-11 font-medium': currentActiveId === linkId,
-      'text-neutral-11 dark:text-neutral-dark-11 hover:text-neutral-12 dark:hover:text-neutral-dark-12': currentActiveId !== linkId
+      'text-pink-11! font-medium!': currentActiveId === linkId,
+      'text-neutral-11! hover:text-neutral-12!': currentActiveId !== linkId
     }
   ]
 }
@@ -149,48 +149,33 @@ const tocLinkClasses = 'block py-1 transition-colors duration-150'
 <template>
   <div v-if="links.length">
     <!-- Mobile Collapsible View -->
-    <div class="dark:border-neutral-dark-4 mb-6 border border-neutral-4 rounded-lg xl:hidden">
-      <CollapsibleRoot
-        v-model:open="isMobileTocOpen"
-        class="w-full"
-      >
+    <div class="mb-6 border border-neutral-4 rounded-lg xl:hidden">
+      <CollapsibleRoot v-model:open="isMobileTocOpen" class="w-full">
         <CollapsibleTrigger
-          class="text-md dark:text-neutral-dark-12 dark:hover:bg-neutral-dark-2 dark:focus-visible:ring-pink-dark-500 w-full flex items-center justify-between rounded-t-lg px-4 py-3 text-neutral-12 font-medium hover:bg-neutral-2 focus-visible:ring-2 focus-visible:ring-pink-500"
-          :aria-label="isMobileTocOpen ? 'Close table of contents' : 'Open table of contents'"
-        >
+          class="text-md w-full flex items-center justify-between rounded-t-lg px-4 py-3 text-neutral-12 font-medium hover:bg-neutral-2 focus-visible:ring-2 focus-visible:ring-pink-500"
+          :aria-label="isMobileTocOpen ? 'Close table of contents' : 'Open table of contents'">
           On this page
-          <Icon
-            name="lucide:chevrons-up-down"
-            class="size-4 transition-transform duration-200"
-            :class="{ 'rotate-180': isMobileTocOpen }"
-          />
+          <Icon name="lucide:chevrons-up-down" class="size-4 transition-transform duration-200"
+            :class="{ 'rotate-180': isMobileTocOpen }" />
         </CollapsibleTrigger>
-        <CollapsibleContent class="dark:border-neutral-dark-4 border-t border-neutral-4">
+        <CollapsibleContent class="border-t border-neutral-4">
           <ScrollAreaRoot class="max-h-[50vh] w-full p-4">
             <ScrollAreaViewport class="h-full w-full">
               <ul :class="tocListClasses">
-                <li
-                  v-for="link in links"
-                  :key="`mobile-${link.id}`"
-                  :class="tocLinkItemClasses(link.depth, activeId, link.id)"
-                >
-                  <a
-                    class="appearance-none"
-                    :href="`#${link.id}`"
-                    :class="tocLinkClasses"
-                    :aria-current="activeId === link.id ? 'true' : undefined"
-                    @click.prevent="scrollToHeading(link.id)"
-                  >
+                <li v-for="link in links" :key="`mobile-${link.id}`"
+                  :class="tocLinkItemClasses(link.depth, activeId, link.id)">
+                  <a :href="`#${link.id}`" :class="tocLinkClasses"
+                    :aria-current="activeId === link.id ? 'true' : undefined" @click.prevent="scrollToHeading(link.id)">
                     {{ link.text }}
                   </a>
                 </li>
               </ul>
             </ScrollAreaViewport>
             <ScrollAreaScrollbar
-              class="dark:bg-neutral-dark-3 dark:hover:bg-neutral-dark-4 flex touch-none select-none bg-neutral-3 p-0.5 transition-colors duration-[160ms] ease-out data-[orientation=vertical]:w-2.5 hover:bg-neutral-4"
-              orientation="vertical"
-            >
-              <ScrollAreaThumb class="dark:bg-neutral-dark-7 relative flex-1 rounded-[10px] bg-neutral-7 before:absolute before:left-1/2 before:top-1/2 before:h-full before:min-h-[44px] before:min-w-[44px] before:w-full before:content-[''] before:-translate-x-1/2 before:-translate-y-1/2" />
+              class="flex touch-none select-none bg-neutral-3 p-0.5 transition-colors duration-[160ms] ease-out data-[orientation=vertical]:w-2.5 hover:bg-neutral-4"
+              orientation="vertical">
+              <ScrollAreaThumb
+                class="relative flex-1 rounded-[10px] bg-neutral-7 before:absolute before:left-1/2 before:top-1/2 before:h-full before:min-h-[44px] before:min-w-[44px] before:w-full before:content-[''] before:-translate-x-1/2 before:-translate-y-1/2" />
             </ScrollAreaScrollbar>
           </ScrollAreaRoot>
         </CollapsibleContent>
@@ -198,35 +183,28 @@ const tocLinkClasses = 'block py-1 transition-colors duration-150'
     </div>
 
     <!-- Desktop Floating View -->
-    <nav class="dark:border-neutral-dark-4 dark:bg-neutral-dark-1 fixed right-8 top-24 hidden max-h-[calc(100vh-7rem)] w-64 border border-neutral-4 rounded-lg bg-neutral-1 p-4 shadow-md xl:block space-y-2">
-      <h3 class="dark:text-neutral-dark-12 mb-2 text-sm text-neutral-12 font-semibold tracking-tight">
+    <nav
+      class="fixed right-8 top-24 hidden max-h-[calc(100vh-7rem)] w-64 border border-neutral-4 rounded-lg bg-neutral-1 p-4 shadow-md xl:block space-y-2">
+      <h3 class="mb-2 text-sm text-neutral-12 font-semibold tracking-tight">
         On this page
       </h3>
       <ScrollAreaRoot class="h-full w-full">
         <ScrollAreaViewport class="h-full w-full">
           <ul :class="tocListClasses">
-            <li
-              v-for="link in links"
-              :key="`desktop-${link.id}`"
-              :class="tocLinkItemClasses(link.depth, activeId, link.id)"
-            >
-              <a
-                class="appearance-none"
-                :href="`#${link.id}`"
-                :class="tocLinkClasses"
-                :aria-current="activeId === link.id ? 'true' : undefined"
-                @click.prevent="scrollToHeading(link.id)"
-              >
+            <li v-for="link in links" :key="`desktop-${link.id}`"
+              :class="tocLinkItemClasses(link.depth, activeId, link.id)">
+              <a :href="`#${link.id}`" :class="tocLinkClasses" :aria-current="activeId === link.id ? 'true' : undefined"
+                @click.prevent="scrollToHeading(link.id)">
                 {{ link.text }}
               </a>
             </li>
           </ul>
         </ScrollAreaViewport>
         <ScrollAreaScrollbar
-          class="dark:bg-neutral-dark-3 dark:hover:bg-neutral-dark-4 flex touch-none select-none bg-neutral-3 p-0.5 transition-colors duration-[160ms] ease-out data-[orientation=vertical]:w-2.5 hover:bg-neutral-4"
-          orientation="vertical"
-        >
-          <ScrollAreaThumb class="dark:bg-neutral-dark-7 relative flex-1 rounded-[10px] bg-neutral-7 before:absolute before:left-1/2 before:top-1/2 before:h-full before:min-h-[44px] before:min-w-[44px] before:w-full before:content-[''] before:-translate-x-1/2 before:-translate-y-1/2" />
+          class="flex touch-none select-none bg-neutral-3 p-0.5 transition-colors duration-[160ms] ease-out data-[orientation=vertical]:w-2.5 hover:bg-neutral-4"
+          orientation="vertical">
+          <ScrollAreaThumb
+            class="relative flex-1 rounded-[10px] bg-neutral-7 before:absolute before:left-1/2 before:top-1/2 before:h-full before:min-h-[44px] before:min-w-[44px] before:w-full before:content-[''] before:-translate-x-1/2 before:-translate-y-1/2" />
         </ScrollAreaScrollbar>
       </ScrollAreaRoot>
     </nav>

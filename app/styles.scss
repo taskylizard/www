@@ -77,7 +77,7 @@
 }
 
 .header-anchor {
-  @apply not-prose text-neutral-10 opacity-0 transition delay-100 duration-200 hover:text-neutral-11 focus:opacity-100 dark:text-neutral-dark-10 dark:hover:text-neutral-dark-11;
+  @apply text-neutral-10! opacity-0 transition delay-100 duration-200 hover:text-neutral-11! focus:opacity-100;
 }
 
 div[class*='language-'] {
