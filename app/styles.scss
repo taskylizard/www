@@ -52,11 +52,15 @@
   }
 }
 
-/* Apply background to Nuxt's root element and ensure it covers viewport height */
 #__nuxt {
   background-color: rgb(var(--neutral-1));
-  min-height: 100vh; /* Ensure it covers the full viewport height */
+  min-height: 100vh; 
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11" on;
 }
+
 
 .content {
   :is(:where(h1, h2, h3, h4, h5, h6):not(:where([class~='not-prose'] *))) {
