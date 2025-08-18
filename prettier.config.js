@@ -4,21 +4,21 @@ export default {
 	semi: false,
 	singleQuote: true,
 	tabWidth: 2,
-	trailingComma: "none",
+	trailingComma: 'none',
 	useTabs: true,
-	plugins: ["prettier-plugin-astro"],
+	plugins: ['prettier-plugin-astro'],
 	overrides: [
 		{
-			files: [".*", "*.md", "*.toml", "*.yml"],
+			files: ['.*', '*.md', '*.toml', '*.yml'],
 			options: {
-				useTabs: false,
-			},
+				useTabs: false
+			}
 		},
 		{
-			files: ["**/*.astro"],
+			files: ['**/*.astro'],
 			options: {
-				parser: "astro",
-			},
-		},
-	],
-};
+				parser: 'astro'
+			}
+		}
+	]
+}
