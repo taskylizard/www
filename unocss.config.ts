@@ -1,4 +1,9 @@
-import { defineConfig, presetWind, presetWebFonts, transformerDirectives } from 'unocss'
+import {
+	defineConfig,
+	presetWind,
+	presetWebFonts,
+	transformerDirectives
+} from 'unocss'
 import { presetRadixColors } from 'unocss-preset-radix-colors'
 import { theme } from 'unocss/preset-wind'
 
@@ -8,19 +13,23 @@ const fontFamily = {
 	'system-sans': systemFonts.sans,
 	'system-serif': systemFonts.serif,
 	sans: ['Geist', "'Geist Fallback'", systemFonts.sans].join(', '),
-	serif: ["'Source Serif 4 Variable'", "'Source Serif 4 Fallback'", systemFonts.serif].join(', '),
-	mono: ['Monaco', 'ui-monospace', 'Menlo', systemFonts.mono].join(', '),
+	serif: [
+		"'Source Serif 4 Variable'",
+		"'Source Serif 4 Fallback'",
+		systemFonts.serif
+	].join(', '),
+	mono: ['Monaco', 'ui-monospace', 'Menlo', systemFonts.mono].join(', ')
 }
 
 export default defineConfig({
 	theme: {
 		fontFamily,
 		letterSpacing: {
-			serif: '-0.018em',
-		},
+			serif: '-0.018em'
+		}
 	},
 	shortcuts: {
-		'font-serif': 'font-serif tracking-serif',
+		'font-serif': 'font-serif tracking-serif'
 	},
 	transformers: [transformerDirectives()],
 	presets: [
@@ -42,15 +51,15 @@ export default defineConfig({
 				'orange',
 				// info
 				'blue',
-				'pink',
+				'pink'
 			],
 			aliases: {
 				neutral: 'gray',
 				info: 'blue',
 				tip: 'green',
 				warning: 'yellow',
-				danger: 'red',
-			},
-		}),
-	],
+				danger: 'red'
+			}
+		})
+	]
 })

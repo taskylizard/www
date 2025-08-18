@@ -6,21 +6,21 @@ const knownProviders = {
 		name: 'GitHub',
 		prefix: 'https://github.com/',
 		icon: 'simple-icons:github',
-		color: 'var(--gray11)',
+		color: 'var(--gray11)'
 	},
 	bluesky: {
 		name: 'Bluesky',
 		prefix: 'https://bsky.app/profile/',
 		icon: 'simple-icons:bluesky',
-		color: 'var(--blue11)',
+		color: 'var(--blue11)'
 	},
 
 	rss: {
 		name: 'RSS Feed',
 		prefix: '',
 		icon: 'material-symbols:rss-feed',
-		color: 'var(--orange11)',
-	},
+		color: 'var(--orange11)'
+	}
 }
 
 export type Props = { links: Record<string, string> }
@@ -31,14 +31,14 @@ const links = Object.entries(Astro.props.links).map(([key, value]) => {
 			name: provider.name,
 			icon: provider.icon,
 			color: provider.color,
-			url: `${provider.prefix}${value}`,
+			url: `${provider.prefix}${value}`
 		}
 	}
 	return {
 		name: key,
 		color: 'var(--gray12)',
 		icon: 'material-symbols:arrow-outward',
-		url: value,
+		url: value
 	}
 })
 ---

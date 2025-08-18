@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 		const next = listedPosts[i - 1]
 		return {
 			params: { slug: post.id },
-			props: { ...post, previous, next },
+			props: { ...post, previous, next }
 		}
 	})
 }
@@ -25,20 +25,31 @@ export async function getStaticPaths() {
 export type Props<T = Post> = T & { previous?: T; next?: T }
 const { previous, next, ...post } = Astro.props
 
-const { Content, remarkPluginFrontmatter: frontmatter, headings: _headings } = await render(post)
+const {
+	Content,
+	remarkPluginFrontmatter: frontmatter,
+	headings: _headings
+} = await render(post)
 const readingTime = frontmatter.readingTime as string
 const headings = _headings.filter((h) => h.depth === 3)
 
 const isAboutPage = post.id === 'about'
 ---
 
-<PostLayout padded={!isAboutPage} title={post.data.title} description={post.data.description}>
+<PostLayout
+	padded={!isAboutPage}
+	title={post.data.title}
+	description={post.data.description}
+>
 	{headings.length > 0 && <TOCScript slot="head" />}
 
 	<Fragment slot="aside-left">
 		<nav>
 			<a class="styled font-sans" href="/">
-				<Icon name="material-symbols:arrow-back" class="inline-block align-middle" />
+				<Icon
+					name="material-symbols:arrow-back"
+					class="inline-block align-middle"
+				/>
 				<span>Home</span>
 			</a>
 		</nav>
@@ -78,7 +89,11 @@ const isAboutPage = post.id === 'about'
 						<p>
 							This page is in{' '}
 							<span class="italic text-blue-11">
-								<Icon name="material-symbols:edit-outline" class="inline align-middle" /> draft mode
+								<Icon
+									name="material-symbols:edit-outline"
+									class="inline align-middle"
+								/>{' '}
+								draft mode
 							</span>
 							meaning the content here is subject to change.
 						</p>

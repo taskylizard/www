@@ -4,7 +4,9 @@ import '@/styles/base.css'
 import { ClientRouter } from 'astro:transitions'
 import Fonts from '@/components/Fonts.astro'
 import LoadingIndicatorScript from '@/components/LoadingIndicatorScript.astro'
-import MetaTags, { type Props as MetaTagsProps } from '@/components/MetaTags.astro'
+import MetaTags, {
+	type Props as MetaTagsProps
+} from '@/components/MetaTags.astro'
 import ThemeScript from '@/components/ThemeScript.astro'
 
 type Props = MetaTagsProps
@@ -25,7 +27,9 @@ const { ...meta } = Astro.props
 		<MetaTags {...meta} />
 		<slot name="head" />
 	</head>
-	<body class="font-serif antialiased text-xl leading-normal bg-gray-1 text-gray-12 w-full h-full">
+	<body
+		class="font-serif antialiased text-xl leading-normal bg-gray-1 text-gray-12 w-full h-full"
+	>
 		<slot />
 	</body>
 </html>

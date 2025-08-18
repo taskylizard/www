@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content'
 import { formatDate } from '@/lib/date'
 
 let posts = await getCollection('posts', (post) => !post.data.unlisted)
-posts = posts.sort((prev, next) => next.data.date.valueOf() - prev.data.date.valueOf())
+posts = posts.sort(
+	(prev, next) => next.data.date.valueOf() - prev.data.date.valueOf()
+)
 ---
 
 <ul class="!pl-0 dashed">
@@ -13,7 +15,9 @@ posts = posts.sort((prev, next) => next.data.date.valueOf() - prev.data.date.val
 				<a class="!decoration-none" href={`/posts/${post.id}`}>
 					{post.data.title}
 					{post.data.sup ? (
-						<sup class="italic text-orange-11 hidden sm:inline">{post.data.sup}</sup>
+						<sup class="italic text-orange-11 hidden sm:inline">
+							{post.data.sup}
+						</sup>
 					) : null}
 				</a>
 				<div class="dash" />

@@ -1,71 +1,71 @@
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import rehypeShiki, { type RehypeShikiOptions } from "@shikijs/rehype";
+import mdx from '@astrojs/mdx'
+import sitemap from '@astrojs/sitemap'
+import rehypeShiki, { type RehypeShikiOptions } from '@shikijs/rehype'
 import {
 	transformerMetaHighlight,
 	transformerNotationDiff,
-	transformerNotationErrorLevel,
-} from "@shikijs/transformers";
-import compress from "astro-compress";
-import icon from "astro-icon";
-import purgecss from "astro-purgecss";
-import { defineConfig } from "astro/config";
-import remarkDirective from "remark-directive";
-import type { BuiltinTheme } from "shiki";
-import unocss from "unocss/astro";
-import { remarkReadingTime } from "./src/remark-rehype/remark-reading-time";
-import { remarkSidenotes } from "./src/remark-rehype/remark-sidenotes";
+	transformerNotationErrorLevel
+} from '@shikijs/transformers'
+import compress from 'astro-compress'
+import icon from 'astro-icon'
+import purgecss from 'astro-purgecss'
+import { defineConfig } from 'astro/config'
+import remarkDirective from 'remark-directive'
+import type { BuiltinTheme } from 'shiki'
+import unocss from 'unocss/astro'
+import { remarkReadingTime } from './src/remark-rehype/remark-reading-time'
+import { remarkSidenotes } from './src/remark-rehype/remark-sidenotes'
 // PurgeCSS can't find imported styles on it's own. For now this will fix.
-import baseCSS from "./src/styles/base.css?raw";
-import proseCSS from "./src/styles/prose.scss?raw";
-import shikiCSS from "./src/styles/shiki.css?raw";
-import vue from "@astrojs/vue";
-import { remarkAlerts } from "./src/remark-rehype/remark-alerts";
+import baseCSS from './src/styles/base.css?raw'
+import proseCSS from './src/styles/prose.scss?raw'
+import shikiCSS from './src/styles/shiki.css?raw'
+import vue from '@astrojs/vue'
+import { remarkAlerts } from './src/remark-rehype/remark-alerts'
 
 const shikiThemes: Record<string, BuiltinTheme> = {
-	light: "github-light-default",
-	dark: "github-dark-dimmed",
-};
+	light: 'github-light-default',
+	dark: 'github-dark-dimmed'
+}
 
-const styles = [baseCSS, proseCSS, shikiCSS].join("\n");
+const styles = [baseCSS, proseCSS, shikiCSS].join('\n')
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://tasky.nuxt.dev",
+	site: 'https://tasky.nuxt.dev',
 
 	devToolbar: {
-		enabled: false,
+		enabled: false
 	},
 
 	markdown: {
 		remarkRehype: {},
-		syntaxHighlight: "shiki",
+		syntaxHighlight: 'shiki',
 		shikiConfig: {
 			themes: shikiThemes,
 			transformers: [
 				// @ts-ignore
 				transformerMetaHighlight(),
 				// @ts-ignore
-				transformerNotationDiff({ matchAlgorithm: "v3" }),
+				transformerNotationDiff({ matchAlgorithm: 'v3' }),
 				// @ts-ignore
-				transformerNotationErrorLevel({ matchAlgorithm: "v3" }),
-			],
+				transformerNotationErrorLevel({ matchAlgorithm: 'v3' })
+			]
 		},
 		remarkPlugins: [
 			remarkReadingTime,
 			remarkDirective,
 			remarkSidenotes,
-			remarkAlerts,
+			remarkAlerts
 		],
 		rehypePlugins: [
 			[
 				rehypeShiki,
 				{
-					inline: "tailing-curly-colon",
-					themes: shikiThemes,
-				} satisfies RehypeShikiOptions,
-			],
-		],
+					inline: 'tailing-curly-colon',
+					themes: shikiThemes
+				} satisfies RehypeShikiOptions
+			]
+		]
 	},
 
 	integrations: [
@@ -79,17 +79,17 @@ export default defineConfig({
 			fontFace: true,
 			safelist: {
 				// Don't purge important class names like !bg-none.
-				deep: [/!.*/],
+				deep: [/!.*/]
 			},
-			css: [{ raw: styles }],
+			css: [{ raw: styles }]
 		}),
 		compress({
 			SVG: false,
 			Image: false,
 			CSS: false,
 			JavaScript: false,
-			HTML: true,
+			HTML: true
 		}),
-		vue(),
-	],
-});
+		vue()
+	]
+})

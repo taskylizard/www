@@ -5,7 +5,9 @@ import site from '@/site.config'
 
 let projects = site.projects
 
-projects = projects.sort((prev, next) => next.date.valueOf() - prev.date.valueOf())
+projects = projects.sort(
+	(prev, next) => next.date.valueOf() - prev.date.valueOf()
+)
 
 const images = projects
 	.filter((project) => project.image !== undefined)

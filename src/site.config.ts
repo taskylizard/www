@@ -26,7 +26,7 @@ export default {
 	description: 'Shitposter by day, programmer by night.',
 	links: {
 		github: 'taskylizard',
-		bluesky: 'tasky.nuxt.dev',
+		bluesky: 'tasky.nuxt.dev'
 	},
 
 	projects: [
@@ -40,16 +40,16 @@ export default {
 					height: 1080,
 					width: 1920,
 					src: '/sites/vivivi.webp',
-					orientation: 0,
+					orientation: 0
 				},
 				dark: {
 					format: 'webp',
 					height: 1080,
 					width: 1920,
 					src: '/sites/vivivi.webp',
-					orientation: 0,
-				},
-			},
+					orientation: 0
+				}
+			}
 		},
 		{
 			title: 'Wotaku',
@@ -61,32 +61,32 @@ export default {
 					height: 1080,
 					width: 1920,
 					src: '/sites/wotaku-light.jpg',
-					orientation: 0,
+					orientation: 0
 				},
 				dark: {
 					format: 'jpg',
 					height: 1080,
 					width: 1920,
 					src: '/sites/wotaku-dark.jpg',
-					orientation: 0,
-				},
-			},
+					orientation: 0
+				}
+			}
 		},
 		{
 			title: 'freemediaheckyeah',
 			link: 'https://fmhy.net/',
-			date: new Date('2018-04-29'),
+			date: new Date('2018-04-29')
 		},
 		{
 			title: 'vyx',
 			link: 'https://github.com/taskylizard/vyx',
 			description: 'Personal discord bot for funsies.',
-			date: new Date('2024-07-13'),
+			date: new Date('2024-07-13')
 		},
 		{
 			title: 'privateersclub',
 			link: 'https://megathread.pages.dev',
-			date: new Date('2021-04-14'),
-		},
-	],
+			date: new Date('2021-04-14')
+		}
+	]
 } as SiteConfig

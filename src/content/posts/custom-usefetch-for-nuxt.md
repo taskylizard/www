@@ -23,7 +23,10 @@ Cheers!
 ```ts
 import type { AsyncData, UseFetchOptions, FetchResult } from 'nuxt/app'
 import type { FetchError } from 'ofetch'
-import type { NitroFetchRequest, AvailableRouterMethod as _AvailableRouterMethod } from 'nitropack'
+import type {
+  NitroFetchRequest,
+  AvailableRouterMethod as _AvailableRouterMethod
+} from 'nitropack'
 import { useToast } from '@/composables/use-toast'
 
 // Custom options
@@ -33,7 +36,7 @@ interface UseFetchyOptions<
   PickKeys extends KeysOf<DataT>,
   DefaultT,
   ReqT extends NitroFetchRequest,
-  Method extends AvailableRouterMethod<ReqT>,
+  Method extends AvailableRouterMethod<ReqT>
 > extends UseFetchOptions<_ResT, DataT, PickKeys, DefaultT, ReqT, Method> {
   alert?: boolean
   suppress?: boolean
@@ -50,7 +53,9 @@ type PickFrom<T, K extends Array<string>> =
           : Pick<T, K[number]>
       : T
 
-type KeysOf<T> = Array<T extends T ? (keyof T extends string ? keyof T : never) : never>
+type KeysOf<T> = Array<
+  T extends T ? (keyof T extends string ? keyof T : never) : never
+>
 
 type AvailableRouterMethod<R extends NitroFetchRequest> =
   | _AvailableRouterMethod<R>
@@ -68,10 +73,10 @@ export async function useFetchy<
   _ResT = ResT extends void ? FetchResult<ReqT, Method> : ResT,
   DataT = _ResT,
   PickKeys extends KeysOf<DataT> = KeysOf<DataT>,
-  DefaultT = DataT,
+  DefaultT = DataT
 >(
   request: Ref<ReqT> | ReqT | (() => ReqT),
-  opts: UseFetchyOptions<_ResT, DataT, PickKeys, DefaultT, ReqT, Method> = {},
+  opts: UseFetchyOptions<_ResT, DataT, PickKeys, DefaultT, ReqT, Method> = {}
 ): Promise<AsyncData<PickFrom<DataT, PickKeys> | DefaultT, ErrorT | null>> {
   const toast = useToast()
 
@@ -81,31 +86,37 @@ export async function useFetchy<
   let successMessage = ''
   let errorMessage = ''
 
-  const result = await useFetch<ResT, ErrorT, ReqT, Method, _ResT, DataT, PickKeys, DefaultT>(
-    request,
-    {
-      ...opts,
-      onResponse({ response }) {
-        if (response.ok) {
-          successMessage = response._data?.message
-        } else {
-          errorMessage = response._data?.message || response.statusText
-        }
-      },
-    },
-  )
+  const result = await useFetch<
+    ResT,
+    ErrorT,
+    ReqT,
+    Method,
+    _ResT,
+    DataT,
+    PickKeys,
+    DefaultT
+  >(request, {
+    ...opts,
+    onResponse({ response }) {
+      if (response.ok) {
+        successMessage = response._data?.message
+      } else {
+        errorMessage = response._data?.message || response.statusText
+      }
+    }
+  })
 
   if (opts.alert && errorMessage) {
     toast.error(errorMessage, {
       title: 'Something went wrong',
-      timeout: 5000,
+      timeout: 5000
     })
   }
 
   if (opts.alert && successMessage) {
     toast.success(successMessage, {
       title: 'Success',
-      timeout: 2000,
+      timeout: 2000
     })
   }
 

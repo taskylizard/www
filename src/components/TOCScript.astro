@@ -21,7 +21,9 @@
 		if (!toc) return
 
 		// Mark current anchor with aria-current attribute.
-		let currentAnchor = toc.querySelector<HTMLAnchorElement>('a[aria-current="true"]')
+		let currentAnchor = toc.querySelector<HTMLAnchorElement>(
+			'a[aria-current="true"]'
+		)
 		const setCurrentAnchor = (target: HTMLAnchorElement) => {
 			if (target === currentAnchor) return
 			if (currentAnchor) currentAnchor.removeAttribute('aria-current')
@@ -31,7 +33,9 @@
 
 		// Define observe function, which will start the intersection observer.
 		const links = [...toc.querySelectorAll<HTMLAnchorElement>('a')]
-		const headings = [...document.querySelectorAll<HTMLHeadingElement>('article h3')]
+		const headings = [
+			...document.querySelectorAll<HTMLHeadingElement>('article h3')
+		]
 		const onIntersect: IntersectionObserverCallback = (entries) => {
 			for (const { isIntersecting, target } of entries) {
 				if (!isIntersecting) continue

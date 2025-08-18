@@ -9,8 +9,8 @@ const posts = defineCollection({
 		published: z.boolean().default(false),
 		unlisted: z.boolean().default(false),
 		date: z.coerce.date(),
-		sup: z.string().optional(),
-	}),
+		sup: z.string().optional()
+	})
 })
 
 export const collections = { posts }
