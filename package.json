@@ -1,50 +1,55 @@
 {
-	"name": "www",
-	"type": "module",
-	"version": "infinitely.many.versions",
-	"scripts": {
-		"format": "prettier --cache --write .",
-		"dev": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"devDependencies": {
-		"@astrojs/mdx": "^4.0.8",
-		"@astrojs/rss": "^4.0.11",
-		"@astrojs/sitemap": "^3.2.1",
-		"@fontsource-variable/source-serif-4": "^5.1.1",
-		"@fontsource/geist": "^5.0.1",
-		"@iconify-json/material-symbols": "^1.2.14",
-		"@iconify-json/simple-icons": "^1.2.23",
-		"@radix-ui/colors": "^3.0.0",
-		"@shikijs/rehype": "^2.3.0",
-		"@shikijs/transformers": "^2.3.0",
-		"@types/node": "^22.13.1",
-		"astro": "^5.2.5",
-		"astro-compress": "^2.3.6",
-		"astro-icon": "^1.1.5",
-		"astro-purgecss": "^5.1.0",
-		"hastscript": "^9.0.0",
-		"linkedom": "^0.18.9",
-		"mdast-util-to-string": "^4.0.0",
-		"prettier": "^3.6.2",
-		"prettier-plugin-astro": "^0.14.1",
-		"reading-time": "^1.5.0",
-		"remark-directive": "^3.0.1",
-		"shiki": "^2.3.0",
-		"unist-util-visit": "^5.0.0",
-		"unocss": "^65.4.3",
-		"unocss-preset-radix-colors": "^0.2.0",
-		"astro-auto-import": "^0.4.4",
-		"remark-emoji": "^5.0.1"
-	},
-	"dependencies": {
-		"@astrojs/vue": "^5.1.0",
-		"sass": "^1.90.0",
-		"vue": "^3.5.18"
-	},
-	"trustedDependencies": [
-		"@parcel/watcher"
-	]
+  "name": "www",
+  "type": "module",
+  "version": "infinitely.many.versions",
+  "scripts": {
+    "format": "prettier --cache --write .",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/source-serif-4": "^5.1.1",
+    "@fontsource/geist": "^5.0.1",
+    "@iconify-json/material-symbols": "^1.2.14",
+    "@iconify-json/simple-icons": "^1.2.23",
+    "@radix-ui/colors": "^3.0.0",
+    "@shikijs/rehype": "^2.3.0",
+    "@shikijs/transformers": "^2.3.0",
+    "@types/node": "^22.13.1",
+    "astro": "^5.2.5",
+    "astro-auto-import": "^0.4.4",
+    "astro-compress": "^2.3.6",
+    "astro-icon": "^1.1.5",
+    "astro-purgecss": "^5.1.0",
+    "hastscript": "^9.0.0",
+    "linkedom": "^0.18.9",
+    "mdast-util-to-string": "^4.0.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "reading-time": "^1.5.0",
+    "remark-directive": "^3.0.1",
+    "remark-emoji": "^5.0.1",
+    "shiki": "^2.3.0",
+    "unist-util-visit": "^5.0.0",
+    "unocss": "^65.4.3",
+    "unocss-preset-radix-colors": "^0.2.0",
+    "wrangler": "^4.31.0"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.4",
+    "@astrojs/vue": "^5.1.0",
+    "sass": "^1.90.0",
+    "vue": "^3.5.18"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "esbuild",
+    "sharp",
+    "workerd"
+  ]
 }
