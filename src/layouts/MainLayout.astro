@@ -2,6 +2,7 @@
 import '@/styles/prose.scss'
 
 import type { Props as MetaTagsProps } from '@/components/MetaTags.astro'
+import Footer from '@/components/Footer.astro'
 import BaseLayout from './BaseLayout.astro'
 
 export type Props = MetaTagsProps & {
@@ -31,12 +32,12 @@ const { asideBorders = false, ...meta } = Astro.props
 				<article class:list={['prose']}>
 					<slot name="article" />
 				</article>
-				<section>
-					<slot name="footnotes" />
-				</section>
 			</main>
 			<aside></aside>
 		</div>
+		<footer class="max-w-3xl px-5 mx-auto pb-10">
+			<Footer />
+		</footer>
 	</div>
 </BaseLayout>
 
