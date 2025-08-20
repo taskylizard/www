@@ -52,9 +52,52 @@ import site from '@/site.config'
 		<div class="h-20"></div>
 		<div class="w-full flex flex-row items-end justify-between">
 			<div class="flex flex-col gap-5 xl:gap-0">
+				<button
+					id="theme-toggle"
+					type="button"
+					class="font-sans text-gray-11 hover:underline cursor-pointer hidden xl:block"
+				></button>
 				<div class="block xl:hidden"><LinkIcons links={site.links} /></div>
 			</div>
 			<FlowersSVG class="h-25 w-auto text-gray-11 mb-2.5 hidden xl:block" />
 		</div>
 	</Fragment>
 </MainLayout>
+
+<script>
+	const themeToggle = document.getElementById(
+		'theme-toggle'
+	) as HTMLButtonElement
+
+	const doc = document.documentElement
+
+	function updateButtonText() {
+		if (themeToggle) {
+			const isDark = doc.classList.contains('dark')
+
+			themeToggle.textContent = isDark
+				? 'You like light mode eh?'
+				: 'You like dark mode eh?'
+		}
+	}
+
+	function toggleTheme(e: Event) {
+		e.preventDefault()
+
+		const isDark = doc.classList.contains('dark')
+
+		const newTheme = isDark ? 'light' : 'dark'
+
+		window.dispatchEvent(
+			new CustomEvent('set-appearance', { detail: newTheme })
+		)
+	}
+
+	const observer = new MutationObserver(() => {
+		updateButtonText()
+	})
+
+	observer.observe(doc, { attributes: true, attributeFilter: ['class'] })
+	document.addEventListener('astro:page-load', updateButtonText)
+	themeToggle.addEventListener('click', toggleTheme)
+</script>
