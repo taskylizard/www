@@ -26,7 +26,8 @@ export default {
   description: 'Shitposter by day, programmer by night.',
   links: {
     github: 'taskylizard',
-    bluesky: 'tasky.nuxt.dev'
+    bluesky: 'tasky.nuxt.dev',
+    rss: 'https://tasky.nuxt.dev/posts/rss.xml'
   },
 
   projects: [

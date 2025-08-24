@@ -22,6 +22,8 @@ import baseCSS from './src/styles/base.css?raw'
 import proseCSS from './src/styles/prose.scss?raw'
 import shikiCSS from './src/styles/shiki.css?raw'
 
+import cloudflare from '@astrojs/cloudflare'
+
 const shikiThemes: Record<string, BuiltinTheme> = {
   light: 'github-light-default',
   dark: 'github-dark-dimmed'
@@ -91,5 +93,7 @@ export default defineConfig({
       HTML: true
     }),
     vue()
-  ]
+  ],
+
+  adapter: cloudflare()
 })
