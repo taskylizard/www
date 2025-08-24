@@ -1,0 +1,7 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - run: bun format {staged_files}
+      glob: '*.{js,ts,jsx,tsx,json,md,mdx,css,html,vue,yaml,toml,astro}'
+      exclude: 'bun.lock'
+      stage_fixed: true

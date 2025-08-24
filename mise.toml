@@ -5,7 +5,7 @@ node = 'latest'
 postinstall = 'npx corepack enable'
 
 [env]
-_.path = [ './node_modules/.bin' ]
+_.path = ['./node_modules/.bin']
 
 [tasks.pnpm-install]
 description = 'Installs dependencies with pnpm'
@@ -13,11 +13,11 @@ run = 'pnpm install'
 sources = [
   'package.json',
   'pnpm-lock.yaml',
-  'mise.toml'
+  'mise.toml',
 ]
-outputs = [ 'node_modules/.pnpm/lock.yaml' ]
+outputs = ['node_modules/.pnpm/lock.yaml']
 
 [tasks.dev]
 description = 'Calls your dev script in `package.json`'
 run = 'node --run dev -- '
-depends = [ 'pnpm-install' ]
+depends = ['pnpm-install']

@@ -15,16 +15,16 @@ import geistLatin400Normal from '@fontsource/geist/files/geist-latin-400-normal.
 import geistLatin600Normal from '@fontsource/geist/files/geist-latin-600-normal.woff2?url'
 import geistLatin800Normal from '@fontsource/geist/files/geist-latin-800-normal.woff2?url'
 const preloadFonts = [
-	geistLatin400Normal,
-	geistLatin600Normal,
-	geistLatin800Normal,
-	sourceSerifLatinWghtNormal,
-	sourceSerifLatinWghtItalic
+  geistLatin400Normal,
+  geistLatin600Normal,
+  geistLatin800Normal,
+  sourceSerifLatinWghtNormal,
+  sourceSerifLatinWghtItalic
 ]
 ---
 
 {
-	preloadFonts.map((url) => (
-		<link rel="preload" href={url} as="font" type="font/woff2" crossorigin />
-	))
+  preloadFonts.map((url) => (
+    <link rel="preload" href={url} as="font" type="font/woff2" crossorigin />
+  ))
 }
