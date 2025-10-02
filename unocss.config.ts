@@ -1,11 +1,11 @@
 import {
   defineConfig,
   presetWebFonts,
-  presetWind,
+  presetWind3,
   transformerDirectives
 } from 'unocss'
 import { presetRadixColors } from 'unocss-preset-radix-colors'
-import { theme } from 'unocss/preset-wind'
+import { theme } from 'unocss/preset-wind3'
 
 type DefaultFontFamily = Record<'sans' | 'serif' | 'mono', string>
 const systemFonts = theme.fontFamily as DefaultFontFamily
@@ -33,7 +33,7 @@ export default defineConfig({
   },
   transformers: [transformerDirectives()],
   presets: [
-    presetWind({ dark: 'class' }),
+    presetWind3({ dark: 'class' }),
     presetWebFonts(),
     presetRadixColors({
       prefix: '',
