@@ -95,5 +95,7 @@ export default defineConfig({
     vue()
   ],
 
-  adapter: cloudflare()
+  adapter: cloudflare({
+    imageService: 'compile'
+  })
 })
