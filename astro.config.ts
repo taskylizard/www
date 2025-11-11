@@ -33,7 +33,7 @@ const styles = [baseCSS, proseCSS, shikiCSS].join('\n')
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://tasky.nuxt.dev',
+  site: 'https://tasky.uwu.network',
 
   devToolbar: {
     enabled: false

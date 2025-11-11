@@ -1,5 +1,3 @@
-# 💐 tasky.nuxt.dev
-
 My personal website. Built with much swag 🤞.
 
 Licensed under the Apache License, Version 2.0, see [LICENSE](./LICENSE) for more information.

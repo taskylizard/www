@@ -1,9 +1,12 @@
 ---
 import FlowersSVG from '@/assets/flowers.svg'
+import SparklesSVG from '@/assets/sparkles.svg'
 import LinkIcons from '@/components/LinkIcons.astro'
+import PerusalList from '@/components/PerusalList.astro'
 import PostsList from '@/components/PostsList.astro'
 import ProjectsList from '@/components/ProjectsList.astro'
 import Sidenote from '@/components/Sidenote.astro'
+import UwUNetworkCard from '@/components/UwUNetworkCard.astro'
 import MainLayout from '@/layouts/MainLayout.astro'
 import site from '@/site.config'
 ---
@@ -43,62 +46,46 @@ import site from '@/site.config'
 
     <h3>Posts</h3>
     <PostsList />
+    <p class="text-gray-11">
+      See <a href="/micro">/micro</a> for more frequent updates.
+      <SparklesSVG class="inline-block ml-1.5 text-green-11" />
+    </p>
 
     <h3>Projects</h3>
+    <Sidenote side="left">
+      <p>
+        <span class="inline xl:hidden">Featuring a</span>
+        <span class="hidden xl:inline">A</span> few screengrabs from some of my
+        recent
+        <em>personal</em> works.
+      </p>
+    </Sidenote>
     <ProjectsList />
+
+    <h3>Perusal</h3>
+    <Sidenote>
+      <p>Things I've read or been reading lately.</p>
+    </Sidenote>
+    <PerusalList />
   </Fragment>
 
   <Fragment slot="footnotes">
     <div class="h-20"></div>
     <div class="w-full flex flex-row items-end justify-between">
       <div class="flex flex-col gap-5 xl:gap-0">
-        <button
-          id="theme-toggle"
-          type="button"
-          class="font-sans text-gray-11 hover:underline cursor-pointer hidden xl:block"
-        >
-        </button>
+        <div class="prose">
+          <div class="text-gray-11">
+            Also, check out my <SparklesSVG
+              class="inline-block align-middle text-yellow-11"
+            />
+            collective: {' '}
+            <a href="https://uwu.network" class="underline decoration-dotted"
+            >uwu.network</a>
+          </div>
+        </div>
         <div class="block xl:hidden"><LinkIcons links={site.links} /></div>
       </div>
       <FlowersSVG class="h-25 w-auto text-gray-11 mb-2.5 hidden xl:block" />
     </div>
   </Fragment>
 </MainLayout>
-
-<script>
-const themeToggle = document.getElementById(
-  'theme-toggle'
-) as HTMLButtonElement
-
-const doc = document.documentElement
-
-function updateButtonText() {
-  if (themeToggle) {
-    const isDark = doc.classList.contains('dark')
-
-    themeToggle.textContent = isDark
-      ? 'You like light mode eh?'
-      : 'You like dark mode eh?'
-  }
-}
-
-function toggleTheme(e: Event) {
-  e.preventDefault()
-
-  const isDark = doc.classList.contains('dark')
-
-  const newTheme = isDark ? 'light' : 'dark'
-
-  window.dispatchEvent(
-    new CustomEvent('set-appearance', { detail: newTheme })
-  )
-}
-
-const observer = new MutationObserver(() => {
-  updateButtonText()
-})
-
-observer.observe(doc, { attributes: true, attributeFilter: ['class'] })
-document.addEventListener('astro:page-load', updateButtonText)
-themeToggle.addEventListener('click', toggleTheme)
-</script>

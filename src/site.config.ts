@@ -20,12 +20,27 @@ export interface Friend {
   image: string
 }
 
+export interface Perusal {
+  title: string
+  date: Date
+  description?: string
+  author?: string
+  url?: string
+}
+
+export type Tag = {
+  id: string
+  name: string
+}
+
 export type SiteConfig = {
   title: string
   description: string
   links: Link
   projects: Project[]
   friends: Friend[]
+  tags: Tag[]
+  persual: Perusal[]
 }
 
 export default {
@@ -33,10 +48,21 @@ export default {
   description: 'Shitposter by day, programmer by night.',
   links: {
     github: 'taskylizard',
-    bluesky: 'tasky.nuxt.dev',
-    rss: 'https://tasky.nuxt.dev/posts/rss.xml'
+    bluesky: 'tasky.uwu.network',
+    rss: 'https://tasky.uwu.network/posts/rss.xml'
   },
-
+  tags: [{ id: 'stupidity', name: 'Stupidity' }, {
+    id: 're',
+    name: 'Reverse Engineering'
+  }, { id: 'mintlify', name: 'Mintlify' }],
+  persual: [{
+    title: 'Radiant Computer',
+    date: new Date('2025-11-08'),
+    description:
+      'Radiant is an ongoing research project in personal computing.',
+    url: 'https://radiant.computer/',
+    author: 'Alexis Sellier'
+  }],
   projects: [
     {
       title: 'vivivi',

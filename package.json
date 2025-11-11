@@ -6,8 +6,9 @@
     "format": "dprint fmt",
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro build && wrangler pages dev",
+    "astro": "astro",
+    "deploy": "astro build && wrangler pages deploy"
   },
   "devDependencies": {
     "@astrojs/mdx": "^4.3.6",

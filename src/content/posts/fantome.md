@@ -3,6 +3,7 @@ title: Mint Fantôme
 description: Or how we bust open the mint packet of docs and nextjs
 date: 2025-10-03
 published: true
+tags: ['re', 'mintlify']
 ---
 
 :::alert{type="info"}
