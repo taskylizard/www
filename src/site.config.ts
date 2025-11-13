@@ -112,8 +112,8 @@ export default {
       date: new Date('2018-04-29')
     },
     {
-      title: 'vyx',
-      link: 'https://github.com/taskylizard/vyx',
+      title: 'kanikou',
+      link: 'https://github.com/taskylizard/kanikou',
       description: 'Personal discord bot for funsies.',
       date: new Date('2024-07-13')
     },
